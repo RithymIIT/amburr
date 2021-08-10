@@ -38,7 +38,9 @@ export class AddAccountPage implements OnInit {
 		});
 		this._getYTChannelsList();
 		this._getTWAccountsList();
-		this.username = JSON.parse(localStorage.getItem("user")).displayName;
+		if(localStorage.getItem("user") !== null && localStorage.getItem("user") !== '' && localStorage.getItem("user") !== undefined){
+		this.username = '';
+		}
 	}
 
 	async _getYTChannelsList() {

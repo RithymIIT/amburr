@@ -57,8 +57,8 @@ export class AuthService {
 				localStorage.setItem("user", JSON.stringify(this.userdata));
 				JSON.parse(localStorage.getItem("user"));
 			} else {
-				localStorage.setItem("user", null);
-				JSON.parse(localStorage.getItem("user"));
+				//localStorage.setItem("user", null);
+				//JSON.parse(localStorage.getItem("user"));
 				Storage.set({ key: TOKEN_KEY, value: "token" });
 			}
 		});
