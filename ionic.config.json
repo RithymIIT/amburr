@@ -1,0 +1,7 @@
+{
+  "name": "amburr",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

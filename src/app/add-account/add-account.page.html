@@ -1,0 +1,93 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>signup-steps</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+	<div signupSteps>
+		<ion-row>
+			<ion-col size="12" size-md="4">
+			    <!--- mobile topbar start --->
+				<div mobtopbar class="ion-hide-md-up">
+					<div mob-back-sec>
+						<a back href="javascript:void(0)"><ion-icon name="arrow-back-outline"></ion-icon></a>
+						<h4>Welcome, Tracy!</h4>
+					</div>
+					<div tracyPara>
+						<p *ngIf="hideMe1">To get started I just need your permission to talk to your accounts.
+							<br><br>Click the buttons below to link me with all your one or more profiles on each platform.<br><br><b>The more the merrier!</b>
+						</p>
+					    <a (click)="hide1()" click-btn href="javascript:void(0)"><b>View Instructions</b> <ion-icon name="chevron-down"></ion-icon></a>
+						<div Gotit-sec *ngIf="hideMe1">
+							<ion-button Gotit-btn (click)="hide1()">Got It! <ion-icon name="chevron-up-outline"></ion-icon></ion-button>
+						</div>
+					</div>
+					<span emoji><img src="../assets/images/icon.png" alt=""></span>
+				</div>
+				<!--- mobile topbar end --->			
+				<div lftbar class="ion-hide-md-down">
+					<a back href="javascript:void(0)" routerLink="/signup-steps"><ion-icon name="arrow-back-outline"></ion-icon></a>
+					<h4>Welcome, {{username}}!</h4>
+					<div tracyPara>
+						<p>To get started I just need your permission to talk to your accounts.
+							<br><br>Click the buttons below to link me with all your one or more profiles on each platform.<br><br><b>The more the merrier!</b>
+						</p>
+					</div>
+					<span emoji><img src="../assets/images/icon.png" alt=""></span>
+				</div>
+			</ion-col>
+			<ion-col size="12" size-md="8">
+				<div ritbar>
+					<ul steps>
+						<li routerLink="/add-account"><span active><ion-icon name="checkmark-outline"></ion-icon></span><p>Add Accounts</p></li>
+						<li  routerLink="/signup-createbrands"><span>2</span><p>Create Brands</p></li>
+						<li routerLink="/signup-goals"><span>3</span><p>Set Goals</p></li>
+					</ul>
+					<div socials>
+						<div colspan>
+							<div full>
+								<ion-icon youtube name="logo-youtube"></ion-icon>
+								<a (click)="_googleLogin()"><ion-icon name="add-circle-outline"></ion-icon> <p>Add Youtube Channel</p></a>
+							</div>
+							<div width100 *ngIf="youtubechannelsarr?.length > 0">
+								<div addedacnt *ngFor="let channel of youtubechannelsarr;let i = index">
+									<div lftAdded>
+										<span><img src={{channel.snippet.thumbnails.high.url}} alt="" /></span>
+										<p>{{channel.snippet.title}}</p>
+									</div>
+									<a href="javascript:void(0)" ml-auto (click)="_deleteChannel(channel.id)">
+										<ion-icon name="trash-outline"></ion-icon>
+									</a>
+								</div>
+							</div>
+							<div width100 *ngIf="youtubechannelsarr.length == 0">
+								<div addedacnt>
+									<div lftAdded>
+										<p marginbottomcl>No Channels added yet!</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div colspan>
+							<div full >
+								<ion-icon twitter name="logo-twitter"></ion-icon>
+								<a (click)="_twitterLogin()"><ion-icon name="add-circle-outline"></ion-icon> <p>Add Twitter Profile</p></a>
+							</div>
+							<div addedacnt *ngFor="let t of twitterAccounts; let i = index">
+								<div lftAdded>
+									<span><img [attr.src]="t.photoURL ? t.photoURL : 'assets/images/user-dummy.png'" alt="" /></span>
+									<p>@{{t.displayName}}</p>
+								</div>
+								<a (click)="deleteTwitter_account(t)" ml-auto>
+									<ion-icon name="trash-outline"></ion-icon>
+								</a>
+							</div>
+						</div>
+					</div>
+					<a mob-next-gt href="javascript:void(0)" class="next-gt" (click)="start()"> Next </a>
+				</div>
+			</ion-col>
+		</ion-row>
+	</div>
+</ion-content>

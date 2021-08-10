@@ -1,0 +1,113 @@
+<ion-content>
+	<div flex-header>
+	  	<a href="javascript:void(0)"><img src="../assets/images/logo.png" alt=""></a>
+	  	<p (click)="presentModal()">Return to Content Calendar <ion-icon name="close-outline"></ion-icon></p>
+	</div>
+	<div mainContent>
+		<ion-row>
+			<ion-col size="12" size-md="12">
+				<!--- mobile ads start --->
+				<div mob-ads-sec class="ion-hide-md-up">
+					<img src="assets/images/mob-ads.jpg" alt="" />
+				</div>
+				<!--- mobile ads end --->				
+				<div class="cont-fls">
+					<div class="add-vf">
+						<a href="javascript:void(0)">
+							<img src="assets/images/ad3.jpg">
+						</a>
+					</div>
+					<div class="fvs-ft">
+						<div centerArea>
+						<div insideCenter>
+							<h2 hdng>Create YouTube Video</h2>
+							<div threeCols>
+								<div smallCol>
+									<!--- mobile menu link start --->
+										<ion-item menuheader lines="none"  class="ion-hide-md-up">
+											<ion-label>
+											  <span>3</span>Suggestions
+											</ion-label>
+											<a slot="end" href="javascript:void(0)" (click)="hide()" menu-btn><ion-icon name="menu"></ion-icon></a>
+										</ion-item>										
+										<div menu-mob-link *ngIf="hideMe"  class="ion-hide-md-up">
+										    <ion-buttons menuclose-btn  (click)="hide()"><ion-icon name="close"></ion-icon></ion-buttons>
+											<ul>
+												<li routerLink="/createytvideo-schedule"><a class="activedone" href="javascript:void(0)"><span>1</span>Schedule</a></li>
+												<li routerLink="/idea-generator"><a class="activedone" href="javascript:void(0)"><span>2</span>Idea Generator</a></li>
+												<li><a class="active" href="javascript:void(0)"><span>3</span>Suggestions</a></li>
+												<li><a routerLink="/createytvideo-scriptscreation" href="javascript:void(0)"><span>4</span>Script Creation</a></li>
+												<li><a routerLink="/createytvideo-uploadvideo" href="javascript:void(0)"><span>5</span>Upload Video</a></li>
+												<li><a routerLink="/createytvideo-metadata" href="javascript:void(0)"><span>6</span>Meta-Data</a></li>
+												<li><a routerLink="/createytvideo-thumbnail" href="javascript:void(0)"><span>7</span>Thumbnail</a></li>
+												<li><a routerLink="/createytvideo-captions" href="javascript:void(0)"><span>8</span>Captioning</a></li>
+												<li><a routerLink="/createytvideo-addtoplaylist" href="javascript:void(0)"><span>9</span>Add to Playlist</a></li>
+												<li><a routerLink="/createytvideo-confirm" href="javascript:void(0)"><span>10</span>Confirm</a></li>
+											</ul>
+										</div>
+										<!--- mobile menu link end --->								
+									<ul class="ion-hide-md-down">
+										<li routerLink="/createytvideo-schedule"><a class="activedone" href="javascript:void(0)"><span>1</span>Schedule</a></li>
+										<li routerLink="/idea-generator"><a class="activedone" href="javascript:void(0)"><span>2</span>Idea Generator</a></li>
+										<li><a class="active" href="javascript:void(0)"><span>3</span>Suggestions</a></li>
+										<li><a routerLink="/createytvideo-scriptscreation" href="javascript:void(0)"><span>4</span>Script Creation</a></li>
+										<li><a routerLink="/createytvideo-uploadvideo" href="javascript:void(0)"><span>5</span>Upload Video</a></li>
+										<li><a routerLink="/createytvideo-metadata" href="javascript:void(0)"><span>6</span>Meta-Data</a></li>
+										<li><a routerLink="/createytvideo-thumbnail" href="javascript:void(0)"><span>7</span>Thumbnail</a></li>
+										<li><a routerLink="/createytvideo-captions" href="javascript:void(0)"><span>8</span>Captioning</a></li>
+										<li><a routerLink="/createytvideo-addtoplaylist" href="javascript:void(0)"><span>9</span>Add to Playlist</a></li>
+										<li><a routerLink="/createytvideo-confirm" href="javascript:void(0)"><span>10</span>Confirm</a></li>
+									</ul>
+								</div>
+								<div largeCol>
+									<div quoteRow>
+										<img carton-img src="../assets/images/account.png" alt="">
+										<div quoteBox>
+											<p><b>Here are my suggestions to create an engaging video for your audience! </b>Based on the thing you gave me.</p>
+											<ion-row>
+											    <ion-col size="12" size-md="6">
+												    <div contentsec>
+													    <p><b>Be Sure to mention your primary keyword</b></p>
+													    <p><b>Cake baking for beginners</b></p>
+													    <p>A few time in your video</p>
+													</div>
+												</ion-col>
+											    <ion-col size="12" size-md="6">
+												    <div contentsec>
+													    <p>Based on your audience's average view duration, I think you should aim to make this approximately.</p>
+													    <p><b>1m 29s</b></p>
+													</div>
+												</ion-col>
+											</ion-row>
+											<div videosec>
+											    <p><b>Also, Here is an example of an intro to a recent video of yours that performed above average!</b></p>
+												<div videomn>												    
+										            <img src="assets/images/cartoon2.jpg" alt="">
+													<a href="javascript: void(0)" playbtn><ion-icon name="play"></ion-icon></a>
+												</div>
+										    </div>
+										</div>
+									</div>
+
+
+
+									<div botmbtns>
+										<ion-button btn-outline fill="outline">Save as draft</ion-button>
+										<ion-button routerLink="/createytvideo-scriptscreation" fill="solid">Next</ion-button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="add-vf">
+					<a href="javascript:void(0)">
+						<img src="assets/images/ad4.jpg">
+					</a>
+				</div>
+			</div>
+			</ion-col>
+		</ion-row>
+	</div>
+	<div botmbg></div>
+</ion-content>

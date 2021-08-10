@@ -1,0 +1,134 @@
+<ion-content>
+	<div flex-header>
+	  	<a href="javascript:void(0)"><img src="../assets/images/logo.png" alt=""></a>
+	  	<p (click)="presentModal()">Return to Content Calendar <ion-icon name="close-outline"></ion-icon></p>
+	</div>
+	<div mainContent>
+		<ion-row>
+			<ion-col size="12" size-md="12">
+				<div class="cont-fls">
+					<div class="add-vf">
+						<a href="javascript:void(0)">
+							<img src="assets/images/ad3.jpg">
+						</a>
+					</div>
+					<div class="fvs-ft">
+						<div centerArea>
+							<div insideCenter>
+								<h2 hdng>Create Cross Promotional Tweet(s)
+									<ul>
+										<li><span>1</span></li>
+										<li></li>
+										<li><span>2</span></li>
+									</ul>
+								</h2>
+								<div threeCols>
+									<div smallCol>
+									<!--- mobile menu link start --->
+										<ion-item menuheader lines="none"  class="ion-hide-md-up">
+											<ion-label>
+											  <span>2</span>Write
+											</ion-label>
+											<a slot="end" href="javascript:void(0)" (click)="hide()" menu-btn><ion-icon name="menu"></ion-icon></a>
+										</ion-item>										
+										<div menu-mob-link *ngIf="hideMe"  class="ion-hide-md-up">
+										    <ion-buttons menuclose-btn  (click)="hide()"><ion-icon name="close"></ion-icon></ion-buttons>
+											<ul>
+											<li routerLink="/create-promotional-tweets"><a href="javascript:void(0)"><span>1</span>Video and Time</a></li>
+											<li><a class="active" href="javascript:void(0)"><span>2</span>Write</a></li>
+											<li routerLink="/confirm"><a href="javascript:void(0)"><span>3</span>Confirm</a></li>
+											</ul>
+										</div>
+										<!--- mobile menu link end --->
+										<!--- mobile quotes start --->
+											<div mobilequotes  class="ion-hide-md-up">
+												<img imgcart src="assets/images/account.png" alt="">
+												<div quoteBox>
+													<div quoteBoxs>
+														<a href="javascript:void(0)" (click)="hide1()"><b>View Instructions</b> <ion-icon name="chevron-down"></ion-icon></a>
+														<p *ngIf="hideMe1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+													</div>													
+												</div>
+											</div>									 																		
+										<!--- mobile quotes end --->
+										<ul class="ion-hide-md-down">
+											<li routerLink="/create-promotional-tweets"><a href="javascript:void(0)"><span>1</span>Video and Time</a></li>
+											<li><a class="active" href="javascript:void(0)"><span>2</span>Write</a></li>
+											<li routerLink="/confirm"><a href="javascript:void(0)"><span>3</span>Confirm</a></li>
+										</ul>
+									</div>
+									<div largeCol>
+									 
+										<div write-tweet mb15>
+											<ion-label>Write Your Tweet <span>0 out of 240 words</span></ion-label>
+											<ion-item lines="none">
+											  <ion-textarea	value="https://yt.cm/12924"></ion-textarea>
+											</ion-item>										
+										</div>
+										<div write-tweet >
+											<ion-label>HashTags <span>Generate New</span></ion-label>
+											<ion-item lines="none">
+                                                <ion-select class="custom-options" multiple="true" value="Lorem1"> 
+													<ion-select-option value="Lorem1">Lorem Ipsum is simply dummy text</ion-select-option> 
+													<ion-select-option value="Lorem2">Lorem Ipsum is simply dummy text</ion-select-option> 
+													<ion-select-option value="Lorem3">Lorem Ipsum is simply dummy text</ion-select-option> 
+													<ion-select-option value="Lorem4">Lorem Ipsum is simply dummy text</ion-select-option> 
+												</ion-select>
+											</ion-item>										
+										</div>
+										<div dragFiles>
+											<ion-icon name="cloud-upload"></ion-icon>
+											<h3 class="ion-hide-md-down">Drag and drop to upload video(s) or photo(s)</h3>
+											<p class="ion-hide-md-down">or <span>Browse</span> to choose file</p>
+											<h3 class="ion-hide-md-up">Upload video(s) or photo(s)</h3>
+											<p class="ion-hide-md-up"><span>Browse</span></p>
+											<p>We'll store the file on our servers, then send it off to YouTube when it's time to publish.</p>
+										</div>
+										<div uplaodimage>
+											<ul class="cont-bstd">
+												<li>
+													<img src="assets/images/cartoon1.jpg">
+													<div edit-delete-hrt>
+														<a href="javascript:void(0)" class="edit-nr"><ion-icon name="pencil-sharp"></ion-icon></a>
+														<a href="javascript:void(0)" class="dlt-nr"><ion-icon name="trash-outline"></ion-icon></a>
+													</div>													
+												</li>
+												<li>
+													<img src="assets/images/img1.jpg">
+													<div edit-delete-hrt>
+														<a href="javascript:void(0)" class="edit-nr"><ion-icon name="pencil-sharp"></ion-icon></a>
+														<a href="javascript:void(0)" class="dlt-nr"><ion-icon name="trash-outline"></ion-icon></a>
+													</div>													
+												</li>
+											</ul>
+										</div>
+										
+
+										<div botmbtns>
+											<ion-button btn-outline fill="outline">Save as draft</ion-button>
+											<ion-button routerLink="/confirm" fill="solid">Next</ion-button>
+										</div>
+									</div>
+									<div smallCol class="ion-hide-md-down">
+										<div centerRit>
+											<img src="../assets/images/icon.png" alt="">
+											<div quotes>
+												<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="add-vf">
+						<a href="javascript:void(0)">
+							<img src="assets/images/ad4.jpg">
+						</a>
+					</div>
+				</div>
+			</ion-col>
+		</ion-row>
+	</div>
+	<div botmbg></div>
+</ion-content>

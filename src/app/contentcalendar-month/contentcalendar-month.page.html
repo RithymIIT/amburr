@@ -1,0 +1,267 @@
+<!--ion-header>
+  <ion-toolbar>
+    <ion-title>dashboard</ion-title>
+  </ion-toolbar>
+</ion-header-->
+
+<ion-content>
+	<div class="dataa-main-all">
+		<ion-row>
+			<ion-col size="12" size-md="3" size-lg="2">
+				<div class="left-part-main">
+					<img src="assets/images/logo.png" class="logo-dash small-none">
+					<div class="small-headr big-none">
+						<img src="assets/images/logo.png" class="logo-dash">
+						<a href="javascript:void(0);" class="menu-togl" (click)="hide()"> <ion-icon name="menu-outline"></ion-icon> </a>
+					</div>					
+					<ul class="menu-list-left big-none position-str" *ngIf="hideMe">
+						<li>
+							<a href="javascript:void(0);" routerLink="/dashboard">
+								<span class="icon-m"> <ion-icon name="home-outline"></ion-icon></span>
+								Home
+							</a>
+						</li>
+						<li class="active">
+							<a href="javascript:void(0);"  routerLink="/contentcalendar-month">
+								<span class="icon-m"> <ion-icon name="calendar-clear-outline"></ion-icon> </span>
+								Content Calendar
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);" routerLink="/brand-builder">
+								<span class="icon-m"> <ion-icon name="star-outline"></ion-icon> </span>
+								Brand Builder
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);" routerLink="/community-center">
+								<span class="icon-m"> <ion-icon name="chatbox-ellipses-outline"></ion-icon> </span>
+								Community Center
+							</a>
+						</li>
+						<li class="user-ledg" routerLink="/my-account">
+							<img src="assets/images/user.jpg" class="usr-im">
+							<h4> John Doe </h4>
+							<h6> My Account </h6>
+						</li>
+					</ul>					
+					<ul class="menu-list-left small-none">
+						<li>
+							<a href="javascript:void(0);" routerLink="/dashboard">
+								<span class="icon-m"> <ion-icon name="home-outline"></ion-icon></span>
+								Home
+							</a>
+						</li>
+						<li class="active">
+							<a href="javascript:void(0);"  routerLink="/contentcalendar-month">
+								<span class="icon-m"> <ion-icon name="calendar-clear-outline"></ion-icon> </span>
+								Content Calendar
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);" routerLink="/brand-builder">
+								<span class="icon-m"> <ion-icon name="star-outline"></ion-icon> </span>
+								Brand Builder
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);" routerLink="/community-center">
+								<span class="icon-m"> <ion-icon name="chatbox-ellipses-outline"></ion-icon> </span>
+								Community Center
+							</a>
+						</li>
+						<li class="user-ledg" routerLink="/my-account">
+							<img src="assets/images/user.jpg" class="usr-im">
+							<h4> John Doe </h4>
+							<h6> My Account </h6>
+						</li>
+					</ul>
+					<div class="add-box small-none">
+						<img src="assets/images/ad1.jpg">
+					</div>
+				</div>
+			</ion-col>
+			<ion-col size="12" size-md="9" size-lg="10">
+					<div class="top-ad">
+						<img src="assets/images/ad2.jpg">
+					</div> 
+					<ion-row>
+						<ion-col size="12" size-md="12">
+							<div class="mac-sf">
+								<div class="secnd-sv">
+								    <div mob-filter-sec class="ion-hide-md-up">
+										<div class="ridd">
+											<div class="filtr-fn">
+												<a href="javascript:void(0)" class="dsf" (click)="hide2()"><ion-icon name="funnel-outline"></ion-icon> </a>
+											</div>
+											<div class="filtr-sect">
+												<a href="javascript:void(0)" class="sec-f" (click)="hide3()">Create <ion-icon name="chevron-down-outline"></ion-icon> </a>
+											</div>
+										</div>										
+										<div class="con-month-sec">
+											<div class="con-sf">
+												<div class="frst-vd">
+													<a href="javascript:void(0)" class="box-dv" (click)="hide5()"> Month  <ion-icon name="chevron-down-outline"></ion-icon></a>
+													<ul class="con-mnts" *ngIf="hideMe5">
+														<li> <a href="javascript:void(0);" routerLink="/contentcalendar-month"> Month </a> </li>
+														<li> <a href="javascript:void(0);" routerLink="/calendar-weekly"> Week </a> </li>
+														<li> <a href="javascript:void(0);" routerLink="/contentcalendar-daily"> Day </a> </li>
+													</ul>
+												</div>
+												<a href="javascript:void(0)" class="icon-lfts"> <ion-icon name="chevron-back-outline"></ion-icon> </a>
+												<a href="javascript:void(0)" class="icon-lfts"> <ion-icon name="chevron-forward-outline"></ion-icon> </a>
+											</div>
+                                            <span class="str"> November 2020  </span>
+										</div>
+									</div>
+									<div class="con-sf ion-hide-md-down">
+										<div class="frst-vd">
+											<a href="javascript:void(0)" class="box-dv" (click)="hide()"> Month  <ion-icon name="chevron-down-outline"></ion-icon></a>
+											<ul class="con-mnts" *ngIf="hideMe">
+												<li> <a href="javascript:void(0);" routerLink="/contentcalendar-month"> Month </a> </li>
+												<li> <a href="javascript:void(0);" routerLink="/calendar-weekly"> Week </a> </li>
+												<li> <a href="javascript:void(0);" routerLink="/contentcalendar-daily"> Day </a> </li>
+											</ul>
+										</div>
+										<a href="javascript:void(0)" class="icon-lfts"> <ion-icon name="chevron-back-outline"></ion-icon> </a>
+										<a href="javascript:void(0)" class="icon-lfts"> <ion-icon name="chevron-forward-outline"></ion-icon> </a>
+									</div>
+									<span class="str ion-hide-md-down"> November 2020  </span>
+									<div class="ridd">
+										<div class="filtr-fn">										
+											<a href="javascript:void(0)" class="dsf ion-hide-md-down" (click)="hide2()"><ion-icon name="funnel-outline"></ion-icon> </a>
+											<div class="pos-filt" *ngIf="hideMe2">
+												<div class="right-dyy ion-hide-md-up">
+													<a href="javascript:void(0);" class="dlt-ic" (click)="hide2()"> <ion-icon name="close-outline"></ion-icon> </a>
+												</div>												
+												<h3 class="main-tt"> Filter By: </h3>
+												<ion-list class="checkboxs">
+													<ion-list-header>Social Media</ion-list-header>
+													  <ion-item lines="none">
+														<ion-label><span class="isf"> <ion-icon name="logo-youtube"></ion-icon> </span> YouTube</ion-label>
+														<ion-checkbox color="primary"  slot="start"></ion-checkbox>
+													  </ion-item>
+													  <ion-item lines="none">
+														<ion-checkbox color="primary"  slot="start"></ion-checkbox>
+														<ion-label><span class="twit"> <ion-icon name="logo-twitter"></ion-icon> </span>  Twitter</ion-label>
+													  </ion-item>
+												</ion-list>
+												<ion-list class="checkboxs">
+													<ion-list-header>Account</ion-list-header>
+													  <ion-item lines="none">
+														<ion-label>
+															<span class="user-you"> 
+																<img src="assets/images/user3.png"> <small><ion-icon name="logo-youtube"></ion-icon>  </small>
+															</span> 
+															Pencilmation
+														</ion-label>
+														<ion-checkbox color="primary"  slot="start"></ion-checkbox>
+													  </ion-item>
+													  <ion-item lines="none">
+														<ion-checkbox color="primary"  slot="start"></ion-checkbox>
+														<ion-label>
+															<span class="user-you"> 
+																<img src="assets/images/user3.png"> <small><ion-icon name="logo-youtube"></ion-icon>  </small>
+															</span>  
+															Cocomelon
+														</ion-label>
+													  </ion-item>
+													  <ion-item lines="none">
+														<ion-checkbox color="primary"  slot="start"></ion-checkbox>
+														<ion-label>
+															<span class="user-you twitr"> 
+																<img src="assets/images/user3.png"> <small><ion-icon name="logo-twitter"></ion-icon>  </small>
+															</span>  
+															@pencilmation
+														</ion-label>
+													  </ion-item>
+												</ion-list>
+												<ion-list class="checkboxs">
+													<ion-list-header>Brand</ion-list-header>
+													  <ion-item lines="none">
+														<ion-label>Brand 1</ion-label>
+														<ion-checkbox color="primary"  slot="start"></ion-checkbox>
+													  </ion-item>
+													  <ion-item lines="none">
+														<ion-checkbox color="primary"  slot="start"></ion-checkbox>
+														<ion-label>Brand 2</ion-label>
+													  </ion-item>
+												</ion-list>
+												<ion-list class="checkboxs">
+													<ion-list-header>Time</ion-list-header>
+													  <ion-item lines="none">
+														<ion-label> Scheduled</ion-label>
+														<ion-checkbox color="primary"  slot="start"></ion-checkbox>
+													  </ion-item>
+													  <ion-item lines="none">
+														<ion-checkbox color="primary"  slot="start"></ion-checkbox>
+														<ion-label> Past</ion-label>
+													  </ion-item>
+												</ion-list>
+											</div>
+										</div>
+										<div class="filtr-sect">
+											<a href="javascript:void(0)" class="sec-f ion-hide-md-down" (click)="hide3()">Create <ion-icon name="chevron-down-outline"></ion-icon> </a>
+											<div class="data-csnd" *ngIf="hideMe3">
+												<div class="right-dyy ion-hide-md-up">
+													<a href="javascript:void(0);" class="dlt-ic" (click)="hide3()"> <ion-icon name="close-outline"></ion-icon> </a>
+												</div>											
+												<h3 class="main-tt"> Choose an account to create a video or tweet </h3>
+												<ul class="list-maihs">
+													<li routerLink="/create-yt-video"> 
+														<span class="user-you"> 
+															<img src="assets/images/user3.png"> <small><ion-icon name="logo-youtube"></ion-icon>  </small>
+														</span> 
+														Pencilmation
+													</li>
+													<li> 
+														<span class="user-you"> 
+																<img src="assets/images/user3.png"> <small><ion-icon name="logo-youtube"></ion-icon>  </small>
+														</span>  
+														Cocomelon
+													</li>
+													<li routerLink="/create-atweet"> 
+														<span class="user-you twitr"> 
+																<img src="assets/images/user3.png"> <small><ion-icon name="logo-twitter"></ion-icon>  </small>
+														</span>  
+														@pencilmation
+													</li>
+												</ul>
+												<div class="bordt-s">
+													<a href="javascript:void(0);" routerLink="/cross-promotion"> <ion-icon name="repeat-outline"></ion-icon> Create Cross Promotion Post <span class="infos"> <ion-icon name="information-circle"></ion-icon> </span></a>
+												</div>	
+												<div class="bordt-s">
+													<a href="javascript:void(0);" routerLink="/drafts"> <ion-icon name="folder-outline"></ion-icon> Drafts </a>
+												</div>
+												<a href="javascript:void(0);" class="cntr-sst" routerLink="/brandbuilder-settings"><ion-icon name="add-circle-outline"></ion-icon>  Add New Profile </a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="calend">
+									<img class="ion-hide-md-down" src="assets/images/calendar3.jpg" (click)="hide4()">
+									<img class="ion-hide-md-up" src="assets/images/mob-calender.jpg" (click)="hide4()">
+									<div class="cenr-bdx" *ngIf="hideMe4">
+										<div class="right-dyy ion-hide-md-up">
+											<a href="javascript:void(0);" class="dlt-ic" (click)="hide4()"> <ion-icon name="close-outline"></ion-icon> </a>
+										</div>									
+										<span class="top-badg"> 03:00 PM | Fri, Nov 5, 2020 </span>
+										<p> Upload a Video </p>
+										<h4> How to Bake a cake - Part 4 </h4>
+										<div class="mif-strs">
+											<span class="img-sr">
+												<img src="assets/images/user3.png">
+												<small><ion-icon name="logo-youtube"></ion-icon> </small>
+											</span>
+											<h5> Pencilmation <small> Brand 1 </small> </h5>
+										</div>
+										<a href="javascript:void(0)" class="viw-dtls"> View Details </a>
+									</div>
+								</div>
+							</div>
+						</ion-col>
+					</ion-row>
+			</ion-col>
+		</ion-row>
+	</div>
+</ion-content>

@@ -1,0 +1,142 @@
+<ion-content>
+	<div flex-header>
+	  	<a href="javascript:void(0)"><img src="../assets/images/logo.png" alt=""></a>
+	  	<p>Return to Dashboard <ion-icon name="close-outline"></ion-icon></p>
+	</div>
+	<div mainContent>
+		<ion-row>
+			<ion-col size="12" size-md="12">
+				<!--- mobile ads start --->
+				<div mob-ads-sec class="ion-hide-md-up">
+					<img src="assets/images/mob-ads.jpg" alt="" />
+				</div>
+				<!--- mobile ads end --->				
+				<div class="cont-fls">
+					<div class="add-vf">
+						<a href="javascript:void(0)">
+							<img src="assets/images/ad3.jpg">
+						</a>
+					</div>
+					<div class="fvs-ft">
+						<div centerArea>
+							<div insideCenter>
+								<div processBar>
+									<span></span>
+									<span></span>
+									<span></span>
+									<span></span>
+									<span></span>
+									<span></span>
+									<div processFill></div>
+								</div>
+								<!--- mobile quotes start --->
+									<div mobilequotes  class="ion-hide-md-up">
+										<img imgcart src="assets/images/account.png" alt="">
+										<div quoteBox>
+											<div quoteBoxs>
+												<a href="javascript:void(0)" (click)="hide()"><b>View Instructions</b> <ion-icon name="chevron-down"></ion-icon></a>
+												<p *ngIf="hideMe">Lorem ipsum dolor sit amet, te ius viderer fabellas, et nam tantas mollis phaedrum. An doctus dolorum nonumes velat nec hom ero commodo consetetur. Nonumes inciderint qui an, adhuc iudicabit an duo</p>
+											</div>													
+										</div>
+									</div>									 																		
+								<!--- mobile quotes end --->								
+								<div quoteRow class="ion-hide-md-down">
+									<img src="../assets/images/account.png" alt="">
+									<div quoteBox>
+										<p><b>Optimize </b> on your recent <b>your Pencilmation YouTube </b>channel page</p>
+										<p>Lorem ipsum dolor sit amet, te ius viderer fabellas, et nam tantas mollis phaedrum. An doctus dolorum nonumes velat nec hom ero commodo consetetur. Nonumes inciderint qui an, adhuc iudicabit an duo</p>
+									</div>
+								</div>
+						<ion-segment class="ion-hide-md-down" mode="md" [(ngModel)]="type">
+
+					      <ion-segment-button value="Channel">
+					        <ion-label>Channel Page</ion-label>
+					      </ion-segment-button>
+
+					      <ion-segment-button value="About">
+					        <ion-label>About</ion-label>
+					      </ion-segment-button>
+
+					      <ion-segment-button value="Playlists">
+					        <ion-label>Playlists</ion-label>
+					      </ion-segment-button>
+
+					      <ion-segment-button value="Upload">
+					        <ion-label>Upload Defaults</ion-label>
+					      </ion-segment-button>
+
+					    </ion-segment>
+                        <div pad [ngSwitch]="type">
+							<ion-list *ngSwitchCase="'Channel'">
+							<ion-row>
+							<ion-col size="12">
+								<div class="top-main-r">
+									<span class="img-isf"> <img src="assets/images/user4.png"> </span>
+									<a href="javascript:void(0)" class="edit-pencl"> <ion-icon name="pencil-sharp"></ion-icon> </a>
+									<div class="cont-sky ion-hide-md-down">
+										<a href="javascript:void(0)" class="plu-sr"> <ion-icon name="add-circle-outline"></ion-icon> Create Cover </a>
+									</div>
+								</div>
+								<div class="bottom-co-ss">
+									<div class="img-box-f">
+										<img src="assets/images/user3.png">
+										<a href="javascript:void(0)" class="chang-ei"> <ion-icon name="pencil-sharp"></ion-icon> </a>
+									</div>
+									<div class="sect-ft">
+										<label class="ld"> Channel Name </label>
+										<ion-input value="Pencilmation"></ion-input>
+									</div>
+									<span class="tctd"> 300.2K Followers </span>
+									<a href="javascript:void(0)" class="rigts-sr"> <ion-icon name="add-circle-outline"></ion-icon> Create Logo </a>
+								</div>
+								<div class="inpt-gif">
+									<ion-row>
+										<ion-col size="12">
+											<div class="label-coy">
+												<label> Channel Trailer</label>
+											</div>
+										</ion-col>
+										<ion-col size="12" size-md="7">
+											<div class="img-bx-coy">
+												<img src="assets/images/img1.jpg">
+											</div>
+										</ion-col>
+										<ion-col size="12" size-md="5">
+											<div class="cont-sff">
+												<h3> Lorem ipsum dolor sit amet, ius an illud vivendum </h3>
+												<p> 200K Views </p>
+												<a href="javascript:void(0)" class="edt-ot"> <ion-icon name="pencil-sharp"></ion-icon> </a>
+											</div>
+										</ion-col>
+									</ion-row>
+								</div>
+							</ion-col>							
+							</ion-row>							
+							</ion-list>	
+							<ion-list *ngSwitchCase="'About'">								
+							</ion-list>	
+							<ion-list *ngSwitchCase="'Playlists'">								
+							</ion-list>	
+							<ion-list *ngSwitchCase="'Upload'">								
+							</ion-list>								
+						</div>
+							</div>
+						</div>
+					</div>
+					<div class="add-vf">
+						<a href="javascript:void(0)">
+							<img src="assets/images/ad4.jpg">
+						</a>
+					</div>
+				</div>
+			</ion-col>
+		</ion-row>
+	</div>
+	<div botmbg></div>
+	<div btnsfooter>
+		<div botmbtns>
+			<ion-button routerLink="/reply-comments" btn-outline fill="outline">Back</ion-button>
+			<ion-button routerLink="/createtweets" fill="solid">Next</ion-button>
+		</div>
+	</div>
+</ion-content>

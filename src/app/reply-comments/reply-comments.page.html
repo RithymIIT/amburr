@@ -1,0 +1,253 @@
+<ion-content>
+	<div flex-header>
+	  	<a href="javascript:void(0)"><img src="../assets/images/logo.png" alt=""></a>
+	  	<p>Return to Content Calendar <ion-icon name="close-outline"></ion-icon></p>
+	</div>
+	<div mainContent>
+		<ion-row>
+			<ion-col size="12" size-md="12">
+				<!--- mobile ads start --->
+				<div mob-ads-sec class="ion-hide-md-up">
+					<img src="assets/images/mob-ads.jpg" alt="" />
+				</div>
+				<!--- mobile ads end --->			
+				<div class="cont-fls">
+					<div class="add-vf">
+						<a href="javascript:void(0)">
+							<img src="assets/images/ad3.jpg">
+						</a>
+					</div>
+					<div class="fvs-ft">
+						<div centerArea>
+							<div insideCenter>
+								<div processBar>
+									<span></span>
+									<span></span>
+									<span></span>
+									<span></span>
+									<span></span>
+									<span></span>
+									<div processFill></div>
+								</div>
+								<!--- mobile quotes start --->
+									<div mobilequotes  class="ion-hide-md-up">
+										<img imgcart src="assets/images/account.png" alt="">
+										<div quoteBox>
+											<div quoteBoxs>
+												<a href="javascript:void(0)" (click)="hide1()"><b>View Instructions</b> <ion-icon name="chevron-down"></ion-icon></a>
+												<p *ngIf="hideMe1">Lorem ipsum dolor sit amet, an eam dico rum. Choro volutpat eam et. Ex sea vidit solum definiebas. Usu ei tale graeci interesset,</p>
+											</div>													
+										</div>
+									</div>									 																		
+								<!--- mobile quotes end --->								
+								<div quoteRow class="ion-hide-md-down">
+									<img src="../assets/images/account.png" alt="">
+									<div quoteBox>
+										<p>Respond to <b>10 comments</b> on your recent <b>Pencilmation YouTube videos</b>.</p>
+										<p>Lorem ipsum dolor sit amet, te ius viderer fabellas, et nam tantas mollis phaedrum. An doctus dolorum nonumes velat nec hom ero commodo consetetur. Nonumes inciderint qui an, adhuc iudicabit an duo</p>
+									</div>
+								</div>
+								<div commnetArea>
+									<ion-row space="2">
+										<ion-col size="12" size-md="12" size-lg="6">
+											<div cmntCol>
+												<div lftPost>
+													<span><img src="../assets/images/cartoon1.jpg" alt=""><a href="javacript:void(0)"><ion-icon name="logo-youtube"></ion-icon></a></span>
+													<p>How to bake a cake and bla-Part...</p>
+												</div>
+												<div ritreply>
+													<div labels>
+														<label>1h ago</label>
+														<label>32 followers</label>
+														<label>48 Engmt Score</label>
+													</div>
+													<div userComnt>
+														<img src="../assets/images/user.jpg" alt="">
+														<p>John Deo - Lorem ipsum dolor sit amet est nostro diceret lorem ipsum</p>
+													</div>
+													<div allReply>
+														<div relpyCount (click)="hide('1')">
+															<p>3 replies</p>
+															<ion-icon name="chevron-down-outline"></ion-icon>
+														</div>
+														<div comts *ngIf="hideMe == '1'">
+															<div userComnt>
+																<img src="../assets/images/user3.jpg" alt="">
+																<p>John Deo - Lorem ipsum dolor sit amet est nostro diceret lorem ipsum</p>
+															</div>
+															<div userComnt>
+																<img src="../assets/images/user3.jpg" alt="">
+																<p>John Deo - Lorem ipsum dolor sit amet est nostro diceret lorem ipsum</p>
+															</div>
+															<a href="javascript:void(0)" loadmore>Load More <ion-icon name="chevron-down-outline"></ion-icon></a>
+														</div>
+													</div>
+													<div sentMsg>
+														<div lftInput>
+															<a href="javascript:void(0)"><ion-icon name="happy-outline"></ion-icon></a>
+															<ion-input placeholder="Reply as Pencilmation"></ion-input>
+														</div>
+														<ion-button btn-submit fill="solid">Submit</ion-button>
+													</div>
+													<div suggested>
+														<p>Suggested:</p><div><p>Thanks!</p><p>You are welcome</p><p>Noted</p></div>
+													</div>
+												</div>
+											</div>
+											<div cmntCol>
+												<div lftPost>
+													<span><img src="../assets/images/img1.jpg" alt=""><a href="javacript:void(0)"><ion-icon name="logo-youtube"></ion-icon></a></span>
+													<p>How to bake a cake and bla-Part...</p>
+												</div>
+												<div ritreply>
+													<div labels>
+														<label>1h ago</label>
+														<label>32 followers</label>
+														<label>48 Engmt Score</label>
+													</div>
+													<div userComnt>
+														<img src="../assets/images/user.jpg" alt="">
+														<p>John Deo - Lorem ipsum dolor sit amet est nostro diceret lorem ipsum</p>
+													</div>
+													<div allReply>
+														<div relpyCount (click)="hide('2')">
+															<p>3 replies</p>
+															<ion-icon name="chevron-down-outline"></ion-icon>
+														</div>
+														<div comts *ngIf="hideMe == '2'">
+															<div userComnt>
+																<img src="../assets/images/user3.jpg" alt="">
+																<p>John Deo - Lorem ipsum dolor sit amet est nostro diceret lorem ipsum</p>
+															</div>
+															<div userComnt>
+																<img src="../assets/images/user3.jpg" alt="">
+																<p>John Deo - Lorem ipsum dolor sit amet est nostro diceret lorem ipsum</p>
+															</div>
+															<a href="javascript:void(0)" loadmore>Load More <ion-icon name="chevron-down-outline"></ion-icon></a>
+														</div>
+													</div>
+													<div sentMsg>
+														<div lftInput>
+															<a href="javascript:void(0)"><ion-icon name="happy-outline"></ion-icon></a>
+															<ion-input placeholder="Reply as Pencilmation"></ion-input>
+														</div>
+														<ion-button btn-submit fill="solid">Submit</ion-button>
+													</div>
+													<div suggested>
+														<p>Suggested:</p><div><p>Thanks!</p><p>You are welcome</p><p>Noted</p></div>
+													</div>
+												</div>
+											</div>
+										</ion-col>
+										<ion-col size="12" size-md="12" size-lg="6">
+											<div cmntCol>
+												<div lftPost>
+													<span><img src="../assets/images/img1.jpg" alt=""><a href="javacript:void(0)"><ion-icon name="logo-youtube"></ion-icon></a></span>
+													<p>How to bake a cake and bla-Part...</p>
+												</div>
+												<div ritreply>
+													<div labels>
+														<label>1h ago</label>
+														<label>32 followers</label>
+														<label>48 Engmt Score</label>
+													</div>
+													<div userComnt>
+														<img src="../assets/images/user.jpg" alt="">
+														<p>John Deo - Lorem ipsum dolor sit amet est nostro diceret lorem ipsum</p>
+													</div>
+													<div allReply>
+														<div relpyCount (click)="hide('3')">
+															<p>3 replies</p>
+															<ion-icon name="chevron-down-outline"></ion-icon>
+														</div>
+														<div comts *ngIf="hideMe == '3'">
+															<div userComnt >
+																<img src="../assets/images/user3.jpg" alt="">
+																<p>John Deo - Lorem ipsum dolor sit amet est nostro diceret lorem ipsum</p>
+															</div>
+															<div userComnt >
+																<img src="../assets/images/user3.jpg" alt="">
+																<p>John Deo - Lorem ipsum dolor sit amet est nostro diceret lorem ipsum</p>
+															</div>
+															<a href="javascript:void(0)"  loadmore>Load More <ion-icon name="chevron-down-outline"></ion-icon></a>
+														</div>
+													</div>
+													<div sentMsg>
+														<div lftInput>
+															<a href="javascript:void(0)"><ion-icon name="happy-outline"></ion-icon></a>
+															<ion-input placeholder="Reply as Pencilmation"></ion-input>
+														</div>
+														<ion-button btn-submit fill="solid">Submit</ion-button>
+													</div>
+													<div suggested>
+														<p>Suggested:</p><div><p>Thanks!</p><p>You are welcome</p><p>Noted</p></div>
+													</div>
+												</div>
+											</div>
+											<div cmntCol>
+												<div lftPost>
+													<span><img src="../assets/images/cartoon1.jpg" alt=""><a href="javacript:void(0)"><ion-icon name="logo-youtube"></ion-icon></a></span>
+													<p>How to bake a cake and bla-Part...</p>
+												</div>
+												<div ritreply>
+													<div labels>
+														<label>1h ago</label>
+														<label>32 followers</label>
+														<label>48 Engmt Score</label>
+													</div>
+													<div userComnt>
+														<img src="../assets/images/user.jpg" alt="">
+														<p>John Deo - Lorem ipsum dolor sit amet est nostro diceret lorem ipsum</p>
+													</div>
+													<div allReply>
+														<div relpyCount  (click)="hide('4')">
+															<p>3 replies</p>
+															<ion-icon name="chevron-down-outline"></ion-icon>
+														</div>
+														<div comts *ngIf="hideMe == '4'">
+															<div userComnt>
+																<img src="../assets/images/user3.jpg" alt="">
+																<p>John Deo - Lorem ipsum dolor sit amet est nostro diceret lorem ipsum</p>
+															</div>
+															<div userComnt>
+																<img src="../assets/images/user3.jpg" alt="">
+																<p>John Deo - Lorem ipsum dolor sit amet est nostro diceret lorem ipsum</p>
+															</div>
+															<a href="javascript:void(0)" loadmore>Load More <ion-icon name="chevron-down-outline"></ion-icon></a>
+														</div>
+													</div>
+													<div sentMsg>
+														<div lftInput>
+															<a href="javascript:void(0)"><ion-icon name="happy-outline"></ion-icon></a>
+															<ion-input placeholder="Reply as Pencilmation"></ion-input>
+														</div>
+														<ion-button btn-submit fill="solid">Submit</ion-button>
+													</div>
+													<div suggested>
+														<p>Suggested:</p><div><p>Thanks!</p><p>You are welcome</p><p>Noted</p></div>
+													</div>
+												</div>
+											</div>
+										</ion-col>
+									</ion-row>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="add-vf">
+						<a href="javascript:void(0)">
+							<img src="assets/images/ad4.jpg">
+						</a>
+					</div>
+				</div>
+			</ion-col>
+		</ion-row>
+	</div>
+	<div botmbg></div>
+	<div btnsfooter>
+		<div botmbtns>
+			<ion-button btn-outline fill="outline">Back</ion-button>
+			<ion-button routerLink="/optimizeytpage" fill="solid">Next</ion-button>
+		</div>
+	</div>
+</ion-content>

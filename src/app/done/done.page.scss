@@ -1,0 +1,390 @@
+
+[flex-header]{
+	display: flex;
+	align-items: center;
+	padding:15px 40px;
+	clear: both;
+	a{
+		img{
+			object-fit: cover;
+			width: 140px;
+		}
+	}
+	p{
+		margin:0 0 0 auto;
+		color: #222;
+		font-size: 14px;
+		display: flex;
+		align-items: center;
+		ion-icon{
+			font-size:40px;
+			margin-left: 0px;
+		}
+	}
+}
+
+ion-content{
+	--background:#f9f9f9;
+	[botmbg]{
+		background: url(../../assets/images/banner.png) center bottom no-repeat;
+		background-size: 100%;
+		height: 200px;
+		position: fixed;
+		left: 0;
+		right: 17px;
+		z-index: 0;
+		bottom: 0;
+		transform: rotate(180deg);
+	}
+	[mainContent]{
+		position: relative;
+		z-index: 1;
+		padding:10px 20px 20px;
+		ion-row{
+			padding:0;
+			margin:0;
+			ion-col{
+				margin:0;
+				padding:0;
+				[leftads]{
+					background: #fff;
+					text-align: center;
+					[fstads]{
+						width: 100%;
+						height: 310px;
+						object-fit: cover;
+					}
+					h3{
+						font-weight: 400;
+						font-size: 24px;
+						color: #111;
+						padding:0 20px;
+						margin:15px 0 0;
+					}
+					p{
+						font-weight: 400;
+						font-size: 15px;
+						color: #111;
+						line-height: 150%;
+						padding:0 20px;
+						margin:10px 0 0;
+					}
+					[paypal]{
+						max-width: 100px;
+						margin: 20px 0;
+					}
+				}
+			}
+		}
+	}
+	[centerArea]{
+		padding:0 15px;
+		[insideCenter]{
+			background:#fff; 
+			border-radius: 10px;
+			[hdng]{
+				display: flex;
+				align-items: center;
+				padding:12px 20px;
+				margin:0;
+				border-bottom: 2px solid #f6f6f6;
+				font-weight: 700;
+				font-size: 21px;
+				ul{
+					margin: 0 0 0 auto;
+					padding:0;
+					list-style: none;
+					display: flex;
+					align-items: center;
+					li{
+						display: flex;
+						align-items: center;
+						padding-right: 20px;
+						position: relative;
+						z-index: 1;
+						span{
+							width: 30px;
+							height:30px;
+							border-radius: 50px;
+							background:#f5f5f5;
+							display: flex; 
+							align-items: center;
+							justify-content: center;
+							color: #111;
+							font-size: 13px;
+							font-weight: 400;
+						}
+						&.doneactive
+						{
+							span{
+								background: #c2facf; 
+							}
+						}
+						&.active
+						{
+							span{
+								background: linear-gradient(153deg, #c2e8fa 0%, #A4C7FB 100%); 
+							}
+						}
+						&:last-child
+						{
+						    padding-right: 0px;
+							&:after
+							{
+								display: none;
+							}							
+						}
+						&:after
+						{
+							position: absolute;
+							content: "";
+							width: 22px;
+							height: 1px;
+							background: #e8e8e8;
+							right: 0px;
+							z-index: -1;
+						}
+					}
+				}
+			}
+			[threeCols]{
+				display: flex;
+				[largeCol]{
+					width: 100%;
+					padding:15px;
+					min-height:80vh;
+					h4{
+						font-size: 16px;
+						font-weight: 600;
+						display: block;
+						margin:0 0 5px;
+						& + p{
+							color: #999;
+							font-size: 14px;
+							margin:0;
+							display: flex;
+							align-items: center;
+							ion-icon{
+								margin-right: 5px;
+								color: orange;
+							}
+						}
+					}
+					h5{
+						& + p{
+							color: #999;
+							font-size: 14px;
+							margin:0 0 15px;
+							display: flex;
+							align-items: center;
+							ion-icon{
+								margin-right: 5px;
+								color: orange;
+							}
+						}
+					}
+				}
+			}
+			[quoteRow]
+			{
+				display: flex;
+				align-items: flex-start;
+				margin:20px 0 0;
+				[imgcart]{
+					width: 50px;
+					object-fit: contain;
+				}
+				[quoteBox]
+				{
+					margin-left: auto;
+					max-width: 90%;
+					width: 90%;
+					[quoteBoxs]
+					{
+						padding:20px;
+						position: relative;
+						background: #def1ff;
+						border-radius: 20px;
+						p{
+							margin:0;
+							font-size: 14px;
+							color: #333;
+							&:first-child{
+								font-size:16px;
+								margin-bottom: 10px;
+								b{
+									font-weight: 600;
+								}
+							}
+						}
+						&:before{
+							width: 0; 
+							height: 0; 
+							border-top: 10px solid transparent;
+							border-bottom: 10px solid transparent;   
+							border-right:10px solid #def1ff;
+							content: "";
+							position: absolute;
+							left:-10px;
+							top: 15px;
+						}
+					}					
+				}
+			}			
+		}
+	}
+	[botmbtns]{
+		margin:25px 0 0;
+		ion-button{
+			text-transform: none;
+			--box-shadow: none;
+			--border-radius: 8px;
+		}
+	}
+}
+
+.cont-fls {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		.add-vf {
+		a {
+				display: block;
+			img {
+				width: 100%;
+				min-width: 160px;
+				object-fit: cover;
+			}
+		}
+	}
+}
+.fvs-ft {
+    width: 100%;
+    max-width: calc(100% - 320px);
+}
+
+@media only screen and (max-width:992px) and (min-width:768px) {  
+	ion-content 
+	{
+	    [flex-header]
+		{
+            padding: 15px 15px;		
+		}
+		[mainContent]
+		{
+		    padding: 10px 5px 20px;
+			.cont-fls
+			{
+                .add-vf				
+				{
+				    display: none;
+				}
+				.fvs-ft
+				{
+					width: 100%;
+					max-width: 100%;
+				}
+				[centerArea]
+				{
+					padding: 0 10px;
+				}				
+			}			
+		}	
+	}
+}
+@media (max-width: 767px) {
+	ion-content
+	{
+		[flex-header]
+		{
+			padding: 15px 8px;
+			p 
+			{
+				font-size: 12px;
+				ion-icon 
+				{
+					font-size: 32px;
+				}				
+			}			
+		}	
+		[maincontent]
+		{
+		    padding: 10px 10px 20px;
+			[mob-ads-sec] 
+			{
+				padding: 0px 10px 15px;
+				text-align: center;
+				img 
+				{
+					max-width: 100%;
+				}				
+			}			
+			.cont-fls
+			{
+				.add-vf
+				{
+					display:none;
+				}
+				.fvs-ft
+				{
+					width: 100%;
+					max-width: 100%;			
+					[centerarea]
+					{
+						[insidecenter]
+						{
+						    [hdng]
+							{
+							    display:none;
+							}
+							[threecols]
+							{
+								display: block;    
+								[largecol]
+								{
+									width: 100%;
+									border-left: none;
+								    display: inline-block;	
+									[quoteRow] 
+									{
+										display: block;
+										margin: 0px;
+										[quoteBox]
+										{
+											max-width: 100%;
+											width: 100%;
+                                            margin: 10px 0px 0px;											
+											[quoteBoxs] 
+											{
+												max-width: 100%;
+												width: 100%;
+												padding: 15px;
+												&:before 
+												{
+													border-top: none;
+													border-bottom: 10px solid #def1ff;
+													border-right: 10px solid transparent;
+													border-left: 10px solid transparent;
+													left: 15px;
+													top: -10px;
+												}
+												p
+												{
+													font-size: 14px;
+												}											
+											}										
+										}										
+									}
+									[botmbtns]
+									{
+										float: none;
+									}									
+								}
+							}
+						}
+					}
+				}
+			}	
+		}	
+	}
+}

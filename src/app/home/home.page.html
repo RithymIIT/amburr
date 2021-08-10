@@ -1,0 +1,214 @@
+<!--ion-header>
+  <ion-toolbar>
+    <ion-title>home</ion-title>
+  </ion-toolbar>
+</ion-header-->
+
+<ion-content>
+	<div class="top-header">
+		<div class="container">
+			<div class="cont-headr">
+				<a href="javascript:void(0);" class="logo-hedr"> <img src="assets/images/logo.png"> </a>
+				<a href="javascript:void(0);" class="menu-togl big-none" (click)="hide()"> <ion-icon name="menu-outline"></ion-icon> </a>
+				<ul class="rist-nav small-none">
+					<li> <a href="javascript:void(0);" class="login-btnd" routerLink="/login"> Login  </a> </li>
+					<li> <a href="javascript:void(0);" class="sig-btnd" routerLink="/signup"> Create Account  </a> </li>
+				</ul>
+				<ul class="rist-nav moble-vis big-none" *ngIf="hideMe">
+					<li> <a href="javascript:void(0);" class="login-btnd"> Login  </a> </li>
+					<li> <a href="javascript:void(0);" class="sig-btnd" routerLink="/signup"> Create Account  </a> </li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<section class="banner-section-main">
+		<div class="cont-box-slid">
+			<ion-row>
+				<ion-col  size="12" size-md="6">
+					<div class="cont-slid">
+						<h3><b> Hi! I’m amburr </b> Your AI Social Media Assistant </h3>
+						<p> You shouldn’t need to stress about confusing analytics to grow on social media. I work with you to make reaching your goals easy. </p>
+						<div class="btn-box-le">
+							<a href="javascript:void(0);" class="sig-btnd" routerLink="/signup"> Create Acount  </a>
+							<p> <b> It's Free! </b> For you and for everyone else. </p>
+						</div>
+					</div>
+				</ion-col>
+				<ion-col  size="12" size-md="6">
+					<div class="banner-lg">
+						<img src="assets/images/banner-logo.png">
+					</div>
+				</ion-col>
+			</ion-row>
+		</div>
+	</section>
+	<section class="about-section">
+		<div class="container">
+			<ion-row class="padding-sr">
+				<ion-col  size="12" size-md="6" class="small-oder-2">
+					<div class="img-boxf">
+						<img src="assets/images/about1.png">
+					</div>
+				</ion-col>
+				<ion-col  size="12" size-md="6" class="small-oder-1">
+					<div class="cont-about">
+						<img src="assets/images/icon.png">
+						<h3> I’ll help you reach your goals efficiently. </h3>
+						<p> Tell me what they are or go with one of my suggestions and start tracking your progress. </p>
+					</div>
+				</ion-col>
+			</ion-row>
+			<ion-row class="padding-sr">
+				<ion-col  size="12" size-md="6">
+					<div class="cont-about">
+						<img src="assets/images/icon.png">
+						<h3> I'll give you personalized suggestions everyday. </h3>
+						<p> To reach your goals as quickly as possible, I analyze your data for you to create a list of tasks. </p>
+						<p> Completing all of them only takes a few minutes using my built-in tools! Each day the list will update with new tasks for you to complete. </p>
+					</div>
+				</ion-col>
+				<ion-col  size="12" size-md="6">
+					<div class="cont-step">
+						<ul class="desc-bx">
+							<li class="main-ttl"> Today's Recommended Tasks </li>
+							<li> Respond to 10 comments on your recent <b> YouTube Channel </b> videos. </li>
+							<li> Optimize your  <b> YouTube Channel </b> home page. </li>
+							<li> Schedule your next 4 Tweets on your <b>  Twitter </b> account.  </li>
+						</ul>
+					</div>
+				</ion-col>
+			</ion-row>
+		</div>
+	</section>
+	<section class="about-section help-sect">
+		<div class="container">
+			<ion-row class="padding-sr">
+				<ion-col  size="12" size-md="6" class="small-oder-2">
+					<div class="img-boxf">
+						<img src="assets/images/help-img.png">
+					</div>
+				</ion-col>
+				<ion-col  size="12" size-md="6" class="small-oder-1">
+					<div class="cont-about">
+						<img src="assets/images/icon.png">
+						<h3> I'll help you simplify your life </h3>
+						<p> See and manage all the posts across your accounts in one place. </p>
+						<p> <b> Schedule linked posts to go up together </b> (New YouTube video at 3pm on Thursday and a recut trailer gets posted natively to Twitter at the same time). </p>
+						<p> Right now my supported platforms are<b> YouTube </b> and <b> Twitter!  </b> </p>
+						<div class="btn-box-le">
+							<a href="javascript:void(0);" class="sig-btnd" routerLink="/signup"> Create Acount  </a>
+							<p>  It's Free!</p>
+						</div>
+					</div>
+				</ion-col>
+			</ion-row>
+		</div>
+	</section>
+	<section class="about-section lern-mre">
+		<div class="container">
+			<ion-row class="padding-sr">
+				<ion-col  size="12" size-md="4">
+					<div class="cont-about pr-0">
+						<img src="assets/images/icon.png">
+						<h3> Learn more about my tools for </h3>
+						<ion-radio-group value="apple" class="radio-btns">
+						  <ion-item lines="none" (click)="changesmtype('yt')">
+							<ion-label> <span class="youtube-ico"> <ion-icon name="logo-youtube"></ion-icon> </span> Youtube</ion-label>
+							<ion-radio slot="start" color="success" value="apple"></ion-radio>
+						  </ion-item>
+
+						  <ion-item lines="none" (click)="changesmtype('tw')">
+							<ion-label><span class="twit-ico"> <ion-icon name="logo-twitter"></ion-icon> </span> Twitter</ion-label>
+							<ion-radio slot="start" color="success" value="grape"></ion-radio>
+						  </ion-item>
+						</ion-radio-group>
+					</div>
+				</ion-col>
+				<ion-col  size="12" size-md="6"  offset-md="2">
+					<div class="cont-about">
+						<ul class="data-icobf" *ngIf="smtype=='yt'">
+							<li>
+								<b> Optimize your account </b>
+								Tune up your channel page with my suggestions. Pick the right tags, set up the perfect playlists, create a new logo, and more! All to help maximize your exposure.
+							</li>
+							<li>
+								<b> Manage your content </b>
+								Use my data driven insights to make the best video possible. I walk you step by step through the process from coming up with a keyword optimized idea, to picking the best time to post and promoting your video after it’s live! <br> 
+								Stay on top of all your current projects and tweak old videos to boost views.
+							</li>
+							<li>
+								<b> Engage with your community </b>
+								See all of your comments in one place. Filter and reply to the most important ones!
+							</li>
+						</ul>
+
+						<ul class="data-icobf" *ngIf="smtype=='tw'">
+								<li>
+									<b> Create Content </b>
+									How often should you be Tweeting? What should you Tweet about? I look at your analytics, your goals, and current trends to help you craft exactly the kind of content your audience is looking for.
+								</li>
+								<li>
+									<b> Engage Your Fans </b>
+									View all your mentions and replies to your Tweets in one place and then sort them by things like how many followers they have or how engaged they are with your other content so you can make sure you’re replying to all the most important people. 
+								</li>
+								<li>
+									<b> Optimize Your Profile </b>
+									I’ll help you review and refine your brand so that it looks great and is consistent across profiles and platforms.<br>
+									Craft a searchable bio, create a new logo, and more!
+								</li>
+						</ul>
+					</div>
+				</ion-col>
+			</ion-row>
+		</div>
+	</section>
+	<section class="about-section lern-more">
+		<div class="container">
+			<div class="contes-sr">
+				<h3> Let's create your account! </h3>
+				<p> It's Free! For you and for everyone else. </p>
+				<a href="javascript:void(0);" class="sig-btnd" routerLink="/signup"> Create Acount  </a>
+			</div>
+		</div>
+		<span class="icon-logg"> <img src="assets/images/account.png"> </span>
+	</section>
+	<section class="roadmap">
+		<div class="container">
+			<ion-row class="padding-sr">
+				<ion-col  size="12">
+					<h3> My Roadmap </h3>
+				</ion-col>
+				<ion-col  size="12" size-md="5">
+					<div class="cont-tor">
+						<p> Check back regularly because I’m learning new skills every day to help you do more with your social media accounts! </p>
+					</div>
+				</ion-col>
+				<ion-col  size="12" size-md="7">
+					<div class="cont-tor">
+						<p>
+							In my future are web and mobile tools to help you better manage, grow, optimize and monetize your profiles across <span class="colf1"> YouTube, </span> <span class="colf2"> Twitter, </span> <span class="colf3">Instagram, </span> <span class="colf4"> Twitch.tv, </span> <span class="colf5"> Facebook, </span>  and TikTok. <b> I’m going to become your free all-in-one Social Media Assistant! </b>
+						</p>
+					</div>
+				</ion-col>
+			</ion-row>
+		</div>
+	</section>
+	<footer class="footer-main">
+		<div class="container">
+			<div class="cont-footer">
+				<a href="javascript:void(0);" class="logo-hedr"> <img src="assets/images/logo.png"> </a>
+				<ul class="rist-nav">
+					<li> <a href="javascript:void(0);" class="login-btnd" routerLink="/login"> Login  </a> </li>
+					<li> <a href="javascript:void(0);" class="sig-btnd" routerLink="/signup"> Create Account  </a> </li>
+				</ul>
+			</div>
+			<div class="copyrit">
+				<p> &copy; amburr 2021 </p>
+				<ul class="right-mens">
+					<li> <a href="javascript:void(0);"> Privacy </a> </li>
+					<li> <a href="javascript:void(0);"> Terms of use </a> </li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+</ion-content>

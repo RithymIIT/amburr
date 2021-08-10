@@ -1,0 +1,124 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+	<div signupSteps>
+		<ion-row>
+			<ion-col size="12" size-md="4">
+			    <!--- mobile topbar start --->
+				<div mobtopbar class="ion-hide-md-up">
+					<div mob-back-sec>
+						<a back href="javascript:void(0)"><ion-icon name="arrow-back-outline"></ion-icon></a>
+						<h4>Now it’s time to organize your accounts into brands!</h4>
+					</div>
+					<div tracyPara>
+						<p *ngIf="hideMe1"><b>A brand is a group of accounts that theoretically share the same audience.</b>
+							<br><br>Creating brands will allow you to more easily manage your content calendar and update shared assets like logos and banners. <a href="javascript:void(0)">View Example</a>
+						</p>
+					    <a (click)="hide1()" click-btn href="javascript:void(0)"><b>View Instructions</b> <ion-icon name="chevron-down"></ion-icon></a>
+						<div Gotit-sec *ngIf="hideMe1">
+							<ion-button Gotit-btn (click)="hide1()">Got It! <ion-icon name="chevron-up-outline"></ion-icon></ion-button>
+						</div>
+					</div>
+					<span emoji><img src="../assets/images/icon.png" alt=""></span>
+				</div>
+				<!--- mobile topbar end --->			
+				<div lftbar class="ion-hide-md-down">
+					<a back href="javascript:void(0)"><ion-icon name="arrow-back-outline"></ion-icon></a>
+					<h4>Now it’s time to organize your accounts into brands!</h4>
+					<div tracyPara>
+						<p><b>A brand is a group of accounts that theoretically share the same audience.</b>
+							<br><br>Creating brands will allow you to more easily manage your content calendar and update shared assets like logos and banners. <a href="javascript:void(0)">View Example</a>
+						</p>
+					</div>
+					<span emoji><img src="../assets/images/icon.png" alt=""></span>
+				</div>
+			</ion-col>
+			<ion-col size="12" size-md="8">
+				<div ritbar>
+					<ul steps>
+						<li routerLink="/add-account"><span active><ion-icon name="checkmark-outline"></ion-icon></span><p>Add Accounts</p></li>
+						<li><span selectdone>2</span><p>Create Brands</p></li>
+						<li routerLink="/signup-goals"><span>3</span><p>Set Goals</p></li>
+					</ul>
+					<div socials>
+							<ion-list>
+								  <h4 smallhdng>Profiles</h4>
+								  <p subtitle *ngIf="profilesArr.length == 0">No Profiles left to add in the brands. <a href="javascript:void(0)">Add New Profile</a> if you want to add more profiles.</p>
+								<div brandsArea mb30>
+
+										<div class="box-spac" dragula="BRANDS" style="height:30px;" [(dragulaModel)]="profilesArr">
+											<div class="boxs" *ngFor="let profile of profilesArr">
+												<div class="profile-brand" *ngIf="profile.type == 'yt'">
+													<span><img src={{profile.snippet.thumbnails.high.url}} alt=""><label class="youtube"><ion-icon name="logo-youtube"></ion-icon></label> </span>
+													<p>{{profile.snippet.title}}</p>
+												</div>
+
+												<div class="profile-brand"  *ngIf="profile.type == 'tw'">
+													<span><img src={{profile.photoURL}} alt=""><label twitter><ion-icon name="logo-twitter"></ion-icon></label> </span>
+													<p>@{{profile.displayName}}</p>
+												</div>
+											</div>
+										</div>
+
+								</div>
+						      	<h4 smallhdng>Brands</h4>
+								<div brandsArea>
+									<ion-row>
+										<ion-col size="12" size-sm="12" size-md="6" size-lg="4" (click)="_createBrand()">
+											<div addbrand addbtnmob>
+												<ion-icon addplus name="add-circle-outline"></ion-icon>
+												<p>Add New Brand</p>
+											</div>
+										</ion-col>
+
+
+										<ion-col size="12" size-sm="6" size-md="6" size-lg="4" *ngFor="let brands of brandsList">
+											<div addbrand brand2>
+												<ul>
+													<li>
+														<ion-input value={{brands.name}} placeholder="Brand" (change)="_editBrand(brands._id, $event)"></ion-input>
+														<ion-button fill="outline" btn-outline (click)="_delBrand(brands._id)"><ion-icon name="trash-outline"></ion-icon></ion-button>
+													</li>
+												</ul>
+											<div dragFiles>
+												
+
+												<div class="box-spac botm-full" id={{brands._id}} dragula="BRANDS" [(dragulaModel)]="brands.profiles">
+														<div class="boxs w-full" *ngFor="let profile of brands.profiles">
+
+															<div class="profile-brand"  *ngIf="profile.type == 'yt'">
+																<span><img src={{profile.snippet.thumbnails.high.url}} alt=""><label class="youtube"><ion-icon name="logo-youtube"></ion-icon></label> </span>
+																<p>{{profile.snippet.title}}</p>
+															</div>
+
+															<div class="profile-brand" *ngIf="profile.type == 'tw'">
+																<span><img src={{profile.photoURL}} alt=""><label twitter><ion-icon name="logo-twitter"></ion-icon></label> </span>
+																<p>{{profile.displayName}}</p>
+															</div>
+
+														</div>
+												</div>
+												<p class="pos-centr" *ngIf="brands.profiles.length == 0">Drag and drop your profile here.</p>
+
+
+											</div>												
+											</div>
+										</ion-col>
+									</ion-row>
+								</div>
+						    </ion-list>					
+					</div>
+						<div botmbtns>
+							<!-- <ion-button btn-outline fill="outline">Skip</ion-button> -->
+							<ion-button *ngIf="profilesArr.length > 0" fill="solid" class="signup-nextdisabled">Next</ion-button>
+							<ion-button *ngIf="profilesArr.length == 0" fill="solid" routerLink="/signup-goals" class="signup-next">Next</ion-button>
+						</div>
+				</div>
+			</ion-col>
+		</ion-row>
+	</div>
+</ion-content>

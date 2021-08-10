@@ -1,0 +1,109 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+	<div signupSteps>
+		<ion-row>
+			<ion-col size="12" size-md="4">
+			    <!--- mobile topbar start --->
+				<div mobtopbar class="ion-hide-md-up">
+					<div mob-back-sec>
+						<a back href="javascript:void(0)"><ion-icon name="arrow-back-outline"></ion-icon></a>
+						<h4>Now it’s time to organize your accounts into brands!</h4>
+					</div>
+					<div tracyPara>
+						<p *ngIf="hideMe"><b>A brand is a group of accounts that theoretically share the same audience.</b>
+							<br><br>Creating brands will allow you to more easily manage your content calendar and update shared assets like logos and banners. <a href="javascript:void(0)">View Example</a>
+						</p>
+					    <a (click)="hide()" click-btn href="javascript:void(0)"><b>View Instructions</b> <ion-icon name="chevron-down"></ion-icon></a>
+						<div Gotit-sec *ngIf="hideMe">
+							<ion-button Gotit-btn (click)="hide()">Got It! <ion-icon name="chevron-up-outline"></ion-icon></ion-button>
+						</div>
+					</div>
+					<span emoji><img src="../assets/images/icon.png" alt=""></span>
+				</div>
+				<!--- mobile topbar end --->			
+				<div lftbar class="ion-hide-md-down">
+					<a back href="javascript:void(0)"><ion-icon name="arrow-back-outline"></ion-icon></a>
+					<h4>Now it’s time to organize your accounts into brands!</h4>
+					<div tracyPara>
+						<p><b>A brand is a group of accounts that theoretically share the same audience.</b>
+							<br><br>Creating brands will allow you to more easily manage your content calendar and update shared assets like logos and banners. <a href="javascript:void(0)">View Example</a>
+						</p>
+					</div>
+					<span emoji><img src="../assets/images/icon.png" alt=""></span>
+				</div>
+			</ion-col>
+			<ion-col size="12" size-md="8">
+				<div ritbar>
+					<ul steps>
+						<li routerLink="/add-account"><span active><ion-icon name="checkmark-outline"></ion-icon></span><p>Add Accounts</p></li>
+						<li><span selectdone>2</span><p>Create Brands</p></li>
+						<li routerLink="/signup-goals"><span>3</span><p>Set Goals</p></li>
+					</ul>
+					<div socials>
+							<ion-list>
+						      	<h4 smallhdng>Profiles</h4>
+								<p subtitle>No Profiles left to add in the brands. <a href="javascript:void(0)">Add New Profile</a> if you want to add more profiles.</p>							
+						      	<h4 smallhdng>Brands</h4>
+								<div brandsArea>
+									<ion-row>
+										<ion-col size="12" size-sm="12" size-md="6" size-lg="4">
+											<div addbrand addbtnmob>
+												<ion-icon addplus name="add-circle-outline"></ion-icon>
+												<p>Add New Brand</p>
+											</div>
+										</ion-col>
+										<ion-col size="12" size-sm="6" size-md="6" size-lg="4">
+											<div addbrand brand2>
+												<ul>
+													<li>
+														<ion-input value="Pencilmation"></ion-input>
+													</li>
+													<li>
+														<div addedBrand>
+															<span><img src="../assets/images/user3.png" alt=""><label youtube><ion-icon name="logo-youtube"></ion-icon></label> </span>
+															<p>Pencilmation</p>
+														</div>
+													</li>
+													<li>
+														<div addedBrand>
+															<span><img src="../assets/images/user3.png" alt=""><label twitter><ion-icon name="logo-twitter"></ion-icon></label> </span>
+															<p>@Pencilmation</p>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</ion-col>
+										<ion-col size="12" size-sm="6" size-md="6" size-lg="4">
+											<div addbrand brand2>
+												<ul>
+													<li>
+														<ion-input placeholder="Brand 2"></ion-input>
+														<ion-button fill="outline" btn-outline><ion-icon name="trash-outline"></ion-icon></ion-button>
+													</li>
+													<li>
+														<div addedBrand>
+															<span><img src="../assets/images/user3.png" alt=""><label youtube><ion-icon name="logo-youtube"></ion-icon></label> </span>
+															<p>Cocomelon</p>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</ion-col>										
+									</ion-row>
+								</div>
+						    </ion-list>					
+					</div>
+						<div botmbtns>
+							<ion-button btn-outline fill="outline">Skip</ion-button>
+							<ion-button fill="solid" routerLink="/signup-goals">Next</ion-button>
+						</div>
+				</div>
+			</ion-col>
+		</ion-row>
+	</div>
+</ion-content>

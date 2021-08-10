@@ -1,0 +1,599 @@
+ion-content{
+	--background: #fbfbfb;
+}
+[signupSteps]{
+	position: relative;
+	ion-row{
+		padding:0;
+		margin:0;
+		ion-col{
+			padding:0;
+			margin:0;
+			[lftbar]{
+				min-height: 100vh;
+				height: 100%;
+				background: url(../../assets/images/banner2.png) right center no-repeat;
+				width: 100%;
+				background-size: cover;
+				padding:50px 80px 50px 50px;
+				[back]{
+					width: 40px;
+					height: 40px;
+					background: #fff;
+					border-radius: 100px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					color: #111;
+				}
+				h4{
+					margin:60px 0 0;
+					font-weight: 600;
+					font-size: 25px;
+					max-width: 200px;
+					width: 100%;
+					line-height: 40px;					
+				}
+				[tracyPara]{
+					background: #fff;
+					border-radius: 20px;
+					padding:20px;
+					position: relative;
+					margin:25px 0 0;
+					color: #333;
+					&:after{
+						content:"";
+						width: 0; 
+						height: 0; 
+						border-left: 20px solid transparent;
+						border-right: 20px solid transparent;
+						border-top: 20px solid #fff;
+						position: absolute;
+						bottom: -10px;
+						left: 20px;
+					}
+				}
+				[emoji]{
+					margin:25px 0 0;
+					display: block;
+				}
+			}
+		}
+	}
+	[ritbar]{
+		padding:50px;
+		min-height: 100%;
+		position: relative;
+		[steps]{
+			list-style: none;
+			padding:0;
+			margin:0;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			li{
+				display: flex;
+				align-items: center;
+				span{
+					width: 35px;
+					height: 35px;
+					border-radius: 100px;
+					background: #343434;
+					color: #fff;
+					margin-right: 8px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					&[active]{
+						background: #c2facf;
+						color: #111;
+						& + p{
+							color: #111;
+						}
+					}
+				}
+				p{
+					color: #111;
+					font-size: 14px;
+					margin:0;
+				}
+				&:after{
+					content: "";
+					display: block;
+					height: 1px;
+					width:180px;
+					margin:0 20px;
+					background: #eee;
+				}
+				&:last-child:after{
+					display: none;
+				}
+			}
+		}
+	}
+	[socials]{
+		display: block;
+		margin:120px 0 0;
+		.con-tou 
+		{
+			display: block;
+			width: 100%;
+			padding: 0 7px;
+			span.nam 
+			{
+				display: block;
+				text-align: center;
+				font-size: 15px;
+				ion-icon  
+				{
+					font-size: 24px;
+					color: #ED1F24;
+					vertical-align: bottom;
+					margin-right: 5px;
+				}
+			}
+			span.nam.col-twi {
+				ion-icon  
+				{
+					color: #55ACEE;
+				}
+			}
+			.btn-dt {
+				background: #FFFFFF 0% 0% no-repeat padding-box;
+				box-shadow: 0px 3px 6px #54533b1a;
+				border-radius: 10px;
+				padding: 12px;
+				margin-top: 20px;
+				ion-select 
+				{
+					background: #FFFFFF 0% 0% no-repeat padding-box;
+					border: 1px solid #E8E8E8;
+					border-radius: 10px;
+					--padding-end: 16px;
+					font-size: 16px;
+				}
+			}
+		}		
+	}
+	[botmbtns]
+	{
+		margin:25px 0 0;
+		display: flex;
+		clear: both;
+		justify-content: flex-end;
+		ion-button{
+			text-transform: none;
+			--box-shadow: none;
+			--border-radius: 8px;
+		}
+	}	
+}
+
+    .con-tou {
+		display: block;
+		width: 100%;
+		    padding: 0 7px;
+		span.nam {
+			display: block;
+			text-align: center;
+			font-size: 15px;
+			ion-icon  {
+				font-size: 24px;
+				color: #ED1F24;
+				vertical-align: bottom;
+				margin-right: 5px;
+			}
+		}
+		span.nam.col-twi {
+			ion-icon  {
+				color: #55ACEE;
+			}
+		}
+		.btn-dt {
+			background: #FFFFFF 0% 0% no-repeat padding-box;
+			box-shadow: 0px 3px 6px #54533b1a;
+			border-radius: 10px;
+			padding: 12px;
+			margin-top: 20px;
+			ion-select {
+				background: #FFFFFF 0% 0% no-repeat padding-box;
+				border: 1px solid #E8E8E8;
+				border-radius: 10px;
+				--padding-end: 16px;
+				font-size: 16px;
+			}
+		}
+	}
+	.data-box-smd {
+		display: block;
+		padding: 6px 48px 18px 18px;
+		background: #FFDEDF;
+		border-radius: 10px;
+		position: relative;
+		margin-top: 12px;
+		line-height: 32px;
+		span.img-box {
+			position: relative;
+			display: inline-block;
+			top: 9px;
+			margin-right: 10px;
+			img {
+				width: 35px;
+				height: 35px;
+				border-radius: 50%;
+				object-fit: cover;
+			}
+			small.icon-is {
+				width: 18px;
+				height: 18px;
+				background: #ffdedf;
+				border-radius: 50%;
+				bottom: 4px;
+				right: -6px;
+				position: absolute;
+				text-align: center;
+				font-size: 9px;
+				line-height: 22px;
+				color: #ED1F24;
+			}
+		}
+		.dots-ell {
+			position: absolute;
+			right: 10px;
+			top: 20px;
+			font-size: 18px;
+		}
+		span.icon-bt {
+			display: block;
+			position: relative;
+			height: 4px;
+			background: #fff;
+			margin-right: -30px;
+			border-radius: 50px;
+			margin-top: 25px;
+			i.lin-r {
+				width: 40%;
+				height: 4px;
+				background: #ED1F24;
+				position: absolute;
+				left: 0;
+				top: 0;
+				border-radius: 100px;
+			}
+			small.round-cr {
+				width: 9px;
+				height: 9px;
+				background: #343434;
+				border: 2px solid #fff;
+				position: absolute;
+				left: 45%;
+				border-radius: 50%;
+				top: -3px;
+			}
+		}
+	}
+	.data-box-smd.green-bxm {
+		background: #DEF1FF;
+		span.img-box small.icon-is {
+			background: #def1ff;
+			color: #55ACEE;
+		}
+		span.icon-bt i.lin-r {
+			background: #55ACEE;
+		}
+	}
+
+.btn-dt {
+	background: #FFFFFF 0% 0% no-repeat padding-box;
+	box-shadow: 0px 3px 6px #54533b1a;
+	border-radius: 10px;
+	padding: 12px;
+	margin-top: 20px;
+	ion-select {
+		background: #FFFFFF 0% 0% no-repeat padding-box;
+		border: 1px solid #E8E8E8;
+		border-radius: 10px;
+		--padding-end: 16px;
+		font-size: 16px;
+	}
+}
+
+.opacity-0 {
+    opacity: 0;
+}
+a.box-contsf {
+ background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #E8E8E8;
+    border-radius: 10px;
+    --padding-end: 16px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding: 9px 15px;
+    text-decoration: none;
+    color: #A9A99D;
+    justify-content: space-between;
+}
+.cont-sect-ne {
+	padding: 20px 0;
+	.wis-c {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 12px;
+		ion-select , ion-input {
+			background: #FFFFFF 0% 0% no-repeat padding-box;
+			border: 1px solid #E8E8E8;
+			border-radius: 10px;
+			width: 100%;
+			padding: 4px 20px;
+			line-height: 28px;
+			font-size: 16px;
+			height:46px;
+		}
+		.m-0-20 {
+			margin: 0 20px;
+		}
+		.ml-20 {
+			margin-left: 20px;
+		}
+		.w-50s {
+			width: 45%;
+		}
+	}
+}
+.btn-dics {
+	display: block;
+	text-align: right;
+	margin-top: 15px;
+	.canc-btn {
+		display: inline-block;
+		text-decoration: none;
+		border: 1px solid #E8E8E8;
+		border-radius: 8px;
+		padding: 8px 23px;
+		font-size: 15px;
+	}
+	.save-btn {
+		background: #343434;
+		display: inline-block;
+		text-decoration: none;
+		border: 1px solid #343434;
+		border-radius: 8px;
+		padding: 8px 23px;
+		color: #fff;
+		font-size: 15px;
+		margin-left: 10px;
+	}
+}
+
+@media (max-width: 992px) and (min-width: 768px) {
+	ion-content
+	{
+		[signupSteps]
+		{
+		    ion-row
+			{
+				ion-col
+				{
+					[lftbar]
+					{
+						height: 100%;
+						min-height: 100vh;
+						padding: 50px 70px 50px 15px;
+					}
+				}
+			}
+		    [ritbar]
+			{
+			    padding: 15px;
+				[socials]
+				{
+					[brandsArea]
+					{
+						[profile-brand]
+						{
+							margin-bottom: 10px;
+						}			
+					}
+					.con-tou
+					{
+						margin-bottom: 10px;			
+					}			
+				}			
+			    [steps]
+				{
+				    li
+					{
+						&:after 
+						{
+							width: 59px;
+						}					
+					}
+				}
+			}
+        }		
+	}
+}
+@media (max-width: 767px) {
+	ion-content
+	{
+		[signupSteps]
+		{
+			[mobtopbar]
+            {
+				min-height: auto;
+				height: auto;
+				background: url(../../assets/images/banner3.png) bottom center no-repeat;
+				width: 100%;
+				background-size: cover;
+				padding:20px 20px 30px 20px;			
+			    [mob-back-sec]
+				{
+				    display: flex;
+					h4
+					{
+						margin: 0px 0px 0px 10px;
+						font-weight: 600;
+						font-size: 17px;
+						max-width: 100%;
+						width: 100%;
+						line-height: 28px;
+					}
+					[back]
+					{
+						width: 25px;
+						height: 25px;
+						background: #fff;
+						border-radius: 100px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						color: #111;
+					}				    
+				}			
+			    [tracyPara]
+				{
+					background: #fff;
+					border-radius: 20px;
+					padding:15px;
+					position: relative;
+					margin:25px 0 0;
+					color: #333;
+					&:after
+					{
+						content:"";
+						width: 0; 
+						height: 0; 
+						border-left: 20px solid transparent;
+						border-right: 20px solid transparent;
+						border-top: 20px solid #fff;
+						position: absolute;
+						bottom: -10px;
+						left: 20px;
+					}
+					p
+					{
+					    &+
+						{
+						    [click-btn]
+							{
+							    display: none;
+							}
+						}
+					}					
+				    [click-btn]
+					{
+						margin:0;
+						font-size: 14px;
+						color: #333;
+						text-decoration: none;
+						display: flex;
+						align-items: center;
+						justify-content: space-between;													
+						ion-icon
+						{
+							min-width: 16px;
+						}													
+						b
+						{
+							font-weight: 600;
+						}
+					}
+					[Gotit-sec]
+					{
+					    width: 100%;
+						text-align: right;
+						[Gotit-btn]
+						{
+							height: 42px;
+							--box-shadow: none;
+							--border-radius: 10px;
+							font-size: 14px;
+							--background: #343434;
+							ion-icon 
+							{
+								margin-left: 15px;
+							}							
+						}
+					}
+					[emoji]
+					{
+						margin:25px 0 0;
+						display: block;
+					}				    
+				}
+			}
+			[ritbar]
+			{
+				padding: 30px 10px;
+				[socials] 
+				{
+					display: block;
+					margin: 40px 0 0;
+					.con-tou
+					{
+					    margin-bottom: 10px;    
+						.cont-sect-ne
+						{
+							padding: 5px 10px 20px;
+							max-width: 100%;
+							.wis-c
+							{
+								.m-0-20
+								{
+									margin: 0 10px;
+								}							
+							}							
+						}					
+					}					
+				}
+				[steps]
+				{ 
+					li
+					{
+						flex-basis: 0;
+						flex-grow: 1;
+						flex-wrap: wrap;
+						position: relative;
+						padding: 0px 15px;					
+						&:after 
+						{
+							content: "";
+							display: block;
+							height: 1px;
+							position: absolute;
+							width: 22px;
+							margin: 0px 0px;
+							background: #eee;
+							right: -7px;
+						}					
+						&:first-child 
+						{
+							padding-left: 0px;
+						}					
+						&:last-child 
+						{
+							padding-right: 0px;
+							&:after
+							{
+							    display: none;
+							}
+						}
+						span
+						{
+							width: 16px;
+							height: 16px;
+							margin-right: 3px;
+							font-size: 10px;
+						}
+						p
+						{
+							font-size: 10px;
+						}						
+					}				
+				}				
+			}			
+		}	
+	}
+}

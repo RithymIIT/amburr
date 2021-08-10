@@ -1,0 +1,20 @@
+<!--ion-header>
+  <ion-toolbar>
+    <ion-title>return-popup</ion-title>
+  </ion-toolbar>
+</ion-header-->
+
+<ion-content bg-grey>
+	<ion-row >
+		<ion-col  size="12" size-md="12">
+			<div class="contn-sec">
+				<h3> Would you like to save your progress to drafts before closing? </h3>
+				<p> You can always see you drafts to continue where you left from in Create>Drafts. </p>
+				<div class="btns-right">
+					<a routerLink="/calendar-weekly" (click)="dismiss()" href="javascript:void(0)" class="btn-otl-bo"> Don't Save and Close </a>
+					<a routerLink="/calendar-weekly" (click)="dismiss()" href="javascript:void(0)" class="btn-bg-dark"> Save & Close </a>
+				</div>
+			</div>
+		</ion-col>
+	</ion-row>
+</ion-content>

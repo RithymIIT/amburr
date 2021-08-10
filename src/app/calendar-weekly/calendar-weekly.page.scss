@@ -1,0 +1,564 @@
+ion-content {
+	.top-ad {
+		display: block;
+		text-align: center;
+		margin-bottom: 10px;
+		img  {
+			height: 95px;
+			width: auto;
+		}
+	}
+	.calend {
+		width: 100%;
+		position: relative;
+		img {
+			width: 100%;
+		}
+	}
+	.mac-sf {
+		position: relative;
+		background: #fff;
+		width: 100%;
+		border-radius: 10px;
+		.secnd-sv {
+			padding: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			.con-sf {
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				.frst-vd {
+					display: block;
+					position: relative;
+					.box-dv  {
+						border: 1px solid #E8E8E8;
+						border-radius: 8px;
+						opacity: 1;
+						min-width: 130px;
+						display: inline-block;
+						text-align: center;
+						padding: 9px 15px;
+						text-decoration: none;
+						font-size: 15px;
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+					}
+					ul.con-mnts {
+						background: #FFFFFF 0% 0% no-repeat padding-box;
+						box-shadow: 0px 3px 6px #54533b1a;
+						border-radius: 10px;
+						opacity: 1;
+						position: absolute;
+						z-index: 11;
+						width: 100%;
+						top: 47px;
+						list-style: none;
+						padding: 0px;
+						margin: 0px;
+						padding: 10px 0;
+						li {
+							display: block;
+							a {
+								text-decoration: none;
+								font-size: 14px;
+								padding: 10px 20px;
+								display: block;
+							}
+						}
+					}
+				}
+			}
+			a.icon-lfts {
+				background: #FFFFFF 0% 0% no-repeat padding-box;
+				border: 1px solid #E8E8E8;
+				width: 30px;
+				height: 30px;
+				text-align: center;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 50%;
+				margin-left: 12px;
+			}
+		}
+	}
+	span.str {
+		font-size: 20px;
+		font-weight: 600;
+	}
+	.ridd {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		.filtr-fn {
+			display: block;
+			position: relative;
+			.dsf {
+				width: 47px;
+				height: 43px;
+				border: 1px solid #E8E8E8;
+				border-radius: 8px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 22px;
+				margin-right: 12px;
+			}
+		}
+		.filtr-sect  {
+			display: block;
+			position: relative;
+			.sec-f {
+				background: #343434 0% 0% no-repeat padding-box;
+				border-radius: 8px;
+				color: #fff;
+				padding: 10px 16px;
+				font-size: 15px;
+				text-decoration: none;
+				min-width: 130px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+		}
+	}
+	.pos-filt {
+		background: #FFFFFF 0% 0% no-repeat padding-box;
+		box-shadow: 0px 3px 6px #54533b1a;
+		border-radius: 10px;
+		position: absolute;
+		z-index: 11;
+		width: 260px;
+		right: 10px;
+		padding: 18px;
+		h3.main-tt {
+			margin: 0px;
+			font-size: 17px;
+			font-weight: 600;
+			margin-bottom: 5px;
+		}
+		ion-list.checkboxs {
+			ion-list-header  {
+				padding: 0px;
+				font-size: 13px;
+				color: #999999;
+				min-height: 25px;
+			}
+			ion-item  {
+				--padding-start: 0px;
+				--padding-top: 0px;
+				--padding-bottom: 0px;
+				padding: 0px;
+				--min-height: 36px;
+				ion-label  {
+					margin: 0px;
+					font-size: 14px;
+					span.isf {
+						color: #ED1F24;
+						font-size: 16px;
+						position: relative;
+						top: 3px;
+						margin-right: 2px;
+					}
+					span.twit {
+						color: #55ACEE;
+						font-size: 16px;
+						position: relative;
+						top: 3px;
+						margin-right: 2px;
+					}
+					span.user-you {
+						display: inline-block;
+						position: relative;
+						margin-right: 5px;
+						vertical-align: middle;
+						top: 0px;
+						img {
+							width: 25px;
+							height: 25px;
+							border-radius: 50%;
+							object-fit: cover;
+						}
+						small {
+							width: 15px;
+							height: 15px;
+							background: #FFDEDF;
+							position: absolute;
+							right: 0;
+							bottom: 0;
+							border-radius: 50%;
+							text-align: center;
+							font-size: 9px;
+							line-height: 17px;
+							color: #ED1F24;
+						}
+					}
+					span.user-you.twitr {
+						small {
+							background: #DEF1FF;
+							color: #55ACEE;
+						}
+					}
+				}
+				ion-checkbox  {
+					margin-right: 10px;
+					margin-top: 0px;
+					margin-bottom: 0px;
+					border-radius: 4px;
+					--border-color: #E8E8E8 !important;
+				}
+			}
+		}
+	}
+	.data-csnd {
+		background: #FFFFFF 0% 0% no-repeat padding-box;
+		box-shadow: 0px 3px 6px #54533b1a;
+		border-radius: 10px;
+		position: absolute;
+		z-index: 11;
+		width: 285px;
+		right: 0px;
+		padding: 18px;
+		h3.main-tt {
+			margin: 0px;
+			font-size: 16px;
+			font-weight: 600;
+			margin-bottom: 20px;
+		}
+		ul.list-maihs {
+			padding: 0px;
+			margin: 0px;
+			margin-bottom:10px;
+			list-style: none;
+			li {
+				display: block;
+				font-size: 15px;
+				padding: 5px 0;
+				cursor:pointer;
+				span.user-you {
+					display: inline-block;
+					position: relative;
+					vertical-align: text-top;
+					margin-right: 5px;
+					img {
+						width: 25px;
+						height: 25px;
+						border-radius: 50%;
+						object-fit: cover;
+					}
+					small {
+						width: 15px;
+						height: 15px;
+						background: #FFDEDF;
+						position: absolute;
+						right: -3px;
+						bottom: 2px;
+						border-radius: 50%;
+						text-align: center;
+						font-size: 9px;
+						line-height: 17px;
+						color: #ED1F24;
+					}
+				}
+				span.user-you.twitr {
+					small {
+						background: #DEF1FF;
+						color: #55ACEE;
+					}
+				}
+			}
+		}
+		.bordt-s {
+			margin: 0px -18px;
+			border-top: 1px solid #E8E8E8;
+			a {
+				display: block;
+				text-decoration: none;
+				font-size: 15px;
+				padding: 10px 18px;
+				ion-icon {
+					font-size: 17px;
+					vertical-align: sub;
+					margin-right: 4px;
+				}
+				span.infos {
+					float: right;
+					margin-right: 0px;
+				}
+			}
+		}
+		.cntr-sst {
+			border-top: 1px solid #E8E8E8;
+			display: block;
+			text-align: center;
+			margin: 0 -18px;
+			padding: 12px;
+			font-size: 15px;
+			text-decoration: none;
+			ion-icon {
+				font-size: 19px;
+				vertical-align: sub;
+			}
+		}
+	}
+	.cenr-bdx {
+		position: absolute;
+		top: 30%;
+		right: 20%;
+		background: #FFFFFF 0% 0% no-repeat padding-box;
+		box-shadow: 0px 3px 10px #87878729;
+		border-radius: 10px;
+		padding: 10px 12px;
+		min-width:190px;
+		span.top-badg {
+			display: inline-block;
+			background: transparent linear-gradient(180deg, #C2E8FA 0%, #A4C7FB 100%) 0% 0% no-repeat padding-box;
+			border-radius: 6px;
+			font-size: 12px;
+			padding: 2px 11px;
+		}
+		p {
+			margin: 0px;
+			font-size: 13px;
+			color: #999999;
+			margin-top: 9px;
+		}
+		h4 {
+			margin: 0px;
+			font-size: 13px;
+			font-weight: 600;
+			margin-top: 4px;
+		}
+	}
+	.mif-strs {
+		display: block;
+		position: relative;
+		margin-top: 15px;
+		span.img-sr  {
+			display: inline-block;
+			position: relative;
+			vertical-align: sub;
+			img {
+				width: 30px;
+				height: 30px;
+				object-fit: cover;
+				border-radius: 50%;
+			}
+			small {
+				width: 18px;
+				height: 18px;
+				background: #FFDEDF;
+				position: absolute;
+				right: -6px;
+				bottom: 2px;
+				border-radius: 50%;
+				text-align: center;
+				font-size: 9px;
+				line-height: 20px;
+				color: #ED1F24;
+			}
+		}
+		h5 {
+			display: inline-block;
+			margin: 0px;
+			margin-left: 12px;
+			font-size: 13px;
+			small {
+				display: block;
+				color: #999999;
+				font-size: 12px;
+			}
+		}
+	}
+	.viw-dtls {
+		display: inline-block;
+		text-decoration: none;
+		font-size: 13px;
+		background: #343434;
+		color: #fff;
+		padding: 6px 17px;
+		border-radius: 6px;
+		margin-top: 8px;
+		&:hover {
+			opacity:0.5;
+		}
+	}
+}
+
+@media only screen and (max-width:992px) and (min-width:768px) {  
+	ion-content 
+	{
+		.dataa-main-all 
+		{
+			padding: 20px 10px 0;
+			.mac-sf
+			{
+				.secnd-sv
+				{
+					padding: 10px;
+					span
+					{
+						&.str
+						{
+							font-size: 14px;
+						}					
+					}					
+				}			
+			}			
+		}	
+	}
+}
+@media only screen and (max-width:767px) {  
+	ion-content 
+	{
+		.dataa-main-all 
+		{
+			padding-bottom: 80px;	
+			.top-ad  
+			{
+				margin-bottom: 5px;
+				margin-top: 5px;
+				img 
+				{
+					height: auto;
+					width: 100%;
+				}
+			}
+			.mac-sf  
+			{
+				.secnd-sv
+				{
+					[mob-filter-sec]
+					{
+					    width: 100%;
+						.ridd
+						{
+						    margin-bottom: 20px;
+						    .filtr-sect
+							{
+							    width: calc(100% - 60px);
+								.sec-f
+								{
+									width: 100%;
+									min-width: 100%;								
+								}
+							}
+						}
+						.con-month-sec 
+						{
+							display: flex;
+							.con-sf
+							{
+							    .frst-vd
+								{
+								    .box-dv
+									{
+									    min-width: 95px;
+										font-size: 13px;
+										padding: 9px 6px;
+									}
+								}
+							    .icon-lfts
+								{
+								        width: 25px;
+										height: 25px;
+										font-size: 13px;
+										margin-left: 8px;
+								}
+							}
+							span.str
+							{
+								font-size: 16px;
+								padding-left: 20px;
+							}							
+						}						
+					}
+					.ridd
+					{
+						.data-csnd
+						{
+							position: fixed;
+							top: 0px;
+							bottom: 0px;
+							width: 100%;
+							overflow-y: auto;
+							left: 0px;
+							right: 0px;
+                            z-index: 11;							
+							.right-dyy 
+							{
+								.dlt-ic {
+									font-size: 32px;
+									vertical-align: middle;
+									top: 3px;
+									position: relative;
+									&:hover {
+										opacity: 0.4;
+									}
+								}
+							}					
+						}
+						.pos-filt
+						{
+							position: fixed;
+							top: 0px;
+							bottom: 0px;
+							width: 100%;
+							overflow-y: auto;
+							left: 0px;
+							right: 0px;
+                            z-index: 11;							
+							.right-dyy 
+							{
+								.dlt-ic {
+									font-size: 32px;
+									vertical-align: middle;
+									top: 3px;
+									position: relative;
+									&:hover {
+										opacity: 0.4;
+									}
+								}
+							}					
+						}					
+					}					
+				}
+				.calend
+				{
+				    .cenr-bdx
+				    {
+						position: fixed;
+						top: 0px;
+						bottom: 0px;
+						width: 100%;
+						overflow-y: auto;
+						left: 0px;
+						right: 0px;
+                        z-index: 11;					
+						.right-dyy 
+						{
+							.dlt-ic {
+								font-size: 32px;
+								vertical-align: middle;
+								top: 3px;
+								position: relative;
+								&:hover {
+									opacity: 0.4;
+								}
+							}
+						}
+						.viw-dtls
+						{
+							display: block;
+							padding: 10px 17px;
+							text-align: center;
+						}						
+				    }
+				}
+			}
+		}
+	}
+}

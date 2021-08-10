@@ -1,0 +1,108 @@
+<ion-content>
+	<div flex-header>
+	  	<a href="javascript:void(0)"><img src="../assets/images/logo.png" alt=""></a>
+	  	<p (click)="presentModal()">Return to Content Calendar <ion-icon name="close-outline"></ion-icon></p>
+	</div>
+	<div mainContent>
+		<ion-row>
+			<ion-col size="12" size-md="12">
+				<!--- mobile ads start --->
+				<div mob-ads-sec class="ion-hide-md-up">
+					<img src="assets/images/mob-ads.jpg" alt="" />
+				</div>
+				<!--- mobile ads end --->			
+				<div class="cont-fls">
+					<div class="add-vf">
+						<a href="javascript:void(0)">
+							<img src="assets/images/ad3.jpg">
+						</a>
+					</div>
+					<div class="fvs-ft">
+						<div centerArea>
+							<div insideCenter>
+								<h2 hdng>Create Cross Promotional Promo on YouTube</h2>
+								<div threeCols>
+									<div smallCol>
+									<!--- mobile menu link start --->
+										<ion-item menuheader lines="none"  class="ion-hide-md-up">
+											<ion-label>
+											  <span>4</span>Thumbnail
+											</ion-label>
+											<a slot="end" href="javascript:void(0)" (click)="hide()" menu-btn><ion-icon name="menu"></ion-icon></a>
+										</ion-item>										
+										<div menu-mob-link *ngIf="hideMe"  class="ion-hide-md-up">
+										    <ion-buttons menuclose-btn  (click)="hide()"><ion-icon name="close"></ion-icon></ion-buttons>
+											<ul>
+												<li><a routerLink="/crosspromotion-choose-video" class="activedone" href="javascript:void(0)"><span>1</span>Video and Time</a></li>
+												<li><a routerLink="/upload-video" class="activedone" href="javascript:void(0)"><span>2</span>Upload Video</a></li>
+												<li><a routerLink="/crosspromotion-metadata" class="activedone" href="javascript:void(0)"><span>3</span>Meta-Data</a></li>
+												<li><a class="active" href="javascript:void(0)"><span>4</span>Thumbnail</a></li>
+												<li><a routerLink="/crosspromotion-confirm" href="javascript:void(0)"><span>5</span>Confirm</a></li>
+											</ul>
+										</div>
+										<!--- mobile menu link end --->
+										<!--- mobile quotes start --->
+											<div mobilequotes  class="ion-hide-md-up">
+												<img imgcart src="assets/images/account.png" alt="">
+												<div quoteBox>
+													<div quoteBoxs>
+														<a href="javascript:void(0)" (click)="hide1()"><b>View Instructions</b> <ion-icon name="chevron-down"></ion-icon></a>
+														<p *ngIf="hideMe1">Lorem ipsum dolor sit amet, an eam dico rum. Choro volutpat eam et. Ex sea vidit solum definiebas. Usu ei tale graeci interesset,</p>
+													</div>													
+												</div>
+											</div>									 																		
+										<!--- mobile quotes end --->
+										<ul class="ion-hide-md-down">
+											<li><a routerLink="/crosspromotion-choose-video" class="activedone" href="javascript:void(0)"><span>1</span>Video and Time</a></li>
+											<li><a routerLink="/upload-video" class="activedone" href="javascript:void(0)"><span>2</span>Upload Video</a></li>
+											<li><a routerLink="/crosspromotion-metadata" class="activedone" href="javascript:void(0)"><span>3</span>Meta-Data</a></li>
+											<li><a class="active" href="javascript:void(0)"><span>4</span>Thumbnail</a></li>
+											<li><a routerLink="/crosspromotion-confirm" href="javascript:void(0)"><span>5</span>Confirm</a></li>
+										</ul>
+									</div>
+									<div largeCol>
+										<div dragFiles>
+											<ion-icon name="cloud-upload"></ion-icon>
+											<h3 class="ion-hide-md-down">Drag and drop to upload a thumbnail</h3>
+											<p class="ion-hide-md-down">or <span>Browse</span> to choose file</p>
+											<h3 class="ion-hide-md-up">Upload a thumbnail</h3>
+											<p class="ion-hide-md-up"><span>Browse</span></p>
+											<p>We'll store the file on our servers, then send it off to YouTube when it's time to publish.</p>
+										</div>
+										<ion-row>
+										    <ion-col size="12" size-md="6">
+											    <div thumbnailsec><p>Don't have a thumbnail?</p></div>
+											</ion-col>
+										    <ion-col size="12" size-md="6">
+											    <div thumbnail-editor><a href="javascript:void(0)">Create Thumbnail in Editor</a></div>
+											</ion-col>
+										</ion-row>
+
+										<div botmbtns>
+											<ion-button btn-outline fill="outline">Save as draft</ion-button>
+											<ion-button routerLink="/crosspromotion-confirm" fill="solid">Next</ion-button>
+										</div>
+									</div>
+									<div smallCol class="ion-hide-md-down">
+										<div centerRit>
+											<img src="../assets/images/icon.png" alt="">
+											<div quotes>
+												<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="add-vf">
+						<a href="javascript:void(0)">
+							<img src="assets/images/ad4.jpg">
+						</a>
+					</div>
+				</div>
+			</ion-col>
+		</ion-row>
+	</div>
+	<div botmbg></div>
+</ion-content>

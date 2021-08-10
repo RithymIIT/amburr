@@ -1,0 +1,451 @@
+<!--ion-header>
+  <ion-toolbar>
+    <ion-title>dashboard</ion-title>
+  </ion-toolbar>
+</ion-header-->
+
+<ion-content>
+	<div class="dataa-main-all">
+		<ion-row>
+			<ion-col size="12" size-md="3" size-lg="2">
+				<div class="left-part-main">
+					<img src="assets/images/logo.png" class="logo-dash small-none">
+					<div class="small-headr big-none">
+						<img src="assets/images/logo.png" class="logo-dash">
+						<a href="javascript:void(0);" class="menu-togl" (click)="hide4()"> <ion-icon name="menu-outline"></ion-icon> </a>
+					</div> 
+					<ul class="menu-list-left big-none position-str" *ngIf="hideMe4">
+						<li>
+							<a href="javascript:void(0);" routerLink="/dashboard">
+								<span class="icon-m"> <ion-icon name="home-outline"></ion-icon></span>
+								Home
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);"  routerLink="/contentcalendar-month">
+								<span class="icon-m"> <ion-icon name="calendar-clear-outline"></ion-icon> </span>
+								Content Calendar
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);" routerLink="/brand-builder">
+								<span class="icon-m"> <ion-icon name="star-outline"></ion-icon> </span>
+								Brand Builder
+							</a>
+						</li>
+						<li class="active">
+							<a href="javascript:void(0);" routerLink="/community-center">
+								<span class="icon-m"> <ion-icon name="chatbox-ellipses-outline"></ion-icon> </span>
+								Community Center
+							</a>
+						</li>
+						<li class="user-ledg" routerLink="/my-account">
+							<img src="assets/images/user.jpg" class="usr-im">
+							<h4> John Doe </h4>
+							<h6> My Account </h6>
+						</li>
+					</ul>
+					<ul class="menu-list-left small-none">
+						<li>
+							<a href="javascript:void(0);" routerLink="/dashboard">
+								<span class="icon-m"> <ion-icon name="home-outline"></ion-icon></span>
+								Home
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);"  routerLink="/contentcalendar-month">
+								<span class="icon-m"> <ion-icon name="calendar-clear-outline"></ion-icon> </span>
+								Content Calendar
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);" routerLink="/brand-builder">
+								<span class="icon-m"> <ion-icon name="star-outline"></ion-icon> </span>
+								Brand Builder
+							</a>
+						</li>
+						<li class="active">
+							<a href="javascript:void(0);" routerLink="/community-center">
+								<span class="icon-m"> <ion-icon name="chatbox-ellipses-outline"></ion-icon> </span>
+								Community Center
+							</a>
+						</li>
+						<li class="user-ledg" routerLink="/my-account">
+							<img src="assets/images/user.jpg" class="usr-im">
+							<h4> John Doe </h4>
+							<h6> My Account </h6>
+						</li>
+					</ul>
+					<div class="add-box small-none">
+						<img src="assets/images/ad1.jpg">
+					</div>
+				</div>
+			</ion-col>
+			<ion-col size="12" size-md="9" size-lg="10">
+					<div class="top-ad">
+						<img src="assets/images/ad2.jpg">
+					</div>
+					<ion-row>
+						<ion-col size="12">
+								<div centerArea>
+							<div insideCenter>
+								<div class="cont-posy big-none">
+									<div class="top-hst">
+										<div class="src-m">
+											<span class="ics"> <ion-icon name="search-outline"></ion-icon> </span>
+											<ion-input type="text" placeholder="Search with name"></ion-input>
+										</div>
+										<div class="bar-bis">
+											<a href="javacript:void(0);" class="men-br" (click)="hide5()"> <ion-icon name="menu-outline"></ion-icon> </a>
+										</div>
+									</div>
+									<div class="bottom-psts top-hst" *ngIf="hideMe5">
+										<ion-select interface="popover" value="nes">
+											<ion-select-option value="nes">Platform </ion-select-option>
+											<ion-select-option value="n64">Platform 1</ion-select-option>
+											<ion-select-option value="ps">Platform 2</ion-select-option>
+											<ion-select-option value="genesis">Platform 3</ion-select-option>
+											<ion-select-option value="saturn">Platform 4</ion-select-option>
+										</ion-select>
+										<ion-select interface="popover" value="nes">
+											<ion-select-option value="nes">Brand </ion-select-option>
+											<ion-select-option value="n64">Brand 1</ion-select-option>
+											<ion-select-option value="ps">Brand 2</ion-select-option>
+											<ion-select-option value="genesis">Brand 3</ion-select-option>
+											<ion-select-option value="saturn">Brand 4</ion-select-option>
+										</ion-select>
+										<ion-select interface="popover" value="nes">
+											<ion-select-option value="nes">Profile </ion-select-option>
+											<ion-select-option value="n64">Profile 1</ion-select-option>
+											<ion-select-option value="ps">Profile 2</ion-select-option>
+											<ion-select-option value="genesis">Profile 3</ion-select-option>
+											<ion-select-option value="saturn">Profile 4</ion-select-option>
+										</ion-select>
+										<div class="cont-aud">
+											<a href="javacript:void(0);" class="cts" (click)="hide2()"> Audience Size <ion-icon name="chevron-down-outline"></ion-icon></a>
+											<div class="data-box" *ngIf="hideMe2">
+												<h4 class="cs-ss"> <small> 0 </small> <small> - </small> <small> 1M+ </small> </h4>
+												<ion-item lines="none">
+													<ion-range min="0" max="1000000" id="dual-range" dual-knobs  value="140000" color="success"></ion-range>
+												</ion-item>
+											</div>
+										</div>
+										<ion-select interface="popover" value="nes" class="fx-18">
+											<ion-select-option value="nes">Engagement Score </ion-select-option>
+											<ion-select-option value="n64">Engagement Score 1</ion-select-option>
+											<ion-select-option value="ps">Engagement Score 2</ion-select-option>
+											<ion-select-option value="genesis">Engagement Score 3</ion-select-option>
+											<ion-select-option value="saturn">Engagement Score 4</ion-select-option>
+										</ion-select>
+										<ion-select interface="popover" value="nes" class="fx-18">
+											<ion-select-option value="nes">Unreplied </ion-select-option>
+											<ion-select-option value="n64">Unreplied 1</ion-select-option>
+											<ion-select-option value="ps">Unreplied 2</ion-select-option>
+											<ion-select-option value="genesis">Unreplied 3</ion-select-option>
+											<ion-select-option value="saturn">Unreplied 4</ion-select-option>
+										</ion-select>
+									</div>
+								</div>  
+								<div class="top-hst small-none">
+									<div class="src-m">
+										<span class="ics"> <ion-icon name="search-outline"></ion-icon> </span>
+										<ion-input type="text" placeholder="Search with name"></ion-input>
+									</div>
+									<ion-select interface="popover" value="nes">
+										<ion-select-option value="nes">Platform </ion-select-option>
+										<ion-select-option value="n64">Platform 1</ion-select-option>
+										<ion-select-option value="ps">Platform 2</ion-select-option>
+										<ion-select-option value="genesis">Platform 3</ion-select-option>
+										<ion-select-option value="saturn">Platform 4</ion-select-option>
+									</ion-select>
+									<ion-select interface="popover" value="nes">
+										<ion-select-option value="nes">Brand </ion-select-option>
+										<ion-select-option value="n64">Brand 1</ion-select-option>
+										<ion-select-option value="ps">Brand 2</ion-select-option>
+										<ion-select-option value="genesis">Brand 3</ion-select-option>
+										<ion-select-option value="saturn">Brand 4</ion-select-option>
+									</ion-select>
+									<ion-select interface="popover" value="nes">
+										<ion-select-option value="nes">Profile </ion-select-option>
+										<ion-select-option value="n64">Profile 1</ion-select-option>
+										<ion-select-option value="ps">Profile 2</ion-select-option>
+										<ion-select-option value="genesis">Profile 3</ion-select-option>
+										<ion-select-option value="saturn">Profile 4</ion-select-option>
+									</ion-select>
+									<div class="cont-aud">
+										<a href="javacript:void(0);" class="cts" (click)="hide2()"> Audience Size <ion-icon name="chevron-down-outline"></ion-icon></a>
+										<div class="data-box" *ngIf="hideMe2">
+											<h4 class="cs-ss"> <small> 0 </small> <small> - </small> <small> 1M+ </small> </h4>
+											<ion-item lines="none">
+												<ion-range min="0" max="1000000" id="dual-range" dual-knobs  value="140000" color="success"></ion-range>
+											</ion-item>
+										</div>
+									</div>
+									<ion-select interface="popover" value="nes" class="fx-18">
+										<ion-select-option value="nes">Engagement Score </ion-select-option>
+										<ion-select-option value="n64">Engagement Score 1</ion-select-option>
+										<ion-select-option value="ps">Engagement Score 2</ion-select-option>
+										<ion-select-option value="genesis">Engagement Score 3</ion-select-option>
+										<ion-select-option value="saturn">Engagement Score 4</ion-select-option>
+									</ion-select>
+									<div class="bar-bis">
+										<a href="javacript:void(0);" class="men-br" (click)="hide3()"> <ion-icon name="menu-outline"></ion-icon> </a>
+										<div class="cont-stt" *ngIf="hideMe3">
+											<ion-select interface="popover" value="nes" class="fx-18">
+												<ion-select-option value="nes">Unreplied </ion-select-option>
+												<ion-select-option value="n64">Unreplied 1</ion-select-option>
+												<ion-select-option value="ps">Unreplied 2</ion-select-option>
+												<ion-select-option value="genesis">Unreplied 3</ion-select-option>
+												<ion-select-option value="saturn">Unreplied 4</ion-select-option>
+											</ion-select>
+										</div>
+									</div>
+								</div>
+								<div commnetArea>
+									<ion-row space="2">
+										<ion-col size="12" size-md="12" size-lg="6">
+											<div cmntCol>
+												<div lftPost>
+													<span><img src="../assets/images/cartoon10.jpg" alt="">
+														<a href="javacript:void(0)"><ion-icon name="logo-youtube"></ion-icon></a>
+													</span>
+													<p>How to bake a cake and bla-Part...</p>
+												</div>
+												<div ritreply>
+													<div labels>
+														<label>1h ago</label>
+														<label>32 followers</label>
+														<label>48 Engmt Score</label>
+													</div>
+													<div userComnt>
+														<img src="../assets/images/user.jpg" alt="">
+														<p>John Deo - Lorem ipsum dolor sit amet est nostro diceret lorem ipsum</p>
+													</div>
+													<div allReply>
+														<div relpyCount (click)="hide('1')">
+															<p>3 replies</p>
+															<ion-icon name="chevron-down-outline"></ion-icon>
+														</div>
+														<div comts *ngIf="hideMe == '1'">
+															<div userComnt>
+																<img src="../assets/images/user3.jpg" alt="">
+																<p>John Deo - Lorem ipsum dolor sit amet est nostro diceret lorem ipsum</p>
+															</div>
+															<div userComnt>
+																<img src="../assets/images/user3.jpg" alt="">
+																<p>John Deo - Lorem ipsum dolor sit amet est nostro diceret lorem ipsum</p>
+															</div>
+														</div>
+														<a href="javascript:void(0)" none loadmore>Load More <ion-icon name="chevron-down-outline"></ion-icon></a>
+													</div>
+													<div sentMsg>
+														<div lftInput>
+															<a href="javascript:void(0)">
+																<img src="assets/images/user3.png">
+															</a>
+															<ion-input placeholder="Reply as Pencilmation"></ion-input>
+														</div>
+														<ion-button btn-submit fill="solid">Submit</ion-button>
+													</div>
+													<div suggested>
+														<p>Suggested:</p><div><p>Thanks!</p><p>You are welcome</p><p>Noted</p></div>
+													</div>
+												</div>
+											</div>
+											<div cmntCol>
+												<div lftPost>
+													<span class="cont-dat">
+														How to bake a cake and bla bla part 4 is live on...
+														<a href="javacript:void(0)"><ion-icon name="logo-twitter"></ion-icon></a>
+													</span>
+												
+												</div>
+												<div ritreply>
+													<div labels>
+														<label>1h ago</label>
+														<label>32 followers</label>
+														<label>48 Engmt Score</label>
+													</div>
+													<div userComnt>
+														<img src="../assets/images/user.jpg" alt="">
+														<p>John Deo - Lorem ipsum dolor sit amet est nostro diceret lorem ipsum</p>
+													</div>
+													<div allReply>
+														<div relpyCount (click)="hide('2')">
+															<p>3 replies</p>
+															<ion-icon name="chevron-down-outline"></ion-icon>  
+														</div>
+														<div comts *ngIf="hideMe == '2'">
+															<div userComnt>
+																<img src="../assets/images/user3.jpg" alt="">
+																<p>John Deo - Lorem ipsum dolor sit amet est nostro diceret lorem ipsum</p>
+															</div>
+															<div userComnt>
+																<img src="../assets/images/user3.jpg" alt="">
+																<p>John Deo - Lorem ipsum dolor sit amet est nostro diceret lorem ipsum</p>
+															</div>
+														</div>
+														<a href="javascript:void(0)" none loadmore>Load More <ion-icon name="chevron-down-outline"></ion-icon></a>
+													</div>
+													<div sentMsg>
+														<div lftInput>
+															<a href="javascript:void(0)"><img src="assets/images/user3.png"></a>
+															<ion-input placeholder="Reply as Pencilmation"></ion-input>
+														</div>
+														<ion-button btn-submit fill="solid">Submit</ion-button>
+													</div>
+													<div suggested>
+														<p>Suggested:</p><div><p>Thanks!</p><p>You are welcome</p><p>Noted</p></div>
+													</div>
+												</div>
+											</div>
+											<div cmntCol>
+												<div lftPost>
+													<span><img src="../assets/images/cartoon1.jpg" alt=""><a href="javacript:void(0)"><ion-icon name="logo-youtube"></ion-icon></a></span>
+													<p>How to bake a cake and bla-Part...</p>
+												</div>
+												<div ritreply>
+													<div labels>
+														<label>1h ago</label>
+														<label>32 followers</label>
+														<label>48 Engmt Score</label>
+													</div>
+													<div userComnt>
+														<img src="../assets/images/user.jpg" alt="">
+														<p>John Deo - Lorem ipsum dolor sit amet est nostro diceret lorem ipsum</p>
+													</div>
+													<div allReply>
+														<div relpyCount (click)="hide('3')">
+															<p>3 replies</p>
+															<ion-icon name="chevron-down-outline"></ion-icon>
+														</div>
+														<div comts *ngIf="hideMe == '3'">
+															<div userComnt>
+																<img src="../assets/images/user3.jpg" alt="">
+																<p>John Deo - Lorem ipsum dolor sit amet est nostro diceret lorem ipsum</p>
+															</div>
+															<div userComnt>
+																<img src="../assets/images/user3.jpg" alt="">
+																<p>John Deo - Lorem ipsum dolor sit amet est nostro diceret lorem ipsum</p>
+															</div>
+														</div>
+														<a href="javascript:void(0)" none loadmore>Load More <ion-icon name="chevron-down-outline"></ion-icon></a>
+													</div>
+													<div sentMsg>
+														<div lftInput>
+															<a href="javascript:void(0)"><img src="assets/images/user3.png"></a>
+															<ion-input placeholder="Reply as Pencilmation"></ion-input>
+														</div>
+														<ion-button btn-submit fill="solid">Submit</ion-button>
+													</div>
+													<div suggested>
+														<p>Suggested:</p><div><p>Thanks!</p><p>You are welcome</p><p>Noted</p></div>
+													</div>
+												</div>
+											</div>
+										</ion-col>
+										<ion-col size="12" size-md="12" size-lg="6">
+											
+											<div cmntCol>
+												<div lftPost>
+													<span><img src="../assets/images/cartoon8.jpg" alt=""><a href="javacript:void(0)"><ion-icon name="logo-youtube"></ion-icon></a></span>
+													<p>How to bake a cake and bla-Part...</p>
+												</div>
+												<div ritreply>
+													<div labels>
+														<label>1h ago</label>
+														<label>32 followers</label>
+														<label>48 Engmt Score</label>
+													</div>
+													<div userComnt>
+														<img src="../assets/images/user.jpg" alt="">
+														<p>John Deo - Lorem ipsum dolor sit amet est nostro diceret lorem ipsum</p>
+													</div>
+													<div allReply>
+														<div relpyCount (click)="hide('4')">
+															<p>3 replies</p>
+															<ion-icon name="chevron-down-outline"></ion-icon>
+														</div>
+														<div comts *ngIf="hideMe == '4'">
+															<div userComnt>
+																<img src="../assets/images/user3.jpg" alt="">
+																<p>John Deo - Lorem ipsum dolor sit amet est nostro diceret lorem ipsum</p>
+															</div>
+															<div userComnt>
+																<img src="../assets/images/user3.jpg" alt="">
+																<p>John Deo - Lorem ipsum dolor sit amet est nostro diceret lorem ipsum</p>
+															</div>
+															<a href="javascript:void(0)" loadmore>Load More <ion-icon name="chevron-down-outline"></ion-icon></a>
+														</div>
+													</div>
+													<div sentMsg>
+														<div lftInput>
+															<a href="javascript:void(0)"><ion-icon name="happy-outline"></ion-icon></a>
+															<ion-input placeholder="Reply as Pencilmation"></ion-input>
+														</div>
+														<ion-button btn-submit fill="solid">Submit</ion-button>
+													</div>
+													<div suggested>
+														<p>Suggested:</p><div><p>Thanks!</p><p>You are welcome</p><p>Noted</p></div>
+													</div>
+												</div>
+											</div>
+											<div cmntCol>
+												<div lftPost>
+													<span class="cont-dat">
+														How to bake a cake and bla bla part 4 is live on...
+														<a href="javacript:void(0)"><ion-icon name="logo-twitter"></ion-icon></a>
+													</span>
+												
+												</div>
+												<div ritreply>
+													<div labels>
+														<label>1h ago</label>
+														<label>32 followers</label>
+														<label>48 Engmt Score</label>
+													</div>
+													<div userComnt>
+														<img src="../assets/images/user.jpg" alt="">
+														<p>John Deo - Lorem ipsum dolor sit amet est nostro diceret lorem ipsum</p>
+													</div>
+													<div allReply>
+														<div relpyCount (click)="hide('5')">
+															<p>3 replies</p>
+															<ion-icon name="chevron-down-outline"></ion-icon>
+														</div>
+														<div comts *ngIf="hideMe == '5'">
+															<div userComnt>
+																<img src="../assets/images/user3.jpg" alt="">
+																<p>John Deo - Lorem ipsum dolor sit amet est nostro diceret lorem ipsum</p>
+															</div>
+															<div userComnt>
+																<img src="../assets/images/user3.jpg" alt="">
+																<p>John Deo - Lorem ipsum dolor sit amet est nostro diceret lorem ipsum</p>
+															</div>
+														</div>
+														<a href="javascript:void(0)" none loadmore>Load More <ion-icon name="chevron-down-outline"></ion-icon></a>
+													</div>
+													<div sentMsg>
+														<div lftInput>
+															<a href="javascript:void(0)"><img src="assets/images/user3.png"></a>
+															<ion-input placeholder="Reply as Pencilmation"></ion-input>
+														</div>
+														<ion-button btn-submit fill="solid">Submit</ion-button>
+													</div>
+													<div suggested>
+														<p>Suggested:</p><div><p>Thanks!</p><p>You are welcome</p><p>Noted</p></div>
+													</div>
+												</div>
+											</div>
+										</ion-col>
+									</ion-row>
+								</div>
+							</div>
+						</div>
+					
+						</ion-col>
+					</ion-row>
+			</ion-col>
+		</ion-row>
+	</div>
+</ion-content>

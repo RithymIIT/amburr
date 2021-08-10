@@ -1,0 +1,47 @@
+<!--ion-header>
+  <ion-toolbar>
+    <ion-title>signup</ion-title>
+  </ion-toolbar>
+</ion-header-->
+
+<ion-content>
+	<div class="bg-main">
+		<a href="javascript:void(0);" class="left-back" routerLink="/home"> <ion-icon name="arrow-back-outline"></ion-icon> </a>
+		<ion-row class="w-100">
+			<ion-col size="12" size-md="6" size-lg="4" offset-md="3" offset-lg="4">
+				<div class="data-signup">
+					<img src="assets/images/logo.png" class="logo-sp">
+					<h3> Sign in to your account </h3>
+					<div class="form-ingd">
+						<form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
+						
+
+						<ion-input formControlName="email" placeholder="Your Email e.g. john@abc.com"></ion-input>
+						
+						<div *ngIf="isSubmit && form.email.errors" class="invalid-feedback">
+							<ion-text validationText *ngIf="form.email.errors.required">
+							  <p>*Email is required!</p>
+							</ion-text>
+							<ion-text validationText *ngIf="form.email.errors.email">
+							  <p>*Email must be a valid email address!</p>
+							</ion-text>
+						</div>
+
+						<ion-input formControlName="password" type="password" placeholder="Your Password"></ion-input>
+						
+						<div *ngIf="isSubmit && form.password.errors" class="invalid-feedback">
+							<ion-text validationText *ngIf="form.password.errors.required">
+							  <p>*Password is required!</p>
+							</ion-text>
+						</div>
+
+						<ion-button color="primary" expand="full" shape="round" class="chsirs" type="submit">Login </ion-button>
+					   </form>
+						<p> Don't have an account? <a [routerLink]="['/signup']">Signup here</a> </p>
+						<p> Forgot Password? <a [routerLink]="['/forgot-password']">Click here</a> </p>
+					</div>
+				</div>
+			</ion-col>
+		</ion-row>
+	</div>
+</ion-content>

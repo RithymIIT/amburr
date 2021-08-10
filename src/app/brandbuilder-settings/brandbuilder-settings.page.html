@@ -1,0 +1,110 @@
+<ion-content>
+	<div mainContent>
+		<ion-row>
+			<ion-col size="12" size-md="3" size-lg="2">
+				<div leftads class="leftmain-ads">
+					<a class="logo-dash small-none" logo href="javascript:void(0)"><img src="../assets/images/logo.png" alt=""></a>
+						<div class="small-headr big-none">
+							<img src="assets/images/logo.png" class="logo-dash">
+							<a href="javascript:void(0);" class="menu-togl" (click)="hide()"> <ion-icon name="menu-outline"></ion-icon> </a>
+						</div>						
+						<ul class="menu-list-left big-none position-str" *ngIf="hideMe">
+							<li><a href="javascript:void(0)" routerLink="/dashboard"><ion-icon name="home-outline"></ion-icon> Home</a></li>
+							<li><a href="javascript:void(0)" routerLink="/contentcalendar-month"><ion-icon name="calendar-outline"></ion-icon> Content Calendar</a></li>
+							<li class="active"><a href="javascript:void(0)" routerLink="/brand-builder"><ion-icon name="build-outline"></ion-icon>Brand Builder</a></li>
+							<li><a routerLink="/community-center" href="javascript:void(0)"><ion-icon name="chatbox-ellipses-outline"></ion-icon>Community Center</a></li>
+							<li class="user-ledg" routerLink="/my-account">
+								<img src="assets/images/user.jpg" class="usr-im">
+								<h4> John Doe </h4>
+								<h6> My Account </h6>
+							</li>
+						</ul>						
+					<div lftLinks class="small-none">				
+						<ul>
+							<li><a href="javascript:void(0)" routerLink="/dashboard"><ion-icon name="home-outline"></ion-icon> Home</a></li>
+							<li><a href="javascript:void(0)" routerLink="/contentcalendar-month"><ion-icon name="calendar-outline"></ion-icon> Content Calendar</a></li>
+							<li class="active"><a href="javascript:void(0)" routerLink="/brand-builder"><ion-icon name="build-outline"></ion-icon>Brand Builder</a></li>
+							<li><a routerLink="/community-center" href="javascript:void(0)"><ion-icon name="chatbox-ellipses-outline"></ion-icon>Community Center</a></li>
+						</ul>
+						<div class="small-none" userPro routerLink="/my-account">
+							<img src="../assets/images/user.jpg" alt="">
+							<p><b>John Deo</b>My Account</p>
+						</div>
+					</div>
+					<img socialads class="small-none" src="../assets/images/lifeads.jpg" alt="">
+				</div>
+			</ion-col>
+			<ion-col size="12" size-md="9" size-lg="10">
+				<div centerArea>
+					<div topHorBanner>
+						<img src="../assets/images/horibanner.jpg" alt="">
+					</div>
+					<div insideCenter>
+								<h2 hdng routerLink="/brand-builder"><ion-icon name="arrow-back-outline"></ion-icon> Settings</h2>					
+							<ion-list>
+						      	<h4 smallhdng>Profiles
+									<ion-button fill="clear"><ion-icon name="add-circle-outline"></ion-icon> Add New Profile</ion-button>
+								</h4>
+								<p>No Profiles left to add in the brands.</p>
+
+								<div brandsArea>
+									<ion-row>
+										<ion-col size="12" size-sm="12" size-md="6" size-lg="4">
+											<div addbrand addbtnmob>
+												<ion-icon addplus name="add-circle-outline"></ion-icon>
+												<p>Add New Brand</p>
+											</div>
+										</ion-col>
+										<ion-col size="12" size-sm="6" size-md="6" size-lg="4">
+											<div addbrand brand2>
+												<ul>
+													<li>
+														<ion-input placeholder="Brand 2"></ion-input>
+														<ion-button fill="outline" btn-outline><ion-icon name="trash-outline"></ion-icon></ion-button>
+													</li>
+													<li>
+														<div addedBrand>
+															<span><img src="../assets/images/user3.png" alt=""><label youtube><ion-icon name="logo-youtube"></ion-icon></label> </span>
+															<p>Pencilmation</p>
+															<ion-icon trash name="trash-outline"></ion-icon>
+														</div>
+													</li>
+													<li>
+														<div addedBrand>
+															<span><img src="../assets/images/user3.png" alt=""><label twitter><ion-icon name="logo-twitter"></ion-icon></label> </span>
+															<p>@Pencilmation</p>
+															<ion-icon trash name="trash-outline"></ion-icon>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</ion-col>
+										<ion-col size="12" size-sm="6" size-md="6" size-lg="4">
+											<div addbrand brand2>
+												<ul>
+													<li>
+														<ion-input placeholder="Brand 2"></ion-input>
+														<ion-button fill="outline" btn-outline><ion-icon name="trash-outline"></ion-icon></ion-button>
+													</li>
+													<li>
+														<div addedBrand>
+															<span><img src="../assets/images/user3.png" alt=""><label youtube><ion-icon name="logo-youtube"></ion-icon></label> </span>
+															<p>Cocomelon</p>
+															<ion-icon trash name="trash-outline"></ion-icon>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</ion-col>
+									</ion-row>
+								</div>
+								
+						    </ion-list>
+						<a href="javascript:void(0);" class="save-bst"> Save </a>
+					</div>
+				</div>
+			</ion-col>
+		</ion-row>
+	</div>
+	<div botmbg></div>
+</ion-content>

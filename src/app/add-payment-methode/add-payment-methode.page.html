@@ -1,0 +1,123 @@
+<!--ion-header>
+  <ion-toolbar>
+    <ion-title>brandbuilder-pp-edit</ion-title>
+  </ion-toolbar>
+</ion-header-->
+
+<ion-content>
+	<div class="box-cnt-bgs">
+		<div class="cntr-man-bx">
+			<div class="top-sh">
+				<h4> Add A Payment Method </h4>
+				<div class="right-dyy">
+					<a href="javascript:void(0);" class="dlt-ic" (click)="dismiss2()"> <ion-icon name="close-outline"></ion-icon> </a>
+				</div>
+			</div>
+		<form [formGroup]="cardForm" (ngSubmit)="addCard(cardForm.value)">
+			<div class="cont-sect">
+
+
+				<div *ngIf="validateCard==true">
+					<p style="color:red;">*Not a Valid Card Number</p>
+				</div>
+
+				<div *ngIf="validateExpMonthYear==true">
+						<p style="color:red;">*Not a Valid Exp. Month Or Year</p>
+				</div>
+
+				<div class="cons-sf">
+					<label> Name on Card </label>
+					<ion-input type="text" formControlName="name" placeholder="Enter name"></ion-input>
+				</div>
+				<div *ngIf="isSubmit && form.name.errors" class="invalid-feedback">
+					<ion-text validationText *ngIf="form.name.errors.required">
+					  <p>*Name is required!</p>
+					</ion-text>
+				
+					<ion-text validationText *ngIf="form.name.errors.pattern">
+					  <p>*Name Should Contain Only Alphabets!</p>
+					</ion-text>
+				</div>
+				<div class="cons-sf">
+					<label> Card Number </label>
+					<ion-input type="number" formControlName="number" placeholder="Enter card number" (keyup)="checkDigit($event)"></ion-input>
+				</div>
+				<div *ngIf="isSubmit && form.number.errors" class="invalid-feedback">
+					<ion-text validationText *ngIf="form.number.errors.required">
+					  <p>*Card Number is required!</p>
+					</ion-text>
+					<ion-text validationText *ngIf="form.number.errors.pattern">
+						<p>*Card Must Contain Only Digits</p>
+					</ion-text> 
+					<ion-text validationText *ngIf="form.number.errors.minlength || form.number.errors.maxlength">
+						<p>*Card Must Contain 16 Digits</p>
+					</ion-text> 
+					<ion-text validationText *ngIf="form.number.errors.validateCCNumber">
+						<p>*Enter the validate card number!</p>
+					  </ion-text>
+					  <ion-text validationText *ngIf="form.number.errors.chk_card">
+						<p>*Please Enter Another Card, This Card is Already Added!</p>
+					  </ion-text>
+				</div>
+				<ion-row class="mr-s">
+					<ion-col size="6" size-md="5">
+						<div class="cons-sf">
+							<label> Expiry Date </label>
+							<div class="flex-sf">
+								<ion-select formControlName="month" interface="popover" placeholder="MM">
+									<ion-select-option *ngFor="let m of months" value="{{m}}">{{m}}</ion-select-option>
+								</ion-select>
+								<ion-select interface="popover" formControlName="year" (ionChange)="onChange($event)" placeholder="YY">
+									<ion-select-option *ngFor="let y of years" value="{{y}}">{{y}}</ion-select-option>
+								</ion-select>
+								
+							</div>
+							<div *ngIf="isSubmit && form.month.errors" class="invalid-feedback">
+								<ion-text validationText *ngIf="form.month.errors.required">
+								  <p>*Expiry month is required!</p>
+								</ion-text>
+								<ion-text validationText *ngIf="form.month.errors.chk_month">
+									<p>*Please Select a valid month!</p>
+								  </ion-text>
+							</div>
+							<div *ngIf="isSubmit && form.year.errors" class="invalid-feedback">
+								<ion-text validationText *ngIf="form.year.errors.required">
+								  <p>*Exoiry year is required!</p>
+								</ion-text>
+								<ion-text validationText *ngIf="form.year.errors.chk_year">
+									<p>*Please Select a valid year!</p>
+								  </ion-text>
+							</div>
+							<!-- <div *ngIf="isSubmit && form.year.errors" class="invalid-feedback">
+								<ion-text validationText *ngIf="form.year.errors.validateExpMonthYear">
+								  <p>*Exoiry month is invalid!</p>
+								</ion-text>
+							</div>
+							<div *ngIf="isSubmit && form.year.errors" class="invalid-feedback">
+								<ion-text validationText *ngIf="form.year.errors.validateExpMonthYear">
+								  <p>*Exoiry year is invalid!</p>
+								</ion-text>
+							</div> -->
+						</div>
+					</ion-col>	
+					<!-- <ion-col size="6" size-md="7">		
+						<div class="cons-sf">
+							<label> CVV </label>
+							<ion-input formControlName="cvv" placeholder="Enter CVV"></ion-input>
+						</div>
+						<div *ngIf="isSubmit && form.cvv.errors" class="invalid-feedback">
+							<ion-text validationText *ngIf="form.cvv.errors.required">
+							  <p>*CVV is required!</p>
+							</ion-text>
+						</div>
+					</ion-col>	 -->
+				</ion-row>
+			</div>
+			<div class="btn-dics ">
+				<a href="javascript:void(0);" class="canc-btn" (click)="dismiss2()">Cancel  </a>
+				<button ion-button class="save-btn" type="submit" >Add </button>
+			</div>
+		</form>
+		</div>
+	</div>
+</ion-content>

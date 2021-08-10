@@ -1,0 +1,112 @@
+<ion-content>
+	<div flex-header>
+	  	<a href="javascript:void(0)"><img src="../assets/images/logo.png" alt=""></a>
+	  	<p (click)="presentModal()">Return to Content Calendar <ion-icon name="close-outline"></ion-icon></p>
+	</div>
+	<div mainContent>
+		<ion-row>
+			<ion-col size="12" size-md="12">
+				<!--- mobile ads start --->
+				<div mob-ads-sec class="ion-hide-md-up">
+					<img src="assets/images/mob-ads.jpg" alt="" />
+				</div>
+				<!--- mobile ads end --->				
+				<div class="cont-fls">
+					<div class="add-vf">
+						<a href="javascript:void(0)">
+							<img src="assets/images/ad3.jpg">
+						</a>
+					</div>
+					<div class="fvs-ft">
+						<div centerArea>
+							<div insideCenter>
+								<h2 hdng>Create Cross Promotional Tweet(s)
+									<ul>
+										<li><span>1</span></li>
+										<li></li>
+										<li><span>2</span></li>
+									</ul>								
+								</h2>
+								<div threeCols>
+									<div smallCol>
+									<!--- mobile menu link start --->
+										<ion-item menuheader lines="none"  class="ion-hide-md-up">
+											<ion-label>
+											  <span>3</span>Confirm
+											</ion-label>
+											<a slot="end" href="javascript:void(0)" (click)="hide()" menu-btn><ion-icon name="menu"></ion-icon></a>
+										</ion-item>										
+										<div menu-mob-link *ngIf="hideMe"  class="ion-hide-md-up">
+										    <ion-buttons menuclose-btn  (click)="hide()"><ion-icon name="close"></ion-icon></ion-buttons>
+											<ul>
+												<li routerLink="/create-promotional-tweets"><a class="activedone" href="javascript:void(0)"><span>1</span>Video and Time</a></li>
+												<li><a routerLink="/cross-promotion-write" class="activedone" href="javascript:void(0)"><span>2</span>Write</a></li>
+												<li><a class="active" href="javascript:void(0)"><span>3</span>Confirm</a></li>
+											</ul>
+										</div>
+										<!--- mobile menu link end --->									
+										<ul class="ion-hide-md-down">
+											<li routerLink="/create-promotional-tweets"><a class="activedone" href="javascript:void(0)"><span>1</span>Video and Time</a></li>
+											<li><a routerLink="/cross-promotion-write" class="activedone" href="javascript:void(0)"><span>2</span>Write</a></li>
+											<li><a class="active" href="javascript:void(0)"><span>3</span>Confirm</a></li>
+										</ul>
+									</div>
+									<div largeCol>
+										<div quoteRow>
+											<img imgcart src="../assets/images/account.png" alt="">
+											<div quoteBox>
+												<div quoteBoxs>
+													<p><b>Great Job John!</b></p>
+													<p>Lorem ipsum dolor sit amet, an eam dico bonorum. Choro volutpat eam et. Ex sea vidit solum definiebas. Usu ei tale graeci interesset,</p>
+												</div>
+												<ion-item lines="none">
+													<ion-avatar slot="start">
+													  <img src="assets/images/user3.jpg">
+													</ion-avatar>
+												    <ion-label>
+													    <h3><b>Pencilmation</b> @Pencilmotion · Dec 1, 2020</h3>
+													    <p>Lorem ipsum dolor sit amet, ius an illud vivendum. Pri modus ignota reprimique an, usu no dicat possit adolescens, te error numquam cum. Mel ea detracto consequat. <b>#AI #TensorFlow #DeepLearning #MachineLearning</b></p>
+													    <ion-row>
+														    <ion-col size="6">
+															    <div imgsec>
+													                <img src="assets/images/img4.jpg">														
+																</div>
+															</ion-col>
+														    <ion-col size="6">
+															    <div imgsec>
+													                <img src="assets/images/img5.jpg">														
+																</div>
+															</ion-col>
+														</ion-row>
+												    </ion-label>
+												</ion-item>
+												<ion-item lines="none">
+													<ion-icon slot="start" name="repeat-outline"></ion-icon>
+												    <ion-label>
+													    <p cont-width>Will be posted One day before the video "How to bake a cake - Part 4" on Dec 4, Fri, 8:00 PM ET</p>
+												    </ion-label>
+												</ion-item>
+											</div>
+										</div>									 
+										
+
+										<div botmbtns>
+											<ion-button btn-outline fill="outline">Save as draft</ion-button>
+											<ion-button routerLink="/done" fill="solid">Publish</ion-button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="add-vf">
+						<a href="javascript:void(0)">
+							<img src="assets/images/ad4.jpg">
+						</a>
+					</div>
+				</div>
+			</ion-col>
+		</ion-row>
+	</div>
+	<div botmbg></div>
+</ion-content>

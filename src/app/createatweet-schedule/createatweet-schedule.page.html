@@ -1,0 +1,189 @@
+<ion-content>
+	<div flex-header>
+	  	<a href="javascript:void(0)"><img src="../assets/images/logo.png" alt=""></a>
+	  	<p (click)="presentModal()">Return to Content Calendar <ion-icon name="close-outline"></ion-icon></p>
+	</div>
+	<div mainContent>
+		<ion-row>
+			<ion-col size="12" size-md="12">
+				<!--- mobile ads start --->
+				<div mob-ads-sec class="ion-hide-md-up">
+					<img src="assets/images/mob-ads.jpg" alt="" />
+				</div>
+				<!--- mobile ads end --->			
+				<div class="cont-fls">
+					<div class="add-vf">
+						<a href="javascript:void(0)">
+							<img src="assets/images/ad3.jpg">
+						</a>
+					</div>
+					<div class="fvs-ft">
+						<div centerArea>
+						<div insideCenter>					
+							<h2 hdng>Create A Tweet</h2>
+							<div threeCols>
+								<div smallCol>
+									<!--- mobile menu link start --->
+										<ion-item menuheader lines="none"  class="ion-hide-md-up">
+											<ion-label>
+											  <span>1</span>Schedule
+											</ion-label>
+											<a slot="end" href="javascript:void(0)" (click)="hide()" menu-btn><ion-icon name="menu"></ion-icon></a>
+										</ion-item>										
+										<div menu-mob-link *ngIf="hideMe"  class="ion-hide-md-up">
+										    <ion-buttons menuclose-btn  (click)="hide()"><ion-icon name="close"></ion-icon></ion-buttons>
+											<ul>
+												<li><a class="active" href="javascript:void(0)"><span>1</span>Schedule</a></li>
+												<li><a routerLink="/idea-generate-tweet" href="javascript:void(0)"><span>2</span>Idea Generator</a></li>
+												<li><a routerLink="/create-a-tweet-write" href="javascript:void(0)"><span>3</span>Write</a></li>
+												<li><a routerLink="/create-atweet-confirm" href="javascript:void(0)"><span>4</span>Confirm</a></li>
+											</ul>
+										</div>
+										<!--- mobile menu link end --->
+										<!--- mobile quotes start --->
+											<div mobilequotes  class="ion-hide-md-up">
+												<img imgcart src="assets/images/account.png" alt="">
+												<div quoteBox>
+													<div quoteBoxs>
+														<a href="javascript:void(0)" (click)="hide1()"><b>View Instructions</b> <ion-icon name="chevron-down"></ion-icon></a>
+														<p *ngIf="hideMe1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+													</div>													
+												</div>
+											</div>									 																		
+										<!--- mobile quotes end --->
+									<ul class="ion-hide-md-down">
+										<li><a class="active" href="javascript:void(0)"><span>1</span>Schedule</a></li>
+										<li><a routerLink="/idea-generate-tweet" href="javascript:void(0)"><span>2</span>Idea Generator</a></li>
+										<li><a routerLink="/create-a-tweet-write" href="javascript:void(0)"><span>3</span>Write</a></li>
+										<li><a routerLink="/create-atweet-confirm" href="javascript:void(0)"><span>4</span>Confirm</a></li>
+									</ul>
+								</div>
+								<div largeCol>
+									<div chooseDate>
+										<h5>When do you want your tweet to go live?</h5>
+										<p><ion-icon name="star"></ion-icon> means best day/time to post your tweet</p>
+										<ion-row>
+										    <ion-col size="12" size-md="6">
+											    <div postsec>
+													<label class="radiosec"><h4>Post now</h4>
+													<p>You tweet will be posted as soon as you complete creating it.</p>
+													  <input type="radio" name="radio">
+													  <span class="checkmark"></span>
+													</label>												
+												</div>
+											</ion-col>
+										    <ion-col size="12" size-md="6">
+											    <div postsec>
+													<label class="radiosec"><h4>Post later</h4>
+													<p>Your tweet will be posted on your chosen date and time.</p>
+													  <input type="radio" name="radio">
+													  <span class="checkmark"></span>
+													</label>												
+												</div>
+											</ion-col>
+										</ion-row>
+									</div>
+
+									<div chooseDate>
+										<h5>Choose Date</h5>
+										<ul>
+											<li>
+												<input type="radio" id="date1" name="date">
+												<label for="date1">Today, 12/24/2020</label>
+											</li>
+											<li>
+												<input type="radio" id="date2" name="date">
+												<label for="date2">Tomorrow, 12/24/2020</label>
+											</li>
+											<li>
+												<input type="radio" id="date3" name="date">
+												<label for="date3"><ion-icon star name="star"></ion-icon> Sat, 12/24/2020</label>
+											</li>
+											<li>
+												<input type="radio" id="date7" name="date">
+												<label for="date7"> Sun, 12/24/2020</label>
+											</li>
+											<li>
+												<input type="radio" id="date4" name="date">
+												<label for="date4"><ion-icon star name="star"></ion-icon> Mon, 12/24/2020</label>
+											</li>
+											<li>
+												<input type="radio" id="date8" name="date">
+												<label for="date8"> Tue, 12/24/2020</label>
+											</li>
+											<li>
+												<input type="radio" id="date9" name="date">
+												<label for="date9"> Wed, 12/24/2020</label>
+											</li>
+											<li datefield> <ion-datetime displayFormat="MM DD YYYY" placeholder="Choose custom date"></ion-datetime>
+											</li>
+										</ul>
+									</div>
+									<div choosetime>
+										<h5>Choose Time</h5>
+										<ul>
+										    <li>
+											    <ion-icon name="chevron-up-outline"></ion-icon>
+											    <p>10 h</p>
+												<ion-icon name="chevron-down-outline"></ion-icon>
+											</li>
+										    <li>
+											    <ion-icon name="chevron-up-outline"></ion-icon>
+											    <p>00 m</p>
+												<ion-icon name="chevron-down-outline"></ion-icon>
+											</li>
+										    <li am-pm>
+											    <h3 active>AM</h3>
+											    <h3>PM</h3>
+											</li>
+										</ul>
+									</div>
+									<div besttime>
+										<h5>Best Times</h5>
+										<ul>
+											<li>
+												<input type="radio" id="time1" name="time">
+												<label for="time1"><ion-icon star name="star"></ion-icon> 10:00 AM</label>
+											</li>
+											<li>
+												<input type="radio" id="time2" name="time">
+												<label for="time2"><ion-icon star name="star"></ion-icon> 02:00 PM</label>
+											</li>
+											<li>
+												<input type="radio" id="time3" name="time">
+												<label for="time3"><ion-icon star name="star"></ion-icon> 08:00 PM</label>
+											</li>
+											<li>
+												<input type="radio" id="time4" name="time">
+												<label for="time4"><ion-icon star name="star"></ion-icon> 10:00 PM</label>
+											</li>
+										</ul>
+									</div>
+									<div botmbtns>
+										<ion-button btn-outline fill="outline">Save as draft</ion-button>
+										<ion-button routerLink="/idea-generate-tweet" fill="solid">Next</ion-button>
+									</div>
+								</div>
+								<div smallCol class="ion-hide-md-down">
+									<div centerRit>
+										<img src="../assets/images/icon.png" alt="">
+										<div quotes>
+											<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="add-vf">
+					<a href="javascript:void(0)">
+						<img src="assets/images/ad4.jpg">
+					</a>
+				</div>
+			</div>
+			</ion-col>
+		</ion-row>
+	</div>
+	<div botmbg></div>
+</ion-content>

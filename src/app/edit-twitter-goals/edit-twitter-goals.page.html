@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="text-left pad15"><div>Edit Twitter Goals</div></ion-title>
+    <ion-buttons slot="end" (click)="dismiss()"><ion-icon name="close-outline"></ion-icon></ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div >
+    <div class="cont-sr">
+  <ion-row>
+    <ion-col  size="12" size-md="12" size-lg="6">
+      <form [formGroup]="twitterForm" (ngSubmit)="addTwitterGoal(twitterForm.value, goal)">
+      <div class="con-tou">
+        <span class="nam col-twi"> <ion-icon name="logo-twitter"></ion-icon> Twitter Profile(s) Goals </span>
+        <div  class="btn-dt">
+          
+          <div class="cont-sect-ne" >
+            <div class="wis-c">
+              I want to Reach <ion-input formControlName="subscriber" class="m-0-20"></ion-input> Subscribers
+            </div>
+            <div *ngIf="isSubmit && fo.subscriber.errors" class="invalid-feedback">
+              <ion-text validationText *ngIf="fo.subscriber.errors.required">
+                <p class="ife">*Subscribers is required!</p>
+              </ion-text>
+            
+              <ion-text validationText *ngIf="fo.subscriber.errors.pattern">
+                <p class="ife">*Subscribers Should Contain Only Numbers!</p>
+              </ion-text>
+            </div>
+            <div class="wis-c">
+              on 
+              
+              <ion-select interface="action-sheet" formControlName="accountType" placeholder="Choose Account" class="ml-20">
+                <ion-select-option *ngFor="let acc of accType" value="{{acc}}">{{acc}}</ion-select-option>
+              </ion-select>
+            </div>
+            <div *ngIf="isSubmit && fo.accountType.errors" class="invalid-feedback">
+              <ion-text validationText *ngIf="fo.accountType.errors.required">
+                <p >*Please Select Account Type on which you have goal!</p>
+              </ion-text>
+            </div>
+            <div class="wis-c">
+              Within 
+              <ion-input formControlName="with" class="w-50s"></ion-input>	
+              <ion-select interface="action-sheet" formControlName="within" placeholder="Select One" class="w-50s">
+                <ion-select-option *ngFor="let t of time" value="{{t}}">{{t}}</ion-select-option>
+              </ion-select>
+            </div>
+            <div *ngIf="isSubmit && fo.with.errors" class="invalid-feedback">
+              <ion-text validationText *ngIf="fo.with.errors.required">
+                <p class="ife">*Please Select One Count in which you want to achive the goal!</p>
+              </ion-text>
+            </div>
+            <div *ngIf="isSubmit && fo.within.errors" class="invalid-feedback">
+              <ion-text validationText *ngIf="fo.within.errors.required">
+                <p class="ife">*Please Select One within which you want to achive this goal!</p>
+              </ion-text>
+            </div>
+            <div class="btn-dics">
+              <ion-button type="submit" class="save-btn">Save </ion-button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </form>
+    </ion-col>
+</ion-row>
+    </div>
+  </div>
+</ion-content>

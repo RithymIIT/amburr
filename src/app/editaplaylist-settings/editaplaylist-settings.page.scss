@@ -1,0 +1,343 @@
+ion-content {
+	.box-cnt-bgs {
+		min-height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.cntr-man-bx {
+			background: #fff;
+			padding: 20px 30px;
+			border: 1px solid #707070;
+			border-radius: 20px;
+			width: 100%;
+			max-width: 750px;
+			.top-sh {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				h4 {
+					margin: 0px;
+					font-size: 22px;
+					font-weight: 700;
+					line-height: 40px;
+				}
+				.right-dyy {
+					.ntm {
+						background: #343434 0% 0% no-repeat padding-box;
+						border-radius: 8px;
+						padding: 8px 20px;
+						margin-right: 10px;
+						color: #fff;
+						text-decoration: none;
+						ion-icon {
+							vertical-align: sub;
+							margin-right: 7px;
+						}
+					}
+					.dlt-ic {
+						font-size: 32px;
+						vertical-align: middle;
+						top: 3px;
+						position: relative;
+					}
+				}
+			}
+			.bottm-img-s {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 30px 0;
+				a {
+					display:block;
+					img {
+						height: 225px;
+						width: auto;
+					}
+				}
+				a.paddin-st  {
+					display: block;
+					padding: 0 30px;
+				}
+			}
+			ion-segment
+			{
+				background: none;
+				display: flex;
+			    border-radius: 0;
+			    border-bottom: 1px solid #eee;
+			    ion-segment-button{
+			    	    width: auto;
+					    --padding: 5px 40px;
+					    margin: 0;
+					    flex: inherit;
+					    --background: none;
+					    --box-shadow: none;
+					    box-shadow: none;
+					    display: flex;
+					    border-radius: 0;
+						--padding-start: 40px;
+						--padding-end: 40px;
+					    color: #666;
+					    align-items: center;
+				    ion-label{
+				    	display: flex;
+				    	margin:0;
+				    	text-transform: capitalize;
+				    	align-items: center;
+				    	ion-icon{
+				    		margin-right:10px;
+				    		font-size: 16px;
+				    	}
+				    }
+				    &.segment-button-checked{
+				    	--box-shadow: none;
+				    	color: #111;
+				    	--border-radius: 0;
+				    	--indicator-color:#c2e8fa;
+				    }
+			    }
+			}			
+		}
+	}
+	.btn-dics {
+		display: block;
+		text-align: right;
+		margin-top: 30px;
+		.canc-btn {
+			display: inline-block;
+			text-decoration: none;
+			border: 1px solid #E8E8E8;
+			border-radius: 8px;
+			padding: 8px 23px;
+		}
+		.save-btn {
+			background: #343434;
+			display: inline-block;
+			text-decoration: none;
+			border: 1px solid #343434;
+			border-radius: 8px;
+			padding: 8px 23px;
+			color: #fff;
+			margin-left: 10px;
+		}
+	}
+	.cont-sect {
+		padding: 20px 0;
+		.label-coy {
+		    margin-bottom:15px;
+			label 
+			{
+				letter-spacing: 0px;
+				color: #343434;
+				font-weight: 600;
+				margin-bottom: 8px;
+				display: block;
+				font-size: 15px;
+			}
+			ion-input 
+			{
+				background: #FFFFFF 0% 0% no-repeat padding-box;
+				box-shadow: 0px 3px 6px #54533b1a;
+				border: 1px solid #54533B0F;
+				border-radius: 10px;
+				padding: 0px 20px !important;
+				font-size: 15px;
+				min-height: 48px;
+				--padding-start: 0px;
+			}
+			ion-textarea 
+			{
+				background: #FFFFFF 0% 0% no-repeat padding-box;
+				box-shadow: 0px 3px 6px rgba(84 , 83 , 59 , 0.1);
+				border: 1px solid rgba(84 , 83 , 59 , 0.06);
+				border-radius: 10px;
+				font-size: 15px;
+				--padding-start: 20px;
+				--padding-end: 20px;
+			}
+			ion-radio-group
+			{
+				&.bts-s
+				{
+					display: flex;
+					align-items: center;
+					ion-item
+					{
+						&.item
+						{
+							--padding-start: 0px;
+							margin-right: 20px;
+						    --min-height: 24px;	
+							ion-label 
+							{
+								font-size: 15px;
+								margin: 0px;
+							}
+							ion-radio  
+							{
+								margin: 0px 12px 0px 0px;
+							}
+						}
+					}
+				}			
+			}			
+		}		
+	}
+	[setting-sec]
+	{
+	    [setting-search]
+		{
+		    padding: 20px 0px 10px;
+			ion-searchbar
+			{
+				--box-shadow: 0px 3px 6px #54533b1a;
+				border: 1px solid #54533B0F;
+				font-size: 14px;
+				--border-radius: 10px;
+				border-radius: 10px;
+				padding:0;
+			}		
+		}
+		[carousal]
+		{
+			margin:15px 0 0;
+			max-height: 400px;
+			overflow-y: auto;
+			[slidesec]
+			{	
+                position:relative;
+                z-index: 1;
+				ion-checkbox 
+				{
+					position: absolute;
+					top: 15px;
+					right: 15px;
+					--border-width: 1px;
+					--border-color: #e8e8e8;
+					--border-radius: 4px;	
+					--background-checked: #c2facf;
+					--border-color-checked: #29E956;
+					--checkmark-color: #29E956;
+					&.checkbox-checked 
+					{
+						&+
+						{				
+							[slidecol] 
+							{
+								border: 1px solid #5ED479;
+							}					
+						}				
+					}				
+				}				
+				[slideCol]
+				{
+					padding:7px;
+					border-radius:8px;
+					border:1px solid #eee;
+					width: 100%;
+					margin-bottom: 10px;
+					max-width: 100%;
+					margin-right: 10px;						
+					position:relative;
+					img
+					{
+						border-radius: 7px;
+						height: 100px;
+						width: 100%;
+						object-fit: cover;
+					}
+					p
+					{
+						margin:5px 0 0px;
+						color: #111;
+						font-size: 14px;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+						max-width: 95%;
+					}
+					small
+					{
+						font-size: 12px;
+						color: #777;
+						margin:0;
+						display: block;
+						text-align: left;
+					}
+				}
+			}
+		}	
+	}	
+}
+	[carousal][scrollbar]::-webkit-scrollbar {
+	  width: 5px;
+	  height:7px;
+	}
+	[carousal][scrollbar]::-webkit-scrollbar-track {
+	  border-radius: 50px;
+	  width:90%;
+	  background:#EEEEEE;
+	}	 
+	[carousal][scrollbar]::-webkit-scrollbar-thumb {
+	  background: #999999; 
+	  border-radius: 50px;
+	}
+	[carousal][scrollbar]::-webkit-scrollbar-thumb:hover {
+	  background:  #343434; 
+	}
+@media (max-width: 767px) {
+	ion-content
+	{
+	    .box-cnt-bgs
+		{
+            .cntr-man-bx
+            {
+				background: #fff;
+				padding: 15px;
+				border: none;
+				border-radius: 0px;
+				width: 100%;
+				max-width: 100%;
+				min-height: 100vh;
+				height: 100%;
+                .top-sh
+                {
+					align-items: flex-start;
+					flex-wrap: wrap;
+					justify-content: flex-start;
+					flex-direction: column-reverse;				
+				}
+				.cont-sect 
+				{
+					.label-coy 
+					{
+						ion-input 
+						{
+							font-size: 13px;
+						}
+						ion-textarea 
+						{
+							font-size: 13px;
+						}
+						ion-radio-group
+						{
+							&.bts-s
+							{
+								ion-item
+								{
+									&.item
+									{
+										ion-label 
+										{
+											font-size: 13px;
+										}
+									}
+								}
+							}			
+						}			
+					}		
+				}				
+			}			
+		}
+	}
+}

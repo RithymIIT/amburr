@@ -1,0 +1,124 @@
+<ion-content>
+	<div signupSteps>
+		<ion-row>
+			<ion-col size="12" size-md="4">
+			    <!--- mobile topbar start --->
+				<div mobtopbar class="ion-hide-md-up">
+					<div mob-back-sec>
+						<a back href="javascript:void(0)"><ion-icon name="arrow-back-outline"></ion-icon></a>
+						<h4>Now it’s time to organize your accounts into brands!</h4>
+					</div>
+					<div tracyPara>
+					    <a click-btn href="javascript:void(0)" (click)="hide()"><b>View Instructions</b> <ion-icon name="chevron-down"></ion-icon></a>
+						<p *ngIf="hideMe">I will generate a list of tasks for you to complete each day based on the goals you set.
+							<br><br>You can set as many as you want but having fewer will make my task suggestions more effective.<br><br><b>As you select goals you’ll see my highlighted recommendations.</b>
+						</p>
+					</div>
+					<span emoji><img src="../assets/images/icon.png" alt=""></span>
+				</div>
+				<!--- mobile topbar end --->
+				<div lftbar class="ion-hide-md-down">
+					<a back href="javascript:void(0)"><ion-icon name="arrow-back-outline"></ion-icon></a>
+					<h4>Now let’s specify some goals!</h4>
+					<div tracyPara>
+						<p>I will generate a list of tasks for you to complete each day based on the goals you set.
+							<br><br>You can set as many as you want but having fewer will make my task suggestions more effective.<br><br><b>As you select goals you’ll see my highlighted recommendations.</b>
+						</p>
+					</div>
+					<span emoji><img src="../assets/images/icon.png" alt=""></span>
+				</div>
+			</ion-col>
+			<ion-col size="12" size-md="8">
+				<div ritbar>
+					<ul steps>
+						<li routerLink="/add-account"><span active><ion-icon name="checkmark-outline"></ion-icon></span><p>Add Accounts</p></li>
+						<li routerLink="/signup-createbrands-filled"><span active>2</span><p>Create Brands</p></li>
+						<li><span>3</span><p>Set Goals</p></li>
+					</ul>
+					<div socials>
+						<ion-row>
+							<ion-col size="12" size-md="12" size-lg="6">
+								<div class="con-tou">
+									<span class="nam"> <ion-icon name="logo-youtube"></ion-icon> YouTube Channel(s) Goals </span>
+									<div class="cntr-man-bx">
+										<div class="cont-sect">
+											<div class="wis-c">
+												<ion-select interface="action-sheet" value="nes" class="w-100">
+													<ion-select-option value="nes">I want to get more subscribers</ion-select-option>
+													<ion-select-option value="n64">I do't want to get any subscriber</ion-select-option>
+												</ion-select>
+											</div>
+											<div class="wis-c">
+												I want to Reach <ion-input value="1000" class="m-0-20"></ion-input> Subscribers
+											</div>
+											<div class="wis-c">
+												on 
+												<ion-select interface="action-sheet" placeholder="Choose Account" class="ml-20">
+													<ion-select-option value="nes">Account One</ion-select-option>
+													<ion-select-option value="n64">Account Two</ion-select-option>
+												</ion-select>
+											</div>
+											<div class="wis-c">
+												Within 
+												<ion-input value="Timeframe" class="m-0-20"></ion-input>
+												<ion-select interface="action-sheet" placeholder="Days" class="w-50s">
+													<ion-select-option value="nes">2 Days</ion-select-option>
+													<ion-select-option value="n64">4 Days</ion-select-option>
+												</ion-select>
+											</div>
+										</div>
+										<div class="btn-dics">
+											<a href="javascript:void(0)" class="save-btn">Add </a>
+										</div>
+									</div>
+									<div class="goa-ft">
+										<div class="data-box-smd">
+											<a href="javascript:void(0)" class="dots-ell"> <ion-icon name="ellipsis-vertical"></ion-icon> </a>
+											<span class="img-box">
+												<img src="assets/images/user3.png">
+												<small class="icon-is"> <ion-icon name="logo-youtube"></ion-icon></small>
+											</span>
+											 I want to Reach <b> 1000 subscribers </b> on Pencilmation within <b>  6 months. </b> 
+											<span class="icon-bt">
+												<i class="lin-r" style="width:20%;"></i>
+												<small class="round-cr" style="left:25%;"></small>
+											</span>
+										</div>
+										<div class="data-box-smd">
+											<a href="javascript:void(0)" class="dots-ell"> <ion-icon name="ellipsis-vertical"></ion-icon> </a>
+											<span class="img-box">
+												<img src="assets/images/user3.png">
+												<small class="icon-is"> <ion-icon name="logo-youtube"></ion-icon></small>
+											</span>
+											 I want to Reach <b> 1000 subscribers </b> on Pencilmation within <b>  6 months. </b> 
+											<span class="icon-bt">
+												<i class="lin-r" style="width:20%;"></i>
+												<small class="round-cr" style="left:25%;"></small>
+											</span>
+										</div>	
+									</div>									
+								</div>					
+							</ion-col>
+							<ion-col size="12" size-md="12" size-lg="6">
+								<div class="con-tou">
+									<span class="nam col-twi"> <ion-icon name="logo-twitter"></ion-icon> Twitter Profile(s) Goals </span>
+									<div class="btn-dt">
+										<ion-select interface="popover" placeholder="Choose goal type to add new">
+											<ion-select-option value="nes">Goal One</ion-select-option>
+											<ion-select-option value="n64">Goal Two</ion-select-option>
+											<ion-select-option value="ps">Goal Three</ion-select-option>
+										</ion-select>
+									</div>							
+								</div>							
+							</ion-col>
+						</ion-row>
+					</div>
+					<div botmbtns>
+						<ion-button btn-outline fill="outline">Skip</ion-button>
+						<ion-button routerLink="/dashboard" fill="solid">Finish</ion-button>
+					</div>					
+				</div>
+			</ion-col>
+		</ion-row>
+	</div>
+</ion-content>

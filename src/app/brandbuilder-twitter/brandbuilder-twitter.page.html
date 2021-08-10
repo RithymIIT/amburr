@@ -1,0 +1,409 @@
+<!--ion-header>
+  <ion-toolbar>
+    <ion-title>dashboard</ion-title>
+  </ion-toolbar>
+</ion-header-->
+
+<ion-content>
+	<div class="dataa-main-all">
+		<ion-row>
+			<ion-col size="12" size-md="3" size-lg="2">
+				<div class="left-part-main">
+					<img src="assets/images/logo.png" class="logo-dash small-none">
+					<div class="small-headr big-none">
+						<img src="assets/images/logo.png" class="logo-dash ">
+						<a href="javascript:void(0);" class="menu-togl" (click)="hide3()"> <ion-icon name="menu-outline"></ion-icon> </a>
+					</div>
+					<ul class="menu-list-left big-none position-str" *ngIf="hideMe3">
+						<li>
+							<a href="javascript:void(0);" routerLink="/dashboard">
+								<span class="icon-m"> <ion-icon name="home-outline"></ion-icon></span>
+								Home
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);"  routerLink="/contentcalendar-month">
+								<span class="icon-m"> <ion-icon name="calendar-clear-outline"></ion-icon> </span>
+								Content Calendar
+							</a>
+						</li>
+						<li class="active">
+							<a href="javascript:void(0);" routerLink="/brand-builder">
+								<span class="icon-m"> <ion-icon name="star-outline"></ion-icon> </span>
+								Brand Builder
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);" routerLink="/community-center">
+								<span class="icon-m"> <ion-icon name="chatbox-ellipses-outline"></ion-icon> </span>
+								Community Center
+							</a>
+						</li>
+						<li class="user-ledg" routerLink="/my-account">
+							<img src="assets/images/user.jpg" class="usr-im">
+							<h4> John Doe </h4>
+							<h6> My Account </h6>
+						</li>
+					</ul>
+					<ul class="menu-list-left  small-none">
+						<li>
+							<a href="javascript:void(0);" routerLink="/dashboard">
+								<span class="icon-m"> <ion-icon name="home-outline"></ion-icon></span>
+								Home
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);"  routerLink="/contentcalendar-month">
+								<span class="icon-m"> <ion-icon name="calendar-clear-outline"></ion-icon> </span>
+								Content Calendar
+							</a>
+						</li>
+						<li class="active">
+							<a href="javascript:void(0);" routerLink="/brand-builder">
+								<span class="icon-m"> <ion-icon name="star-outline"></ion-icon> </span>
+								Brand Builder
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);" routerLink="/community-center">
+								<span class="icon-m"> <ion-icon name="chatbox-ellipses-outline"></ion-icon> </span>
+								Community Center
+							</a>
+						</li>
+						<li class="user-ledg" routerLink="/my-account">
+							<img src="assets/images/user.jpg" class="usr-im">
+							<h4> John Doe </h4>
+							<h6> My Account </h6>
+						</li>
+					</ul>
+					<div class="add-box small-none">
+						<img src="assets/images/ad1.jpg">
+					</div>
+				</div>
+			</ion-col>
+			<ion-col size="12" size-md="9" size-lg="10">
+					<div class="top-ad">
+						<img src="assets/images/ad2.jpg">
+					</div> 
+					<div class="main-cont bold-vir big-none">
+						<div class="cont-ttl main-cost">
+							<h3>	
+								<span class="img-boxf nes-top">
+									<img src="assets/images/user3.png">
+									<small class="icon-y"> <ion-icon name="logo-youtube"></ion-icon>  </small>
+								</span> Pencilmation </h3>
+							<a href="javascript:void(0);" class="cogsf" (click)="hide2()"> <ion-icon name="menu-outline"></ion-icon></a>
+						</div>
+						<div *ngIf="hideMe2">
+							<div class="cont-ttl">
+								<h3> Brands & Profiles </h3>
+								<a href="javascript:void(0);" class="cogsf" routerLink="/brandbuilder-settings"> <ion-icon name="settings-sharp"></ion-icon> </a>
+							</div>
+							<ul class="menu-maf">
+								<li>
+									<a href="javascript:void(0);">
+										<span class="img-boxf">
+											<img src="assets/images/user3.png">
+										</span>
+										Pencilmation
+									</a>
+								</li>
+								<li class="sub-men ">
+									<a href="javascript:void(0);" routerLink="brandbuilder-yt-channel">
+										<span class="img-boxf">
+											<img src="assets/images/user3.png">
+											<small class="icon-y"> <ion-icon name="logo-youtube"></ion-icon>  </small>
+										</span>
+										Pencilmation
+									</a>
+								</li>
+								<li  class="sub-men active">
+									<a href="javascript:void(0);" routerLink="/brandbuilder-twitter">
+										<span class="img-boxf">
+											<img src="assets/images/user3.png">
+											<small class="icon-twit"> <ion-icon name="logo-twitter"></ion-icon>  </small>
+										</span>
+										@Pencilmation
+									</a>
+								</li>
+							</ul>
+							<hr class="divi" />
+							<ul class="menu-maf">
+								<li >
+									<a href="javascript:void(0);">
+										<span class="img-boxf">
+											<img src="assets/images/image.svg">
+										</span>
+										Brand 2
+									</a>
+								</li>
+								<li class="sub-men">
+									<a href="javascript:void(0);">
+										<span class="img-boxf">
+											<img src="assets/images/user.jpg">
+											<small class="icon-y"> <ion-icon name="logo-youtube"></ion-icon>  </small>
+										</span>
+										Cocomelon
+									</a>
+								</li>
+							</ul>
+							<hr class="divi" />
+							<ul class="menu-maf paddinb-vuy">
+								<li >
+									<a href="javascript:void(0);">
+										Unbranded
+									</a>
+								</li>
+								<li  class="sub-men">
+									<a href="javascript:void(0);">
+										<span class="img-boxf">
+											<img src="assets/images/user.jpg">
+											<small class="icon-twit"> <ion-icon name="logo-twitter"></ion-icon>  </small>
+										</span>
+										Cocomelon
+									</a>
+								</li>
+							</ul>
+							
+							<a href="javascript:void(0);" class="bottom-add" routerLink="/brandbuilder-settings"><ion-icon name="add-circle-outline"></ion-icon> Add New Brand/Profile </a>
+						</div>
+					</div>
+					<div class="main-dic-s">
+						<ion-row>
+							<ion-col size="12" size-md="4" size-lg="3" class="p-0">
+								<div class="main-cont small-none">
+									<div class="cont-ttl">
+										<h3> Brands & Profiles </h3>
+										<a href="javascript:void(0);" class="cogsf" routerLink="/brandbuilder-settings"> <ion-icon name="settings-sharp"></ion-icon> </a>
+									</div>
+									<ul class="menu-maf">
+										<li >
+											<a href="javascript:void(0);" routerLink="/brand-builder">
+												<span class="img-boxf">
+													<img src="assets/images/user3.png">
+												</span>
+												Pencilmation
+											</a>
+										</li>
+										<li class="sub-men ">
+											<a href="javascript:void(0);" routerLink="brandbuilder-yt-channel">
+												<span class="img-boxf">
+													<img src="assets/images/user3.png">
+													<small class="icon-y"> <ion-icon name="logo-youtube"></ion-icon>  </small>
+												</span>
+												Pencilmation
+											</a>
+										</li>
+										<li  class="sub-men active">
+											<a href="javascript:void(0);" routerLink="/brandbuilder-twitter">
+												<span class="img-boxf">
+													<img src="assets/images/user3.png">
+													<small class="icon-twit"> <ion-icon name="logo-twitter"></ion-icon>  </small>
+												</span>
+												@Pencilmation
+											</a>
+										</li>
+									</ul>
+									<hr class="divi" />
+									<ul class="menu-maf">
+										<li >
+											<a href="javascript:void(0);">
+												<span class="img-boxf">
+													<img src="assets/images/image.svg">
+												</span>
+												Brand 2
+											</a>
+										</li>
+										<li class="sub-men">
+											<a href="javascript:void(0);">
+												<span class="img-boxf">
+													<img src="assets/images/user.jpg">
+													<small class="icon-y"> <ion-icon name="logo-youtube"></ion-icon>  </small>
+												</span>
+												Cocomelon
+											</a>
+										</li>
+									</ul>
+									<hr class="divi" />
+									<ul class="menu-maf">
+										<li >
+											<a href="javascript:void(0);">
+												Unbranded
+											</a>
+										</li>
+										<li  class="sub-men">
+											<a href="javascript:void(0);">
+												<span class="img-boxf">
+													<img src="assets/images/user.jpg">
+													<small class="icon-twit"> <ion-icon name="logo-twitter"></ion-icon>  </small>
+												</span>
+												Cocomelon
+											</a>
+										</li>
+									</ul>
+									
+									<a href="javascript:void(0);" class="bottom-add" routerLink="/brandbuilder-settings"><ion-icon name="add-circle-outline"></ion-icon> Add New Brand/Profile </a>
+								</div>
+							</ion-col>
+							<ion-col size="12" size-md="8" size-lg="9">
+								<ion-segment  [(ngModel)]="profiletab" scrollable="true" mode="md">
+
+								  <ion-segment-button value="all">
+									About
+								  </ion-segment-button>
+
+								  <ion-segment-button value="brands">
+									Tweets
+								  </ion-segment-button>
+
+
+								</ion-segment>
+								<div pad [ngSwitch]="profiletab">
+									<ion-list *ngSwitchCase="'all'">
+										<div class="top-main-r">
+											<span class="img-isf"> <img src="assets/images/user4.png"> </span>
+											<a href="javascript:void(0)" class="edit-pencl" (click)="presentModal()"> <ion-icon name="pencil-sharp"></ion-icon> </a>
+											<div class="cont-sky">
+												<a href="javascript:void(0);" class="plu-sr"> <ion-icon name="add-circle-outline"></ion-icon> Create Cover </a>
+											</div>
+										</div>
+										<div class="bottom-co-ss">
+											<div class="img-box-f">
+												<img src="assets/images/user3.png">
+												<a href="javascript:void(0)" class="chang-ei" (click)="presentModal2()"> <ion-icon name="pencil-sharp"></ion-icon> </a>  
+											</div>
+											<div class="sect-ft">
+												<label class="ld"> Twitter Handle </label>
+												<ion-input value="@Pencilmation"></ion-input>
+											</div>
+											<span class="tctd"> 300.2K Followers </span>
+											<a href="javascript:void(0);" class="rigts-sr"> <ion-icon name="add-circle-outline"></ion-icon> Create Logo </a>
+										</div>
+										<div class="inpt-gif">
+											<ion-row>
+												<ion-col size="12">
+													<div class="label-coy">
+														<label> Bio <span class="rs-t"> 212 out of 250 words</span> </label>
+													</div>
+												</ion-col>
+												<ion-col size="12">
+													<div class="textat">
+														<ion-textarea rows="2" value="Lorem ipsum dolor sit amet, ius an illud vivendum. Pri modus ignota reprimique an, usu no dicat possit adolescens, te error numquam cum. Mel ea detracto consequat dissentias. Eam graeco maluisset no."></ion-textarea>
+													</div>
+													<div class="botm-pros">
+														<div class="scfs">
+															Keywords score: 
+															<span class="pro-db"></span> 60
+														</div>
+														<ul class="cod-r">
+															<li> Lorem </li>
+															<li class="active"> Lorem </li>
+															<li> Lorem </li>
+															<li> Lorem </li>
+														</ul>
+													</div>
+												</ion-col>
+												<ion-col size="12">
+													<div class="lisb-ss">
+														<label> Link </label>
+														<ion-input class="inf"></ion-input>
+													</div>
+												</ion-col>
+												<ion-col size="12">
+													<div class="lisb-ss">
+														<label> Location </label>
+														<ion-input class="inf"></ion-input>
+													</div>
+												</ion-col>
+											</ion-row>
+										</div>
+										<div class="cntr-btsr">
+											<a href="javascript:void(0);" class="bgn-s">Save </a>
+										</div>
+									</ion-list>
+									<ion-list *ngSwitchCase="'brands'" class="mn-5">
+										<div class="twitt-data-box">
+											<div class="twi-dt">
+												<img src="assets/images/user3.png" class="main-usf">
+												<div class="contd">
+													<h4> Pencilmation <span> @Pencilmotion <small> · </small> Dec 1 </span> </h4> 
+													<p> Lorem ipsum dolor sit amet, ius an illud vivendum. Pri modus ignota reprimique an, usu no dicat possit adolescens, te error numquam cum. Mel ea detracto consequat.<b>  #AI #TensorFlow #DeepLearning #MachineLearning </b> </p>
+													<ul class="list-strd">
+														<li class="chatd">
+															<ion-icon name="chatbubble-outline"></ion-icon> 0 
+														</li>
+														<li class="exc">
+															<ion-icon name="repeat-outline"></ion-icon> 20 
+														</li>
+														<li class="likd">
+															<ion-icon name="heart"></ion-icon> 121 
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="twi-dt">
+												<img src="assets/images/user3.png" class="main-usf">
+												<div class="contd">
+													<h4> Pencilmation <span> @Pencilmotion <small> · </small> Dec 1 </span> </h4> 
+													<p> Lorem ipsum dolor sit amet, ius an illud vivendum. Pri modus ignota reprimique an, usu no dicat possit adolescens, te error numquam cum. Mel ea detracto consequat. <b> #AI #TensorFlow #DeepLearning #MachineLearning </b></p>
+													<ul class="list-strd">
+														<li class="chatd">
+															<ion-icon name="chatbubble-outline"></ion-icon> 0 
+														</li>
+														<li class="exc">
+															<ion-icon name="repeat-outline"></ion-icon> 20 
+														</li>
+														<li class="likd">
+															<ion-icon name="heart"></ion-icon> 121 
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="twi-dt">
+												<img src="assets/images/user3.png" class="main-usf">
+												<div class="contd">
+													<h4> Pencilmation <span> @Pencilmotion <small> · </small> Dec 1 </span> </h4> 
+													<p> Lorem ipsum dolor sit amet, ius an illud vivendum. Pri modus ignota reprimique an, usu no dicat possit adolescens, te error numquam cum. Mel ea detracto consequat. <b> #AI #TensorFlow #DeepLearning #MachineLearning </b></p>
+													<img src="assets/images/cartoon12.jpg" class="img-car">
+													<ul class="list-strd">
+														<li class="chatd">
+															<ion-icon name="chatbubble-outline"></ion-icon> 0 
+														</li>
+														<li class="exc">
+															<ion-icon name="repeat-outline"></ion-icon> 20 
+														</li>
+														<li class="likd">
+															<ion-icon name="heart"></ion-icon> 121 
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="twi-dt">
+												<img src="assets/images/user3.png" class="main-usf">
+												<div class="contd">
+													<h4> Pencilmation <span> @Pencilmotion <small> · </small> Dec 1 </span> </h4> 
+													<p> Lorem ipsum dolor sit amet, ius an illud vivendum. Pri modus ignota reprimique an, usu no dicat possit adolescens, te error numquam cum. Mel ea detracto consequat. <b> #AI #TensorFlow #DeepLearning #MachineLearning </b></p>
+													<ul class="list-strd">
+														<li class="chatd">
+															<ion-icon name="chatbubble-outline"></ion-icon> 0 
+														</li>
+														<li class="exc">
+															<ion-icon name="repeat-outline"></ion-icon> 20 
+														</li>
+														<li class="likd">
+															<ion-icon name="heart"></ion-icon> 121 
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</ion-list>
+								</div>
+							</ion-col>
+						</ion-row>
+						
+					</div>
+			</ion-col>
+		</ion-row>
+	</div>
+</ion-content>

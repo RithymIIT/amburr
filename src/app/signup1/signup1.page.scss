@@ -1,0 +1,28 @@
+ion-content {
+	.bg-main-tx {
+		background: #F6F6F6;
+		min-height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		ion-row {
+			width: 100%;
+			.cont-box-s {
+				img.logo-cnt {
+					max-width: 200px;
+					display: block;
+					margin: 0 auto;
+					margin-bottom: 40px;
+				}
+				ion-button {
+					border-radius: 10px !important;
+					--border-radius: 10px !important;
+					margin-bottom: 10px;
+					min-height: 50px;
+					font: normal normal normal 14px/22px Titillium Web;
+					text-transform: capitalize;
+				}
+			}
+		}
+	}
+}

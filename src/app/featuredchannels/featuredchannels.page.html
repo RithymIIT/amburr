@@ -1,0 +1,41 @@
+<!--ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header-->
+
+<ion-content>
+	<div class="box-cnt-bgs">
+		<div class="cntr-man-bx">
+			<div class="top-sh">
+				<h4> Featured Channels </h4>
+				<div class="right-dyy">
+					<a href="javascript:void(0);" class="dlt-ic" (click)="dismiss()"> <ion-icon name="close-outline"></ion-icon> </a>
+				</div>
+			</div>
+			<div class="cont-sect">
+				<div class="label-coy">
+					<label> Title </label>
+					<ion-input type="text" value="Follow these guys!"></ion-input>
+				</div>	
+				<div class="label-coy">
+					<div class="box-st-ii">
+						<img src="assets/images/user5.png">
+						<h5> Carb Loaded Camel </h5>
+						<div class="scnd-hrt">
+							<a href="javascript:void(0)" class="dlt-nr"><ion-icon name="trash-outline"></ion-icon></a>
+						</div>						
+					</div>
+				</div>	
+				<div class="label-coy">
+					<label> Search a Channel to add more </label>
+					<ion-searchbar (click)="dismiss()" (click)="presentModal()" placeholder="Enter Channel name"></ion-searchbar>
+				</div>			
+			</div>
+			<div class="btn-dics">
+				<a href="javascript:void(0);" class="canc-btn" (click)="dismiss()">Cancel  </a>
+				<a href="javascript:void(0);" class="save-btn"  (click)="dismiss()">Save </a>
+			</div>
+		</div>
+	</div>
+</ion-content>

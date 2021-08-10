@@ -1,0 +1,95 @@
+<ion-content>
+	<div flex-header>
+	  	<a href="javascript:void(0)"><img src="../assets/images/logo.png" alt=""></a>
+	  	<p (click)="presentModal()">Return to Content Calendar <ion-icon name="close-outline"></ion-icon></p>
+	</div>
+	<div mainContent>
+		<ion-row>
+			<ion-col size="12" size-md="12">
+				<!--- mobile ads start --->
+				<div mob-ads-sec class="ion-hide-md-up">
+					<img src="assets/images/mob-ads.jpg" alt="" />
+				</div>
+				<!--- mobile ads end --->			
+				<div class="cont-fls">
+					<div class="add-vf">
+						<a href="javascript:void(0)">
+							<img src="assets/images/ad3.jpg">
+						</a>
+					</div>
+					<div class="fvs-ft">
+						<div centerArea>
+							<div insideCenter>
+								<h2 hdng>Create YouTube Video</h2>
+								<div threeCols>
+									<div smallCol>
+									<!--- mobile menu link start --->
+										<ion-item menuheader lines="none"  class="ion-hide-md-up">
+											<ion-label>
+											  <span>8</span>Captioning
+											</ion-label>
+											<a slot="end" href="javascript:void(0)" (click)="hide()" menu-btn><ion-icon name="menu"></ion-icon></a>
+										</ion-item>										
+										<div menu-mob-link *ngIf="hideMe"  class="ion-hide-md-up">
+										    <ion-buttons menuclose-btn  (click)="hide()"><ion-icon name="close"></ion-icon></ion-buttons>
+										<ul>
+											<li><a routerLink="/createytvideo-schedule" class="activedone" href="javascript:void(0)"><span>1</span>Schedule</a></li>
+											<li><a routerLink="/idea-generator" href="javascript:void(0)" class="activedone"><span>2</span>Idea Generator</a></li>
+											<li><a routerLink="/createytvideo-suggestions" class="activedone" href="javascript:void(0)"><span>3</span>Suggestions</a></li>
+											<li><a routerLink="/createytvideo-scriptscreation" class="activedone" href="javascript:void(0)"><span>4</span>Script Creation</a></li>
+											<li><a  routerLink="/createytvideo-uploadvideo" class="activedone" href="javascript:void(0)"><span>5</span>Upload Video</a></li>
+											<li><a routerLink="/createytvideo-metadata" class="activedone" href="javascript:void(0)"><span>6</span>Meta-Data</a></li>
+											<li><a routerLink="/createytvideo-thumbnail" class="activedone" href="javascript:void(0)"><span>7</span>Thumbnail</a></li>
+											<li><a class="active" href="javascript:void(0)"><span>8</span>Captioning</a></li>
+											<li><a routerLink="/createytvideo-addtoplaylist" href="javascript:void(0)"><span>9</span>Add to Playlist</a></li>
+											<li><a routerLink="/createytvideo-confirm" href="javascript:void(0)"><span>10</span>Confirm</a></li>
+										</ul>
+										</div>
+										<!--- mobile menu link end --->
+										<ul class="ion-hide-md-down">
+											<li><a routerLink="/createytvideo-schedule" class="activedone" href="javascript:void(0)"><span>1</span>Schedule</a></li>
+											<li><a routerLink="/idea-generator" href="javascript:void(0)" class="activedone"><span>2</span>Idea Generator</a></li>
+											<li><a routerLink="/createytvideo-suggestions" class="activedone" href="javascript:void(0)"><span>3</span>Suggestions</a></li>
+											<li><a routerLink="/createytvideo-scriptscreation" class="activedone" href="javascript:void(0)"><span>4</span>Script Creation</a></li>
+											<li><a  routerLink="/createytvideo-uploadvideo" class="activedone" href="javascript:void(0)"><span>5</span>Upload Video</a></li>
+											<li><a routerLink="/createytvideo-metadata" class="activedone" href="javascript:void(0)"><span>6</span>Meta-Data</a></li>
+											<li><a routerLink="/createytvideo-thumbnail" class="activedone" href="javascript:void(0)"><span>7</span>Thumbnail</a></li>
+											<li><a class="active" href="javascript:void(0)"><span>8</span>Captioning</a></li>
+											<li><a routerLink="/createytvideo-addtoplaylist" href="javascript:void(0)"><span>9</span>Add to Playlist</a></li>
+											<li><a routerLink="/createytvideo-confirm" href="javascript:void(0)"><span>10</span>Confirm</a></li>
+										</ul>
+									</div>										
+									<div largeCol>
+										<div quoteRow>
+											<img imgcart src="../assets/images/account.png" alt="">
+											<div quoteBox>
+												<div quoteBoxs>
+													<p><b>You have a nice video John, but it needs captions to make your video higher in search and make your video viewable to a wider audience.</b></p>
+													<p><b>I can save your time and create captions for you</b>. According to my calculations it will <b>cost $4.25</b> to caption this video for you.</p>
+												</div>													
+										<div Captions-btn>
+											<ion-button (click)="presentModal1()" fill="solid">Buy Captions for $4.25</ion-button>										
+										</div>
+											</div>
+										</div>									 
+										<div botmbtns>
+											<ion-button btn-outline fill="outline">Save as draft</ion-button>
+											<ion-button routerLink="/createytvideo-addtoplaylist" fill="solid">Next</ion-button>
+										</div>									
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="add-vf">
+						<a href="javascript:void(0)">
+							<img src="assets/images/ad4.jpg">
+						</a>
+					</div>
+				</div>
+			</ion-col>
+		</ion-row>
+	</div>
+	<div botmbg></div>
+</ion-content>

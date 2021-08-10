@@ -1,0 +1,176 @@
+<!--ion-header>
+  <ion-toolbar>
+    <ion-title>brandbuilder-pp-edit</ion-title>
+  </ion-toolbar>
+</ion-header-->
+
+<ion-content>
+	<div class="box-cnt-bgs">
+		<div class="cntr-man-bx">
+			<div class="top-sh">
+				<h4> Edit A Shelve </h4>
+				<div class="right-dyy">
+					<a href="javascript:void(0);" class="dlt-ic" (click)="dismiss()"> <ion-icon name="close-outline"></ion-icon> </a>
+				</div>
+			</div>
+			<div class="cont-sect">
+				<div class="confg">
+					<label> Content</label>
+					<ion-select interface="popover" value="nes">
+						<ion-select-option value="nes">Single playlist</ion-select-option>
+						<ion-select-option value="n64">Single playlist 1</ion-select-option>
+						<ion-select-option value="ps">Single playlist 2</ion-select-option>
+					</ion-select>
+				</div>
+				<div class="cons-sf">
+					<label> Layout</label>
+					<ion-radio-group class="bts-s">
+					  <ion-item lines="none">
+						<ion-label>Horizontal Layout</ion-label>
+						<ion-radio slot="start" color="success" value="apple"></ion-radio>
+					  </ion-item>
+
+					  <ion-item lines="none">
+						<ion-label>Vertical Layout</ion-label>
+						<ion-radio slot="start" color="success" value="grape"></ion-radio>
+					  </ion-item>
+					</ion-radio-group>
+				</div>
+				<div class="cons-sf">
+					<div class="confg">
+						<label> Playlist</label>
+						<ion-select interface="popover" value="nes">
+							<ion-select-option value="nes">New here? Check these out</ion-select-option>
+							<ion-select-option value="n64">Check these out 1</ion-select-option>
+							<ion-select-option value="ps">Check these out 2</ion-select-option>
+						</ion-select>
+					</div>
+					<div carousal>
+						<ion-slides class="ion-hide-md-down" scrollbar [options]="slideOpts">
+							<ion-slide>
+								<div slideCol>
+									<img src="../assets/images/cartoon1.jpg" alt="">
+									<p>Lorem ipsum is simply text</p>
+									<small>Dec 4, Fri, 8:00 PM ET</small>
+								</div>
+							</ion-slide>
+							<ion-slide>
+								<div slideCol active-slide>
+									<img src="../assets/images/cartoon2.jpg" alt="">
+									<p>Lorem ipsum is simply text</p>
+									<small>Dec 4, Fri, 8:00 PM ET</small>
+								</div>
+							</ion-slide>
+							<ion-slide>
+								<div slideCol>
+									<img src="../assets/images/cartoon3.jpg" alt="">
+									<p>Lorem ipsum is simply text</p>
+									<small>Dec 4, Fri, 8:00 PM ET</small>
+								</div>
+							</ion-slide>
+							<ion-slide>
+								<div slideCol>
+									<img src="../assets/images/cartoon4.jpg" alt="">
+									<p>Lorem ipsum is simply text</p>
+									<small>Dec 4, Fri, 8:00 PM ET</small>
+								</div>
+							</ion-slide>
+							<ion-slide>
+								<div slideCol>
+									<img src="../assets/images/cartoon2.jpg" alt="">
+									<p>Lorem ipsum is simply text</p>
+									<small>Dec 4, Fri, 8:00 PM ET</small>
+								</div>
+							</ion-slide>
+							<ion-slide>
+								<div slideCol>
+									<img src="../assets/images/cartoon3.jpg" alt="">
+									<p>Lorem ipsum is simply text</p>
+									<small>Dec 4, Fri, 8:00 PM ET</small>
+								</div>
+							</ion-slide>
+							<ion-slide>
+								<div slideCol>
+									<img src="../assets/images/cartoon4.jpg" alt="">
+									<p>Lorem ipsum is simply text</p>
+									<small>Dec 4, Fri, 8:00 PM ET</small>
+								</div>
+							</ion-slide>
+						</ion-slides>
+						<ion-slides scrollbar class="ion-hide-md-up">
+							<ion-row>
+								<ion-col size="6" size-md="3">
+									<ion-slide>
+										<div slideCol>
+											<img src="../assets/images/cartoon4.jpg" alt="">
+											<p>Lorem ipsum is simply text</p>
+											<small>Dec 4, Fri, 8:00 PM ET</small>
+										</div>
+									</ion-slide>								
+								</ion-col>	
+								<ion-col size="6" size-md="3">
+									<ion-slide>
+										<div slideCol active-slide>
+											<img src="../assets/images/cartoon2.jpg" alt="">
+											<p>Lorem ipsum is simply text</p>
+											<small>Dec 4, Fri, 8:00 PM ET</small>
+										</div>
+									</ion-slide>								
+								</ion-col>	
+								<ion-col size="6" size-md="3">
+									<ion-slide>
+										<div slideCol>
+											<img src="../assets/images/cartoon3.jpg" alt="">
+											<p>Lorem ipsum is simply text</p>
+											<small>Dec 4, Fri, 8:00 PM ET</small>
+										</div>
+									</ion-slide>								
+								</ion-col>	
+								<ion-col size="6" size-md="3">
+									<ion-slide>
+										<div slideCol>
+											<img src="../assets/images/cartoon4.jpg" alt="">
+											<p>Lorem ipsum is simply text</p>
+											<small>Dec 4, Fri, 8:00 PM ET</small>
+										</div>
+									</ion-slide>								
+								</ion-col>	
+								<ion-col size="6" size-md="3">
+									<ion-slide>
+										<div slideCol>
+											<img src="../assets/images/cartoon2.jpg" alt="">
+											<p>Lorem ipsum is simply text</p>
+											<small>Dec 4, Fri, 8:00 PM ET</small>
+										</div>
+									</ion-slide>								
+								</ion-col>	
+								<ion-col size="6" size-md="3">
+									<ion-slide>
+										<div slideCol>
+											<img src="../assets/images/cartoon3.jpg" alt="">
+											<p>Lorem ipsum is simply text</p>
+											<small>Dec 4, Fri, 8:00 PM ET</small>
+										</div>
+									</ion-slide>								
+								</ion-col>	
+								<ion-col size="6" size-md="3">
+									<ion-slide>
+										<div slideCol>
+											<img src="../assets/images/cartoon4.jpg" alt="">
+											<p>Lorem ipsum is simply text</p>
+											<small>Dec 4, Fri, 8:00 PM ET</small>
+										</div>
+									</ion-slide>								
+								</ion-col>							
+							</ion-row>
+						</ion-slides>
+					</div>
+				</div>
+			</div>
+			<div class="btn-dics">
+				<a href="javascript:void(0);" class="canc-btn" (click)="dismiss()">Cancel  </a>
+				<a href="javascript:void(0);" class="save-btn" (click)="dismiss()">Save </a>
+			</div>
+		</div>
+	</div>
+</ion-content>

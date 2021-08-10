@@ -1,0 +1,124 @@
+ion-content {
+	.bg-main {
+		position: relative;
+		min-height: 100%;
+		background: #F6F6F6;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding:40px 20px;
+		a.left-back {
+			width: 37px;
+			height: 37px;
+			background: #fff;
+			position: absolute;
+			top: 55px;
+			left: 96px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			font-size: 20px;
+		}
+		.w-100 {
+			width:100%;
+		}
+		.data-signup {
+			text-align: center;
+			img.logo-sp {
+				width: 175px;
+				height: auto;
+			}
+			h3 {
+				font-size: 40px;
+				color: #54533B;
+				margin-bottom: 40px;
+			}
+		}
+		.form-ingd {
+			display: block;
+			text-align: left;
+			ion-input  {
+				background: #FFFFFF 0% 0%;
+				box-shadow: 0px 3px 6px #54533b1a;
+				border: 1px solid #54533B0F;
+				border-radius: 10px;
+				padding: 3px 15px !important;
+				font-size: 15px;
+				min-height: 48px;
+				margin-bottom: 12px;
+				color: #000;
+			}
+			ion-item.ns-ltv {
+				background: transparent;
+				--background: transparent;
+				white-space: initial;
+				--padding-start: 0px;
+				align-items: flex-start;
+				ion-label  {
+					white-space: initial;
+					max-width: 80%;
+					color: #54533B;
+					line-height: 22px;
+				}
+				ion-checkbox  {
+					box-shadow: 0px 3px 6px #54533b1a;
+					--border: 1px solid #54533B0F !important;
+					--border-color: #54533B0F;
+					width: 21px;
+					height: 21px;
+					border-radius: 6px !important;
+					margin-left: 0px;
+					margin-top: 10px;
+					margin-right: 20px;
+					--border-radius: 6px !important;
+				}
+			}
+			ion-button.chsirs{
+				border-radius: 10px !important;
+				--border-radius: 10px !important;
+				margin-bottom: 10px;
+				min-height: 50px;
+				font: normal normal normal 14px/22px Titillium Web;
+				text-transform: capitalize;
+				margin-top: 22px;
+				margin-bottom: 10px;
+			}
+			p {
+				text-align: center;
+				margin-bottom: 0px;
+				margin-top: 30px;
+			}
+			.invalid-feedback ion-text p{
+				color: #ff7474 !important;
+				font-size: 12px;
+			  }
+		}
+	}
+	
+}
+
+@media only screen and (max-width:767px) {
+	ion-content {
+		.bg-main {
+			padding: 90px 15px 20px;
+			a.left-back {
+				top: 25px;
+				left: 20px;
+			}
+			.data-signup  {
+				h3 {
+					font-size: 20px;
+					color: #54533B;
+					margin-bottom: 30px;
+					font-weight: 600;
+				}
+				
+			}
+			.form-ingd ion-item.ns-ltv  ion-label {
+				font-size: 14px;
+			}
+		}
+	}
+}

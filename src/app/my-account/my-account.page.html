@@ -1,0 +1,611 @@
+<ion-content>
+<div class="dataa-main-all">
+<ion-row>
+<ion-col size="12" size-md="3" size-lg="2">
+<div class="left-part-main">
+	<img src="assets/images/logo.png" class="logo-dash small-none">
+	<div class="small-headr big-none">
+		<img src="assets/images/logo.png" class="logo-dash">
+		<a href="javascript:void(0);" class="menu-togl" (click)="hide4()"> <ion-icon name="menu-outline"></ion-icon> </a>
+	</div>
+	<ul class="menu-list-left big-none position-str" *ngIf="hideMe4">
+		<li class="active">
+			<a href="javascript:void(0);" routerLink="/dashboard">
+				<span class="icon-m"> <ion-icon name="home-outline"></ion-icon></span>
+				Home
+			</a>
+		</li>
+		<li>
+			<a href="javascript:void(0);"  routerLink="/contentcalendar-month">
+				<span class="icon-m"> <ion-icon name="calendar-clear-outline"></ion-icon> </span>
+				Content Calendar
+			</a>
+		</li>
+		<li>
+			<a href="javascript:void(0);" routerLink="/brand-builder">
+				<span class="icon-m"> <ion-icon name="star-outline"></ion-icon> </span>
+				Brand Builder
+			</a>
+		</li>
+		<li>
+			<a href="javascript:void(0);" routerLink="/community-center">
+				<span class="icon-m"> <ion-icon name="chatbox-ellipses-outline"></ion-icon> </span>
+				Community Center
+			</a>
+		</li>
+		<li>
+			<a (click)="logout()">
+				<span class="icon-m"> <ion-icon name="power"></ion-icon> </span>
+				Logout
+			</a>
+		</li>
+		<li class="user-ledg" routerLink="/my-account">
+			<img [attr.src]="imgURL ? imgURL : 'assets/images/user-dummy.png'" class="usr-im">
+			<h4> John Doe </h4>
+			<h6> My Account </h6>
+		</li>
+	</ul>
+	<ul class="menu-list-left small-none">
+		<li class="active">
+			<a href="javascript:void(0);" routerLink="/dashboard">
+				<span class="icon-m"> <ion-icon name="home-outline"></ion-icon></span>
+				Home
+			</a>
+		</li>
+		<li>
+			<a href="javascript:void(0);"  routerLink="/contentcalendar-month">
+				<span class="icon-m"> <ion-icon name="calendar-clear-outline"></ion-icon> </span>
+				Content Calendar
+			</a>
+		</li>
+		<li>
+			<a href="javascript:void(0);" routerLink="/brand-builder">
+				<span class="icon-m"> <ion-icon name="star-outline"></ion-icon> </span>
+				Brand Builder
+			</a>
+		</li>
+		<li>
+			<a href="javascript:void(0);" routerLink="/community-center">
+				<span class="icon-m"> <ion-icon name="chatbox-ellipses-outline"></ion-icon> </span>
+				Community Center
+			</a>
+		</li>
+		<li class="user-ledg" routerLink="/my-account">
+			<img [attr.src]="imgURL ? imgURL : 'assets/images/user-dummy.png'" class="usr-im">
+			
+			<h4> {{userdata.displayName ? userdata.displayName : ''}} </h4>
+			<h6> My Account </h6>
+		</li>
+	</ul>
+	<div class="add-box small-none">
+		<img src="assets/images/ad1.jpg">
+	</div>
+</div>
+</ion-col>
+<ion-col size="12" size-md="9" size-lg="10">
+<div centerArea>
+	<div topHorBanner>
+		<img src="../assets/images/horibanner.jpg" alt="">
+	</div>
+	<div insideCenter>
+		<ion-segment 
+		scrollable="true"
+		mode="md"
+		[(ngModel)]="type">
+
+			<ion-segment-button value="all">
+			<ion-label><ion-icon name="person-outline"></ion-icon> Personal Info</ion-label>
+			</ion-segment-button>
+
+			<ion-segment-button value="brands">
+			<ion-label><ion-icon name="star-outline"></ion-icon> Brands & Profiles</ion-label>
+			</ion-segment-button>
+
+			<ion-segment-button value="settings">
+			<ion-label><ion-icon name="locate-sharp"></ion-icon> Goals</ion-label>
+			</ion-segment-button>
+
+			<ion-segment-button value="profile">
+			<ion-label><ion-icon name="card-outline"></ion-icon> Payment Methods</ion-label>
+			</ion-segment-button>
+
+		</ion-segment>
+		<div pad [ngSwitch]="type">
+			<ion-list *ngSwitchCase="'all'">
+				<div class="top-sec-q">
+					<img [attr.src]="imgURL ? imgURL : 'assets/images/user-dummy.png'" class="main-usr">
+					
+					<div class="sc-ch">
+						<label> Profile Picture </label>
+						<div class="bto-psh">
+							<a href="javascript:void(0);" class="main-s" (click)="hide()"> Change Profile Photo <ion-icon name="chevron-down-outline"></ion-icon> </a>
+							<ul class="brd-ps" *ngIf="hideMe">
+								<li> <a  (click)="editprofile()"> Browse</a> </li>
+								<li> <a (click)="deleteImage()"> Remove Photo </a> </li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<form [formGroup]="profileForm" (ngSubmit)="updateProfile(profileForm.value)">
+				<div class="cont-sfg">
+					<ion-row class="mn-5">
+						<ion-col size="12"  size-md="5" size-lg="3">
+							<div class="cos-sts">
+								<label> Full Name </label>
+								<ion-input type="text" value="John Doe" formControlName="name"></ion-input>
+							</div>
+
+							<div *ngIf="isSubmit && form.name.errors" class="invalid-feedback">
+								<ion-text validationText *ngIf="form.name.errors.required">
+									<p>*Full Name is required!</p>
+								</ion-text>
+								</div>
+						</ion-col>
+						<ion-col size="12"  size-md="5" size-lg="3">
+							<div class="cos-sts">
+								<label> Email </label>
+								<ion-input type="email" value="Johndoe@gmail.com" formControlName="email"></ion-input>
+							</div>
+
+							<div *ngIf="isSubmit && form.email.errors" class="invalid-feedback">
+								<ion-text validationText *ngIf="form.email.errors.required">
+									<p>*Email is required!</p>
+								</ion-text>
+								<ion-text validationText *ngIf="form.email.errors.email">
+									<p>*Email must be a valid email address!</p>
+								</ion-text>
+								</div>
+						</ion-col>
+					</ion-row>
+				</div>
+				<div class="btn-savs">
+					<button ion-button type="submit" class="save-bst" > Save </button>
+				</div>
+			</form>
+				<div class="updt-prog">
+					<a href="javascript:void(0);" class="updt-d" (click)="presentModal()"> Update Password </a>
+				</div>
+				
+			</ion-list>
+			
+			<ion-list *ngSwitchCase="'brands'">
+				<h4 smallhdng>Profiles
+					<ion-button fill="clear"><ion-icon name="add-circle-outline"></ion-icon> Add New Profile</ion-button>
+				</h4>
+				<p>No Profiles left to add in the brands.</p>
+
+				<div brandsArea>
+					<ion-row class="smal-psx">
+						<ion-col size="6" class="ion-hide-md-up">
+							<div class="box-smks">
+								<span><img src="../assets/images/user3.png" alt=""><label youtube><ion-icon name="logo-youtube"></ion-icon></label> </span>
+								<p>Cocomelon</p>
+							</div>
+						</ion-col>
+						<ion-col size="6" class="ion-hide-md-up">
+							<div class="box-smks">
+								<span class="bg-twit"><img src="../assets/images/user3.png" alt=""><label youtube><ion-icon name="logo-twitter"></ion-icon></label> </span>
+								<p>@Pencilmation</p>
+							</div>
+						</ion-col>
+						<ion-col size="12" size-md="6" size-lg="4" class="small-none">
+							<div addbrand>
+								<ion-icon addplus name="add-circle-outline"></ion-icon>
+								<p>Add New Brand</p>
+							</div>
+						</ion-col>
+						
+						<ion-col size="12" size-md="6" size-lg="4">
+							<div addbrand brand2>
+								<ul>
+									<li>
+										<ion-input placeholder="Brand 2"></ion-input>
+										<ion-button fill="outline" btn-outline><ion-icon name="trash-outline"></ion-icon></ion-button>
+									</li>
+									<li>
+										<div addedBrand>
+											<span><img src="../assets/images/user3.jpg" alt=""><label youtube><ion-icon name="logo-youtube"></ion-icon></label> </span>
+											<p>Pencilmation</p>
+											<ion-icon trash name="trash-outline"></ion-icon>
+										</div>
+									</li>
+									<li>
+										<div addedBrand>
+											<span><img src="../assets/images/user3.jpg" alt=""><label youtube><ion-icon name="logo-youtube"></ion-icon></label> </span>
+											<p>Pencilmation</p>
+											<ion-icon trash name="trash-outline"></ion-icon>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</ion-col>
+						<ion-col size="12" size-md="6" size-lg="4">
+							<div addbrand brand2>
+								<ul>
+									<li>
+										<ion-input placeholder="Brand 2"></ion-input>
+										<ion-button fill="outline" btn-outline><ion-icon name="trash-outline"></ion-icon></ion-button>
+									</li>
+									<li>
+										<div addedBrand>
+											<span><img src="../assets/images/user3.jpg" alt=""><label youtube><ion-icon name="logo-youtube"></ion-icon></label> </span>
+											<p>Pencilmation</p>
+											<ion-icon trash name="trash-outline"></ion-icon>
+										</div>
+									</li>
+									<li>
+										<div addedBrand>
+											<span><img src="../assets/images/user3.jpg" alt=""><label youtube><ion-icon name="logo-youtube"></ion-icon></label> </span>
+											<p>Pencilmation</p>
+											<ion-icon trash name="trash-outline"></ion-icon>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</ion-col>
+					</ion-row>
+					
+				</div>
+				
+				<div class="btn-savs">
+					<button ion-button type="submit" class="save-bst" > Save </button>
+				</div>
+				
+				
+			</ion-list>
+			
+			<ion-list *ngSwitchCase="'settings'">
+				<div class="bottom-coy">
+			<div class="cont-sr">
+				<ion-row>
+					<ion-col size="12" size-md="12" size-lg="6">
+						<form [formGroup]="youtubeForm" (ngSubmit)="addYoutubeGoal(youtubeForm.value)">
+						<div class="con-tou">
+							<span class="nam"> <ion-icon name="logo-youtube"></ion-icon> YouTube Channel(s) Goals </span>
+							<div class="btn-dt">
+								<a href="javascript:void(0)" class="box-contsf" (click)="hide3()"> Choose goal type to add new <ion-icon name="chevron-down-outline"></ion-icon></a>
+								<div class="cont-sect-ne" *ngIf="hideMe3"> 
+									<div class="wis-c">
+										I want to Reach <ion-input formControlName="subscriber" class="m-0-20"></ion-input> Subscribers
+										
+									</div>
+									<div *ngIf="isSubmit && f.subscriber.errors" class="invalid-feedback">
+										<ion-text validationText *ngIf="f.subscriber.errors.required">
+										  <p class="ife">*Subscribers is required!</p>
+										</ion-text>
+									
+										<ion-text validationText *ngIf="f.subscriber.errors.pattern">
+										  <p class="ife">*Subscribers Should Contain Only Numbers!</p>
+										</ion-text>
+									</div>
+									<div class="wis-c">
+										on 
+										<ion-select interface="action-sheet" formControlName="accountType" placeholder="Choose Account" class="ml-20">
+											<ion-select-option *ngFor="let acc of accType" value="{{acc}}">{{acc}}</ion-select-option>
+											<!-- <ion-select-option value="n64">Account Two</ion-select-option> -->
+										</ion-select>
+										
+									</div>
+									<div *ngIf="isSubmit && f.accountType.errors" class="invalid-feedback">
+										<ion-text validationText *ngIf="f.accountType.errors.required">
+										  <p class="ife">*Please Select Account Type on which you have goal!</p>
+										</ion-text>
+									</div>
+									<div class="wis-c">
+										Within 
+										<ion-input formControlName="with" class="w-50s"></ion-input>
+											
+										<ion-select interface="action-sheet" formControlName="within" placeholder="Select One" class="w-50s">
+											<ion-select-option *ngFor="let t of time" value="{{t}}">{{t}}</ion-select-option>
+										</ion-select>
+										
+									</div>
+									<div *ngIf="isSubmit && f.with.errors" class="invalid-feedback">
+										<ion-text validationText *ngIf="f.with.errors.required">
+										  <p class="ife">*Please Select One Count in which you want to achive the goal!</p>
+										</ion-text>
+									</div>
+									<div *ngIf="isSubmit && f.within.errors" class="invalid-feedback">
+										<ion-text validationText *ngIf="f.within.errors.required">
+										  <p class="ife">*Please Select One within which you want to achive this goal!</p>
+										</ion-text>
+									</div>
+									<div class="btn-dics">
+										<ion-button  type="submit" class="save-btn">Add </ion-button>
+									</div>
+								</div>
+							</div>
+						</div>
+						</form>
+					</ion-col>
+					<ion-col size="12" size-md="12" size-lg="6" class="small-none">
+						<form [formGroup]="twitterForm" (ngSubmit)="addTwitterGoal(twitterForm.value)">
+						<div class="con-tou">
+							<span class="nam col-twi"> <ion-icon name="logo-twitter"></ion-icon> Twitter Profile(s) Goals </span>
+							<div class="btn-dt">
+								<a href="javascript:void(0)" class="box-contsf" (click)="hide2()"> Choose goal type to add new <ion-icon name="chevron-down-outline"></ion-icon></a>
+								<div class="cont-sect-ne" *ngIf="hideMe2">
+									<div class="wis-c">
+										I want to Reach <ion-input formControlName="subscriber" class="m-0-20"></ion-input> Subscribers
+									</div>
+									<div *ngIf="isSubmit && fo.subscriber.errors" class="invalid-feedback">
+										<ion-text validationText *ngIf="fo.subscriber.errors.required">
+										  <p class="ife">*Subscribers is required!</p>
+										</ion-text>
+									
+										<ion-text validationText *ngIf="fo.subscriber.errors.pattern">
+										  <p class="ife">*Subscribers Should Contain Only Numbers!</p>
+										</ion-text>
+									</div>
+									<div class="wis-c">
+										on 
+										<ion-select interface="action-sheet" formControlName="accountType" placeholder="Choose Account" class="ml-20">
+											<ion-select-option *ngFor="let acc of accType" value="{{acc}}">{{acc}}</ion-select-option>
+										</ion-select>
+									</div>
+									<div *ngIf="isSubmit && fo.accountType.errors" class="invalid-feedback">
+										<ion-text validationText *ngIf="fo.accountType.errors.required">
+										  <p >*Please Select Account Type on which you have goal!</p>
+										</ion-text>
+									</div>
+									<div class="wis-c">
+										Within 
+										<ion-input formControlName="with" class="w-50s"></ion-input>		
+										<ion-select interface="action-sheet" formControlName="within" placeholder="Select One" class="w-50s">
+											<ion-select-option *ngFor="let t of time" value="{{t}}">{{t}}</ion-select-option>
+										</ion-select>
+										
+									</div>
+									<div *ngIf="isSubmit && fo.with.errors" class="invalid-feedback">
+										<ion-text validationText *ngIf="fo.with.errors.required">
+										  <p class="ife">*Please Select One Count in which you want to achive the goal!</p>
+										</ion-text>
+									</div>
+									<div *ngIf="isSubmit && fo.within.errors" class="invalid-feedback">
+										<ion-text validationText *ngIf="fo.within.errors.required">
+										  <p class="ife">*Please Select One within which you want to achive this goal!</p>
+										</ion-text>
+									</div>
+									<div class="btn-dics">
+										<ion-button type="submit" class="save-btn">Add </ion-button>
+									</div>
+								</div>
+							</div>
+						</div>
+						</form>
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col size="12" size-md="6">
+						<div class="con-tou msl-s">
+							<div class="goa-ft">
+								<h4 class="ttl"> My Goals </h4>
+								<div *ngFor="let yg of youtubeGoals; let i = index" class="data-box-smd">
+									
+									
+									<a  class="dots-ell">
+										
+										<ion-icon name="ellipsis-vertical" (click)="show_delete(i)"></ion-icon>
+										
+									</a> <!--<ion-icon name="ellipsis-vertical"></ion-icon>  -->
+									<span class="img-box">
+										<img src="assets/images/user3.png">
+										<small class="icon-is"> <ion-icon name="logo-youtube"></ion-icon></small>
+									</span>
+										I want to Reach <b> {{yg.subscribers}} subscribers </b> on {{yg.accountType}} within <b>  {{yg.with}} {{yg.within}}. </b> 
+									<span class="icon-bt">
+										
+										<!-- <i class="lin-r" style="width:40%;"> </i> -->
+											<ion-progress-bar class="lin-r"  value="0" color="danger" ></ion-progress-bar>
+											
+										<!-- </i> -->
+										<small class="round-cr" style="left:45%;"></small>
+									</span>
+								</div>
+								<div *ngIf= "youtubeGoals === null || youtubeGoals === undefined">
+									<ion-item>No Youtube Goals Found!</ion-item>
+								</div>
+								<!-- <div class="data-box-smd">
+									<a href="javascript:void(0);" class="dots-ell"> <ion-icon name="ellipsis-vertical"></ion-icon> </a>
+									<span class="img-box">
+										<img src="assets/images/user3.png">
+										<small class="icon-is"> <ion-icon name="logo-youtube"></ion-icon></small>
+									</span>
+										I want to Reach <b> 1000 subscribers </b> on Pencilmation within <b>  6 months. </b> 
+									<span class="icon-bt">
+										<i class="lin-r" style="width:40%;"></i>
+										<small class="round-cr" style="left:45%;"></small>
+									</span>
+								</div> -->
+								<!-- <div class="data-box-smd">
+									<a href="javascript:void(0);" class="dots-ell"> <ion-icon name="ellipsis-vertical"></ion-icon> </a>
+									<span class="img-box">
+										<img src="assets/images/user3.png">
+										<small class="icon-is"> <ion-icon name="logo-youtube"></ion-icon></small>
+									</span>
+										I want to Reach <b> 1000 subscribers </b> on Pencilmation within <b>  6 months. </b> 
+									<span class="icon-bt">
+										<i class="lin-r" style="width:40%;"></i>
+										<small class="round-cr" style="left:45%;"></small>
+									</span>
+								</div>	 -->
+							</div>
+						</div>
+					</ion-col>
+					<ion-col size="12" size-md="6" class="big-none">
+						<div class="con-tou ">
+							<span class="nam col-twi"> <ion-icon name="logo-twitter"></ion-icon> Twitter Profile(s) Goals </span>
+							<div class="btn-dt">
+								<a href="javascript:void(0)" class="box-contsf" (click)="hide2()"> Choose goal type to add new <ion-icon name="chevron-down-outline"></ion-icon></a>
+								<div  class="cont-sect-ne" *ngIf="hideMe2">
+									<div class="wis-c">
+										I want to Reach <ion-input value="1000" class="m-0-20"></ion-input> Subscribers
+									</div>
+									<div class="wis-c">
+										on 
+										<ion-select interface="action-sheet" placeholder="Choose Account" class="ml-20">
+											<ion-select-option value="nes">Account One</ion-select-option>
+											<ion-select-option value="n64">Account Two</ion-select-option>
+										</ion-select>
+									</div>
+									<div class="wis-c">
+										Within 
+										<ion-input value="1000" class="m-0-20"></ion-input>
+										<ion-select interface="action-sheet" placeholder="Days" class="w-50s">
+											<ion-select-option value="nes">2 Days</ion-select-option>
+											<ion-select-option value="n64">4 Days</ion-select-option>
+										</ion-select>
+									</div>
+									<div class="btn-dics">
+										<a href="javascript:void(0);" class="save-btn">Add </a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</ion-col>
+					<ion-col size="12" size-md="6">
+						<div class="con-tou msl-s">
+							<div class="goa-ft">
+								<h4 class="ttl opacity-0"> My Goals </h4>
+								<div *ngFor="let tg of twitterGoals; let i = index " class="data-box-smd green-bxm">
+									<a  class="dots-ell"> <ion-icon name="ellipsis-vertical" (click)="show_tdelete(i)"></ion-icon> </a>
+									<span class="img-box">
+										<img src="assets/images/user3.png">
+										<small class="icon-is"> <ion-icon name="logo-twitter"></ion-icon> </small>
+									</span>
+									I want to get to <b>  {{tg.subscribers}} followers </b> on<b>  {{tg.accountType}} </b>  within <b> {{tg.with}} {{tg.within}}. </b>
+									<span class="icon-bt">
+									    <ion-progress-bar class="lin-r"  value="0" color="secondary" ></ion-progress-bar>
+										<!-- <i class="lin-r" style="width:20%;"></i> -->
+										<small class="round-cr" style="left:60%;">
+											
+										</small>
+									</span>
+								</div>
+								<div *ngIf= "twitterGoals === null || twitterGoals === undefined">
+									<ion-item>No Twitter Goals Found!</ion-item>
+								</div>
+							</div>
+						</div>
+					</ion-col>
+				</ion-row>
+			</div>
+			</div>
+			</ion-list>
+			
+			<ion-list *ngSwitchCase="'profile'" class="mn-90">
+				<ion-row>
+					<ion-col size="12" size-md="9">
+						<div class="top-se">
+							<h4 class="ttl-st"> Payment Method(s) </h4>
+							<ion-row>
+								<ion-col size="12" size-md="6" *ngFor="let card of cardData; let i = index">
+									<div class="box-vis" >
+										<p class="top-sf" *ngIf="card.type === 'Visa'"><img  src="assets/images/visa.png"> <span>**** **** ****</span>{{card.lastnumber}}  </p>
+										<p class="top-sf" *ngIf="card.type === 'Mastercard'"><img width="25" height="25" height="25" src="assets/images/master.png"> <span>**** **** ****</span>{{card.lastnumber}}  </p>
+										<p class="top-sf" *ngIf="card.type === 'Discover'"><img width="25" height="25" src="assets/images/discover.png"> <span>**** **** ****</span>{{card.lastnumber}}  </p>
+										<p class="top-sf" *ngIf="card.type === 'Diners Club'"><img  width="25" height="25" src="assets/images/dinnersclub.png"> <span>**** **** ****</span>{{card.lastnumber}}  </p>
+										<p class="top-sf" *ngIf="card.type === 'JCB'"><img width="25" height="25" src="assets/images/jcb.png"> <span>**** **** ****</span>{{card.lastnumber}}  </p>
+										<p class="top-sf" *ngIf="card.type === 'Amex'"><img width="25" height="25" src="assets/images/amex.png"> <span>**** **** ****</span>{{card.lastnumber}}  </p>
+										<p class="top-sf" *ngIf="card.type === 'Unknown'"><img  width="25" height="25" src="assets/images/unknown.png"> <span>**** **** ****</span>{{card.lastnumber}}  </p>
+										
+										
+										<span *ngIf="card.primary === true" class="col-pr">Primary </span>
+										<span *ngIf="card.primary !== true" class="not-ps-pr" (click)="make_primary(card.number)">Make Primary </span>
+										<a href="javascript:void(0)" class="dlr"> <ion-icon name="trash-outline" (click)="presentAlert(i)"></ion-icon> </a>
+									</div>
+								</ion-col>
+									<!-- <div class="box-vis">
+										<p class="top-sf"><img src="assets/images/visa.png"> <span> **** **** **** </span> 4444 </p>
+										<span class="col-pr">Primary </span>
+										<a href="javascript:void(0)" class="dlr"> <ion-icon name="trash-outline"></ion-icon> </a>
+									</div> -->
+								
+								<!-- <ion-col size="12" size-md="6">
+									<div class="box-vis">
+										<p class="top-sf"><img src="assets/images/visa.png"> <span> **** **** **** </span> 4444 </p>
+										<span class="not-ps-pr">Make Primary </span>
+										<a href="javascript:void(0)" class="dlr"> <ion-icon name="trash-outline"></ion-icon> </a>
+									</div>
+								</ion-col> -->
+							</ion-row>
+							<a href="javascript:void(0)" class="addnes" (click)="presentModal2()">  <ion-icon name="add-circle-outline"></ion-icon> Add New Payment Mehod </a>
+							<h4 class="ttl-st mmrgis"> Transactions </h4>
+							<ul class="data-str-b">
+								<li>
+									<div class="df">
+										<span> Buy Captions - 28/12/2020 </span>
+										<p> Lorem ipsum dolor imit </p>
+									</div>
+									<span class="dfd"> - $23.2 </span>
+								</li>
+								<li>
+									<div class="df">
+										<span> Buy Captions - 28/12/2020 </span>
+										<p> Lorem ipsum dolor imit </p>
+									</div>
+									<span class="dfd"> - $23.2 </span>
+								</li>
+								<li>
+									<div class="df">
+										<span> Buy Captions - 28/12/2020 </span>
+										<p> Lorem ipsum dolor imit </p>
+									</div>
+									<span class="dfd"> - $23.2 </span>
+								</li>
+								<li>
+									<div class="df">
+										<span> Buy Captions - 28/12/2020 </span>
+										<p> Lorem ipsum dolor imit </p>
+									</div>
+									<span class="dfd"> - $23.2 </span>
+								</li>
+								<li>
+									<div class="df">
+										<span> Buy Captions - 28/12/2020 </span>
+										<p> Lorem ipsum dolor imit </p>
+									</div>
+									<span class="dfd"> - $23.2 </span>
+								</li>
+								<li>
+									<div class="df">
+										<span> Buy Captions - 28/12/2020 </span>
+										<p> Lorem ipsum dolor imit </p>
+									</div>
+									<span class="dfd"> - $23.2 </span>
+								</li>
+								<li>
+									<div class="df">
+										<span> Buy Captions - 28/12/2020 </span>
+										<p> Lorem ipsum dolor imit </p>
+									</div>
+									<span class="dfd"> - $23.2 </span>
+								</li>
+								<li>
+									<div class="df">
+										<span> Buy Captions - 28/12/2020 </span>
+										<p> Lorem ipsum dolor imit </p>
+									</div>
+									<span class="dfd"> - $23.2 </span>
+								</li>
+								<li>
+									<div class="df">
+										<span> Buy Captions - 28/12/2020 </span>
+										<p> Lorem ipsum dolor imit </p>
+									</div>
+									<span class="dfd"> - $23.2 </span>
+								</li>
+							</ul>
+						</div>
+					</ion-col>
+				</ion-row>
+			</ion-list>
+			
+		</div>
+		
+	</div>
+</div>
+</ion-col>
+</ion-row>
+</div>
+</ion-content>

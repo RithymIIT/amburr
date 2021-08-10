@@ -1,0 +1,241 @@
+<ion-content>
+	<div signupSteps>
+		<ion-row>
+			<ion-col size="12" size-md="4">
+			    <!--- mobile topbar start --->
+				<div mobtopbar class="ion-hide-md-up">
+					<div mob-back-sec>
+						<a back href="javascript:void(0)"><ion-icon name="arrow-back-outline"></ion-icon></a>
+						<h4>Now it’s time to organize your accounts into brands!</h4>
+					</div>
+					<div tracyPara>
+						<p *ngIf="hideMe">I will generate a list of tasks for you to complete each day based on the goals you set.
+							<br><br>You can set as many as you want but having fewer will make my task suggestions more effective.<br><br><b>As you select goals you’ll see my highlighted recommendations.</b>
+						</p>
+					    <a (click)="hide()" click-btn href="javascript:void(0)"><b>View Instructions</b> <ion-icon name="chevron-down"></ion-icon></a>
+						<div Gotit-sec *ngIf="hideMe">
+							<ion-button Gotit-btn (click)="hide()">Got It! <ion-icon name="chevron-up-outline"></ion-icon></ion-button>
+						</div>
+					</div>
+					<span emoji><img src="../assets/images/icon.png" alt=""></span>
+				</div>
+				<!--- mobile topbar end --->			
+				<div lftbar class="ion-hide-md-down">
+					<a back href="javascript:void(0)"><ion-icon name="arrow-back-outline"></ion-icon></a>
+					<h4>Now let’s specify some goals!</h4>
+					<div tracyPara>
+						<p>I will generate a list of tasks for you to complete each day based on the goals you set.
+							<br><br>You can set as many as you want but having fewer will make my task suggestions more effective.<br><br><b>As you select goals you’ll see my highlighted recommendations.</b>
+						</p>
+					</div>
+					<span emoji><img src="../assets/images/icon.png" alt=""></span>
+				</div>
+			</ion-col>
+			<ion-col size="12" size-md="8">
+				<div ritbar>
+					<ul steps>
+						<li routerLink="/add-account"><span active><ion-icon name="checkmark-outline"></ion-icon></span><p>Add Accounts</p></li>
+						<li routerLink="/signup-createbrands"><span active>2</span><p>Create Brands</p></li>
+						<li><span>3</span><p>Set Goals</p></li>
+					</ul>
+					<div socials>
+						<div class="cont-sr">
+								<ion-row>
+									<ion-col  size="12" size-md="12" size-lg="6">
+										<form [formGroup]="youtubeForm" (ngSubmit)="addYoutubeGoal(youtubeForm.value)">
+										<div class="con-tou">
+											<span class="nam"> <ion-icon name="logo-youtube"></ion-icon> YouTube Channel(s) Goals </span>
+											<div  class="btn-dt">
+												<a href="javascript:void(0)" class="box-contsf" (click)="hide3()"> Choose goal type to add new <ion-icon name="chevron-down-outline"></ion-icon></a>
+												<div class="cont-sect-ne" *ngIf="hideMe3"> 
+													<div class="wis-c">
+														I want to Reach <ion-input formControlName="subscriber" class="m-0-20"></ion-input> Subscribers
+													</div>
+													<div *ngIf="isSubmit && f.subscriber.errors" class="invalid-feedback">
+														<ion-text validationText *ngIf="f.subscriber.errors.required">
+														  <p class="ife">*Subscribers is required!</p>
+														</ion-text>
+													
+														<ion-text validationText *ngIf="f.subscriber.errors.pattern">
+														  <p class="ife">*Subscribers Should Contain Only Numbers!</p>
+														</ion-text>
+													</div>
+													<div class="wis-c">
+														on 
+														<ion-select interface="action-sheet" formControlName="accountType" placeholder="Choose Account" class="ml-20">
+															<ion-select-option *ngFor="let acc of accType" value="{{acc}}">{{acc}}</ion-select-option>
+															<!-- <ion-select-option value="n64">Account Two</ion-select-option> -->
+														</ion-select>
+													</div>
+													<div *ngIf="isSubmit && f.accountType.errors" class="invalid-feedback">
+														<ion-text validationText *ngIf="f.accountType.errors.required">
+														  <p class="ife">*Please Select Account Type on which you have goal!</p>
+														</ion-text>
+													</div>
+													<div class="wis-c">
+														Within 
+														<ion-input formControlName="with" class="w-50s"></ion-input>
+														<ion-select interface="action-sheet" formControlName="within" placeholder="Select One" class="w-50s">
+															<ion-select-option *ngFor="let t of time" value="{{t}}">{{t}}</ion-select-option>
+														</ion-select>
+													</div>
+													<div *ngIf="isSubmit && f.with.errors" class="invalid-feedback">
+														<ion-text validationText *ngIf="f.with.errors.required">
+														  <p class="ife">*Please Select One Count in which you want to achive the goal!</p>
+														</ion-text>
+													</div>
+													<div *ngIf="isSubmit && f.within.errors" class="invalid-feedback">
+														<ion-text validationText *ngIf="f.within.errors.required">
+														  <p class="ife">*Please Select One within which you want to achive this goal!</p>
+														</ion-text>
+													</div>
+													<div class="btn-dics">
+														<ion-button type="submit" class="save-btn">Add </ion-button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</form>
+									</ion-col>
+									<ion-col  size="12" size-md="12" size-lg="6">
+										<form [formGroup]="twitterForm" (ngSubmit)="addTwitterGoal(twitterForm.value)">
+										<div class="con-tou">
+											<span class="nam col-twi"> <ion-icon name="logo-twitter"></ion-icon> Twitter Profile(s) Goals </span>
+											<div  class="btn-dt">
+												<a href="javascript:void(0)" class="box-contsf" (click)="hide2()"> Choose goal type to add new <ion-icon name="chevron-down-outline"></ion-icon></a>
+												<div class="cont-sect-ne" *ngIf="hideMe2">
+													<div class="wis-c">
+														I want to Reach <ion-input formControlName="subscriber" class="m-0-20"></ion-input> Subscribers
+													</div>
+													<div *ngIf="isSubmit && fo.subscriber.errors" class="invalid-feedback">
+														<ion-text validationText *ngIf="fo.subscriber.errors.required">
+														  <p class="ife">*Subscribers is required!</p>
+														</ion-text>
+													
+														<ion-text validationText *ngIf="fo.subscriber.errors.pattern">
+														  <p class="ife">*Subscribers Should Contain Only Numbers!</p>
+														</ion-text>
+													</div>
+													<div class="wis-c">
+														on 
+														
+														<ion-select interface="action-sheet" formControlName="accountType" placeholder="Choose Account" class="ml-20">
+															<ion-select-option *ngFor="let acc of accType" value="{{acc}}">{{acc}}</ion-select-option>
+														</ion-select>
+													</div>
+													<div *ngIf="isSubmit && fo.accountType.errors" class="invalid-feedback">
+														<ion-text validationText *ngIf="fo.accountType.errors.required">
+														  <p >*Please Select Account Type on which you have goal!</p>
+														</ion-text>
+													</div>
+													<div class="wis-c">
+														Within 
+														<ion-input formControlName="with" class="w-50s"></ion-input>		
+														<ion-select interface="action-sheet" formControlName="within" placeholder="Select One" class="w-50s">
+															<ion-select-option *ngFor="let t of time" value="{{t}}">{{t}}</ion-select-option>
+														</ion-select>
+													</div>
+													<div *ngIf="isSubmit && fo.with.errors" class="invalid-feedback">
+														<ion-text validationText *ngIf="fo.with.errors.required">
+														  <p class="ife">*Please Select One Count in which you want to achive the goal!</p>
+														</ion-text>
+													</div>
+													<div *ngIf="isSubmit && fo.within.errors" class="invalid-feedback">
+														<ion-text validationText *ngIf="fo.within.errors.required">
+														  <p class="ife">*Please Select One within which you want to achive this goal!</p>
+														</ion-text>
+													</div>
+													<div class="btn-dics">
+														<ion-button type="submit" class="save-btn">Add </ion-button>
+													</div>
+												</div>
+											</div>
+										</div>
+										</form>
+									</ion-col>
+								</ion-row>
+								<ion-row >
+									<ion-col  size="12" size-md="12" size-lg="6">
+										<div class="con-tou">
+											<div class="goa-ft">
+												<div *ngFor="let yg of youtubeGoals; let i = index" class="data-box-smd">
+													<a href="javascript:void(0)" class="dots-ell"> <ion-icon name="ellipsis-vertical" (click)="show_delete(i)"></ion-icon> </a>
+													<span class="img-box">
+														<img src="assets/images/user3.png">
+														<small class="icon-is"> <ion-icon name="logo-youtube"></ion-icon></small>
+													</span>
+													 I want to Reach <b> {{yg.subscribers}} subscribers </b> on {{yg.accountType}} within <b>  {{yg.with}} {{yg.within}}. </b> 
+													<span class="icon-bt">
+														<!-- <i class="lin-r" style="width:40%;"></i> -->
+														<ion-progress-bar class="lin-r"  value="0" color="danger" ></ion-progress-bar>
+														<small class="round-cr" style="left:45%;"></small>
+													</span>
+												</div>
+												<!-- <div *ngIf= "youtubeGoals === null || youtubeGoals === undefined">
+													<ion-item>No Youtube Goals Found!</ion-item>
+												</div> -->
+												<!-- <div class="data-box-smd">
+													<a href="javascript:void(0)" class="dots-ell"> <ion-icon name="ellipsis-vertical"></ion-icon> </a>
+													<span class="img-box">
+														<img src="assets/images/user3.png">
+														<small class="icon-is"> <ion-icon name="logo-youtube"></ion-icon></small>
+													</span>
+													 I want to Reach <b> 1000 subscribers </b> on Pencilmation within <b>  6 months. </b> 
+													<span class="icon-bt">
+														<i class="lin-r" style="width:40%;"></i>
+														<small class="round-cr" style="left:45%;"></small>
+													</span>
+												</div> 
+												<div class="data-box-smd">
+													<a href="javascript:void(0)" class="dots-ell"> <ion-icon name="ellipsis-vertical"></ion-icon> </a>
+													<span class="img-box">
+														<img src="assets/images/user3.png">
+														<small class="icon-is"> <ion-icon name="logo-youtube"></ion-icon></small>
+													</span>
+													 I want to Reach <b> 1000 subscribers </b> on Pencilmation within <b>  6 months. </b> 
+													<span class="icon-bt">
+														<i class="lin-r" style="width:40%;"></i>
+														<small class="round-cr" style="left:45%;"></small>
+													</span>
+												</div>-->	
+											</div>
+										</div>
+									</ion-col>
+									<!-- <ion-col *ngIf="!hideMe3"></ion-col> -->
+									<ion-col size="12" size-md="12" size-lg="6">
+										<div class="con-tou">
+											<div class="goa-ft">
+												<div *ngFor="let tg of twitterGoals; let i = index " class="data-box-smd green-bxm">
+													<a href="javascript:void(0)" class="dots-ell"> <ion-icon name="ellipsis-vertical" (click)="show_tdelete(i)"></ion-icon> </a>
+													<span class="img-box">
+														<img src="assets/images/user3.png">
+														<small class="icon-is"> <ion-icon name="logo-twitter"></ion-icon> </small>
+													</span>
+													I want to get to <b>  {{tg.subscribers}} followers </b> on<b>  @{{tg.accountType}} </b>  within <b> {{tg.with}} {{tg.within}}. </b>
+													<span class="icon-bt">
+														<!-- <i class="lin-r" style="width:20%;"></i> -->
+														<ion-progress-bar class="lin-r"  value="0" color="primary" ></ion-progress-bar>
+														<small class="round-cr" style="left:60%;"></small>
+													</span>
+												</div>
+											</div>
+											<!-- <div *ngIf= "twitterGoals === null || twitterGoals === undefined">
+												<ion-item>No Twitter Goals Found!</ion-item>
+											</div> -->
+										</div>
+									</ion-col>
+									<!-- <ion-col *ngIf="!hideMe2"></ion-col> -->
+								</ion-row>
+							</div>
+					</div>
+					<div botmbtns>
+						
+						<!-- <ion-button btn-outline fill="outline">Skip</ion-button> -->
+						<ion-button fill="solid" *ngIf="twitterGoals?.length == 0 && youtubeGoals?.length == 0" class="goals-nextdisabled">Finish</ion-button>
+						<ion-button fill="solid" routerLink="/dashboard" *ngIf="twitterGoals?.length > 0 || youtubeGoals?.length > 0" class="goals-next">Finish</ion-button>
+					</div>					
+				</div>
+			</ion-col>
+		</ion-row>
+	</div>
+</ion-content>
