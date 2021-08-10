@@ -16,20 +16,23 @@ const routes: Routes = [
   },
   {
     path: 'return-popup',
-    loadChildren: () => import('./return-popup/return-popup.module').then( m => m.ReturnPopupPageModule)
+    loadChildren: () => import('./return-popup/return-popup.module').then( m => m.ReturnPopupPageModule),
+    canLoad: [AuthGuard]
   },
   {
     path: 'signup1',
-    loadChildren: () => import('./signup1/signup1.module').then( m => m.Signup1PageModule)
+    loadChildren: () => import('./signup1/signup1.module').then( m => m.Signup1PageModule),
+    canLoad: [AuthGuard, AutoLoginGuard]
   },
   {
     path: 'signup',
-    loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule)
+    loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule),
+    canLoad: [AuthGuard, AutoLoginGuard]
   },
   {
     path: 'dashboard',
     loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule),
-    canLoad: [IntroGuard, AuthGuard]
+    canLoad: [IntroGuard, AuthGuard,]
   },
   {
     path: 'calendar-weekly',
@@ -308,36 +311,43 @@ const routes: Routes = [
   },
   {
     path: 'createytvideo-metadata',
-    loadChildren: () => import('./createytvideo-metadata/createytvideo-metadata.module').then( m => m.CreateytvideoMetadataPageModule)
+    loadChildren: () => import('./createytvideo-metadata/createytvideo-metadata.module').then( m => m.CreateytvideoMetadataPageModule),
+    canLoad: [AuthGuard]
   },
   {
     path: 'createytvideo-thumbnail',
-    loadChildren: () => import('./createytvideo-thumbnail/createytvideo-thumbnail.module').then( m => m.CreateytvideoThumbnailPageModule)
+    loadChildren: () => import('./createytvideo-thumbnail/createytvideo-thumbnail.module').then( m => m.CreateytvideoThumbnailPageModule),
+    canLoad: [AuthGuard]
   },
   {
     path: 'a-buycaptions',
-    loadChildren: () => import('./a-buycaptions/a-buycaptions.module').then( m => m.ABuycaptionsPageModule)
+    loadChildren: () => import('./a-buycaptions/a-buycaptions.module').then( m => m.ABuycaptionsPageModule),
+    canLoad: [AuthGuard]
   },
   {
     path: 'createytvideo-captions',
-    loadChildren: () => import('./createytvideo-captions/createytvideo-captions.module').then( m => m.CreateytvideoCaptionsPageModule)
+    loadChildren: () => import('./createytvideo-captions/createytvideo-captions.module').then( m => m.CreateytvideoCaptionsPageModule),
+    canLoad: [AuthGuard]
   },
   {
     path: 'b-buycaptions-cardadded',
-    loadChildren: () => import('./b-buycaptions-cardadded/b-buycaptions-cardadded.module').then( m => m.BBuycaptionsCardaddedPageModule)
+    loadChildren: () => import('./b-buycaptions-cardadded/b-buycaptions-cardadded.module').then( m => m.BBuycaptionsCardaddedPageModule),
+    canLoad: [AuthGuard]
   },
   {
     path: 'createytvideo-addtoplaylist',
-    loadChildren: () => import('./createytvideo-addtoplaylist/createytvideo-addtoplaylist.module').then( m => m.CreateytvideoAddtoplaylistPageModule)
+    loadChildren: () => import('./createytvideo-addtoplaylist/createytvideo-addtoplaylist.module').then( m => m.CreateytvideoAddtoplaylistPageModule),
+    canLoad: [AuthGuard]
   },
   {
     path: 'createytvideo-confirm',
-    loadChildren: () => import('./createytvideo-confirm/createytvideo-confirm.module').then( m => m.CreateytvideoConfirmPageModule)
+    loadChildren: () => import('./createytvideo-confirm/createytvideo-confirm.module').then( m => m.CreateytvideoConfirmPageModule),
+    canLoad: [AuthGuard]
   },
   {
     path: 'createytvideo-uploadvideo',
-    loadChildren: () => import('./createytvideo-uploadvideo/createytvideo-uploadvideo.module').then( m => m.CreateytvideoUploadvideoPageModule)
-  },
+    loadChildren: () => import('./createytvideo-uploadvideo/createytvideo-uploadvideo.module').then( m => m.CreateytvideoUploadvideoPageModule),
+    canLoad: [AuthGuard]},
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule),
@@ -345,16 +355,21 @@ const routes: Routes = [
   },
   {
     path: 'forgot-password',
-    loadChildren: () => import('./forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
-  },
+    loadChildren: () => import('./forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule),
+    canLoad: [AuthGuard]},
   {
     path: 'edit-youtube-goals',
-    loadChildren: () => import('./edit-youtube-goals/edit-youtube-goals.module').then( m => m.EditYoutubeGoalsPageModule)
+    loadChildren: () => import('./edit-youtube-goals/edit-youtube-goals.module').then( m => m.EditYoutubeGoalsPageModule),
+    canLoad: [AuthGuard]
   },
   {
     path: 'edit-twitter-goals',
-    loadChildren: () => import('./edit-twitter-goals/edit-twitter-goals.module').then( m => m.EditTwitterGoalsPageModule)
-  }
+    loadChildren: () => import('./edit-twitter-goals/edit-twitter-goals.module').then( m => m.EditTwitterGoalsPageModule),
+    canLoad: [AuthGuard]},
+  {
+    path: 'banner',
+    loadChildren: () => import('./banner/banner.module').then( m => m.BannerPageModule),
+    canLoad: [AuthGuard]}
   // {
   //   path: 'twitter',
   //   loadChildren: () => import('./providers/twitter/twitter.module').then( m => m.TwitterPageModule)

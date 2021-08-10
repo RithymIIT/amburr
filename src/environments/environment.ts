@@ -12,7 +12,11 @@ export const environment = {
     messagingSenderId: "738580139894",
     appId: "1:738580139894:web:db5f342e06b48039ea7457",
     measurementId: "G-3VNC877F9B"
-  }
+  },
+adsense: {
+    adClient: 'ca-pub-2060798330303598',
+    show: true
+ }
   };
  // };
   // firebaseConfig:{
